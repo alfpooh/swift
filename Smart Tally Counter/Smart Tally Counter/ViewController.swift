@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 // UILabel Kerining extention
 // refered from http://stackoverflow.com/questions/7370013/how-to-set-kerning-in-iphone-uilabel?lq=1
@@ -41,18 +42,39 @@ extension UILabel {
     }
 }
 
+
+
 class ViewController: UIViewController {
 
     var CountedNumber: Int = 0
     var lengthCountedNumber: Int = 0
+    var countingSound: AVAudioPlayer!
+    var startTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .ShortStyle, timeStyle: .ShortStyle)
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        let path = NSBundle.mainBundle().pathForResource("counting", ofType: "wav")
+        let soundUrl = NSURL (fileURLWithPath: path!)
+        
+        do {
+            try countingSound = AVAudioPlayer(contentsOfURL: soundUrl)
+            countingSound.prepareToPlay()
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+        
+        
+    }
     
     @IBOutlet weak var CurrentCount:
     UILabel!
     
     @IBAction func AddCount(sender: UIButton) {
         CountedNumber = CountedNumber + 1
+        if CountedNumber == 1 { startTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .ShortStyle, timeStyle: .ShortStyle)}
         SetCount (CountedNumber)
-        return
+        playSound ()
     }
     
     @IBAction func ResetCount(sender: UIButton) {
@@ -66,6 +88,7 @@ class ViewController: UIViewController {
         CountedNumber = 0
         }
         SetCount (CountedNumber)
+        playSound ()
     }
     
     func SetCount (countnumb: Int) {
@@ -73,9 +96,24 @@ class ViewController: UIViewController {
          CurrentCount.kerning = 15
     
     }
+    
+
+    
     @IBAction func CopyCount(sender: UIButton) {
-        UIPasteboard.generalPasteboard().string = String(CountedNumber)
+        let endTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .ShortStyle, timeStyle: .ShortStyle)
+        
+        UIPasteboard.generalPasteboard().string = "Counted: " + String(CountedNumber) + " times " + "from \(startTime) to \(endTime)"
+    }
+    
+    func playSound () {
+        if countingSound.playing {
+            countingSound.stop()
+        } else {
+            countingSound.play()
+        }
     }
     
 }
+
+
 

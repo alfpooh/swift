@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="storeTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="od0-aW-AoU" userLabel="TopView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.4152138509877602" blue="0.33279962034707622" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="kXv-YN-csq"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9kJ-ZN-FoW" userLabel="StackMainP">
+                                <rect key="frame" x="175" y="70" width="200" height="150"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="스크린샷 2016-02-22 오후 11.18.13" translatesAutoresizingMaskIntoConstraints="NO" id="W75-bs-iDe" userLabel="SelectedProduct">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="4zG-fF-GEp"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="W75-bs-iDe" firstAttribute="top" secondItem="9kJ-ZN-FoW" secondAttribute="top" constant="5" id="4Zc-5u-pKM"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="fNN-xM-ROj"/>
+                                    <constraint firstItem="W75-bs-iDe" firstAttribute="centerX" secondItem="9kJ-ZN-FoW" secondAttribute="centerX" id="pnZ-vS-OBx"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HzM-Pd-977" userLabel="StackThumbnails">
+                                <rect key="frame" x="0.0" y="372" width="600" height="120"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="스크린샷 2016-02-22 오후 11.18.30" translatesAutoresizingMaskIntoConstraints="NO" id="HHM-mG-XxP" userLabel="thumb1">
+                                        <rect key="frame" x="0.0" y="0.0" width="104" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="TBm-lM-4Eg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="스크린샷 2016-02-22 오후 11.19.09" translatesAutoresizingMaskIntoConstraints="NO" id="e0V-Ca-lMh" userLabel="thumb2">
+                                        <rect key="frame" x="124" y="0.0" width="104" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="fr0-BJ-zyB"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="스크린샷 2016-02-23 오후 3.07.55" translatesAutoresizingMaskIntoConstraints="NO" id="hBr-ST-a8O" userLabel="thumb3">
+                                        <rect key="frame" x="248" y="0.0" width="104" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="1FT-7h-uBg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="스크린샷 2016-03-22 오후 1.26.39" translatesAutoresizingMaskIntoConstraints="NO" id="8jN-XB-amP" userLabel="thumb4">
+                                        <rect key="frame" x="372" y="0.0" width="104" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="qJy-Mq-XtZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="스크린샷 2016-02-22 오후 11.18.48" translatesAutoresizingMaskIntoConstraints="NO" id="Pwv-XM-mJL" userLabel="thumb5">
+                                        <rect key="frame" x="496" y="0.0" width="104" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="IeX-SR-TcO"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rYk-y0-D8t" userLabel="StackLAbel">
+                                <rect key="frame" x="226" y="500" width="600" height="29"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cool Shoes Burgandy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3c9-cV-EML">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="29"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                        <color key="textColor" red="0.36470588235294116" green="0.058823529411764705" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3c9-cV-EML" firstAttribute="centerX" secondItem="rYk-y0-D8t" secondAttribute="centerX" id="FzA-cl-VDp"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vT5-ST-hu7" userLabel="StackPrice">
+                                <rect key="frame" x="226" y="537" width="560" height="22"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="100$, Size M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RG0-N4-Rik">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="22"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" red="0.38889557261996088" green="0.52018570026178013" blue="0.50972046341520405" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RG0-N4-Rik" firstAttribute="centerX" secondItem="vT5-ST-hu7" secondAttribute="centerX" id="4qq-Z3-x7w"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZQ-0D-KnE">
+                                <rect key="frame" x="0.0" y="570" width="600" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1k-yZ-YNM">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                                        <color key="backgroundColor" red="0.44757060332346044" green="0.46288039921465973" blue="0.084936506821720423" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Like">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzR-hA-fUR">
+                                        <rect key="frame" x="300" y="0.0" width="300" height="30"/>
+                                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Buy">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dzR-hA-fUR" firstAttribute="width" secondItem="L1k-yZ-YNM" secondAttribute="width" id="7b3-eW-b0D"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vT5-ST-hu7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6hp-9i-hPH"/>
+                            <constraint firstAttribute="trailing" secondItem="VZQ-0D-KnE" secondAttribute="trailing" id="88Z-ne-ugc"/>
+                            <constraint firstItem="rYk-y0-D8t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AAG-aY-Tzn"/>
+                            <constraint firstItem="VZQ-0D-KnE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OO8-k8-CZQ"/>
+                            <constraint firstItem="HzM-Pd-977" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RH1-io-Zbv"/>
+                            <constraint firstAttribute="leading" secondItem="od0-aW-AoU" secondAttribute="leading" id="RUV-qQ-LQg"/>
+                            <constraint firstItem="9kJ-ZN-FoW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WbP-vj-mIT"/>
+                            <constraint firstAttribute="trailing" secondItem="HzM-Pd-977" secondAttribute="trailing" id="Zed-mY-H5k"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VZQ-0D-KnE" secondAttribute="bottom" id="bwG-8O-W6H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vT5-ST-hu7" secondAttribute="trailing" id="eMF-VH-CDq"/>
+                            <constraint firstAttribute="top" secondItem="od0-aW-AoU" secondAttribute="top" id="jO7-MN-oWD"/>
+                            <constraint firstAttribute="trailing" secondItem="od0-aW-AoU" secondAttribute="trailing" id="mBd-qV-95Z"/>
+                            <constraint firstAttribute="trailing" secondItem="rYk-y0-D8t" secondAttribute="trailing" id="mUG-pc-hNS"/>
+                            <constraint firstItem="vT5-ST-hu7" firstAttribute="top" secondItem="rYk-y0-D8t" secondAttribute="bottom" constant="15" id="rPw-3D-foN"/>
+                            <constraint firstItem="od0-aW-AoU" firstAttribute="bottom" secondItem="9kJ-ZN-FoW" secondAttribute="top" constant="-10" id="sfH-5Q-GhK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="315"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="스크린샷 2016-02-22 오후 11.18.13" width="592" height="402"/>
+        <image name="스크린샷 2016-02-22 오후 11.18.30" width="610" height="414"/>
+        <image name="스크린샷 2016-02-22 오후 11.18.48" width="620" height="428"/>
+        <image name="스크린샷 2016-02-22 오후 11.19.09" width="604" height="466"/>
+        <image name="스크린샷 2016-02-23 오후 3.07.55" width="572" height="354"/>
+        <image name="스크린샷 2016-03-22 오후 1.26.39" width="532" height="390"/>
+    </resources>
+</document>

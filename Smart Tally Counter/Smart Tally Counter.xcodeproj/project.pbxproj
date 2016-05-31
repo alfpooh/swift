@@ -12,8 +12,9 @@
 		FD2836391CF5CA94002AE3A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2836371CF5CA94002AE3A5 /* Main.storyboard */; };
 		FD28363B1CF5CA94002AE3A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD28363A1CF5CA94002AE3A5 /* Assets.xcassets */; };
 		FD28363E1CF5CA94002AE3A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD28363C1CF5CA94002AE3A5 /* LaunchScreen.storyboard */; };
-		FD2836491CF5CA94002AE3A5 /* Smart_Tally_CounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2836481CF5CA94002AE3A5 /* Smart_Tally_CounterTests.swift */; };
-		FD2836541CF5CA94002AE3A5 /* Smart_Tally_CounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2836531CF5CA94002AE3A5 /* Smart_Tally_CounterUITests.swift */; };
+		FD6588741CFCEB7A00D77F95 /* counting.wav in Resources */ = {isa = PBXBuildFile; fileRef = FD6588731CFCEB7A00D77F95 /* counting.wav */; };
+		FD6588751CFCEB7A00D77F95 /* counting.wav in Resources */ = {isa = PBXBuildFile; fileRef = FD6588731CFCEB7A00D77F95 /* counting.wav */; };
+		FD6588761CFCEB7A00D77F95 /* counting.wav in Resources */ = {isa = PBXBuildFile; fileRef = FD6588731CFCEB7A00D77F95 /* counting.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,44 +32,41 @@
 			remoteGlobalIDString = FD28362F1CF5CA94002AE3A5;
 			remoteInfo = "Smart Tally Counter";
 		};
-		FD2E91C01CF755AE00246004 /* PBXContainerItemProxy */ = {
+		FD2CB3551CFD76D30060D7B5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FD2E91BA1CF755AB00246004 /* Smart Tally Counter.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = FD2E91891CF755AB00246004;
+			remoteGlobalIDString = FD2CB34C1CFD76CA0060D7B5;
 			remoteInfo = "Smart Tally Counter";
 		};
-		FD2E91C21CF755AE00246004 /* PBXContainerItemProxy */ = {
+		FD2CB3571CFD76D30060D7B5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FD2E91BA1CF755AB00246004 /* Smart Tally Counter.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = FD2E919D1CF755AB00246004;
+			remoteGlobalIDString = FD2CB34D1CFD76CA0060D7B5;
 			remoteInfo = "Smart Tally CounterTests";
 		};
-		FD2E91C41CF755AE00246004 /* PBXContainerItemProxy */ = {
+		FD2CB3591CFD76D30060D7B5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FD2E91BA1CF755AB00246004 /* Smart Tally Counter.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = FD2E91A81CF755AB00246004;
+			remoteGlobalIDString = FD2CB34E1CFD76CA0060D7B5;
 			remoteInfo = "Smart Tally CounterUITests";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FD2836301CF5CA94002AE3A5 /* Smart Tally Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Tally Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD2836331CF5CA94002AE3A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD2836351CF5CA94002AE3A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD2836381CF5CA94002AE3A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD28363A1CF5CA94002AE3A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD28363D1CF5CA94002AE3A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD28363F1CF5CA94002AE3A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD2836441CF5CA94002AE3A5 /* Smart Tally CounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart Tally CounterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD2836481CF5CA94002AE3A5 /* Smart_Tally_CounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_Tally_CounterTests.swift; sourceTree = "<group>"; };
-		FD28364A1CF5CA94002AE3A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD28364F1CF5CA94002AE3A5 /* Smart Tally CounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart Tally CounterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD2836531CF5CA94002AE3A5 /* Smart_Tally_CounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_Tally_CounterUITests.swift; sourceTree = "<group>"; };
-		FD2836551CF5CA94002AE3A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD2CB34F1CFD76CA0060D7B5 /* Smart Tally Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Tally Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD2CB3501CFD76CA0060D7B5 /* Smart Tally CounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart Tally CounterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD2CB3511CFD76CA0060D7B5 /* Smart Tally CounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart Tally CounterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD2E91BA1CF755AB00246004 /* Smart Tally Counter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Smart Tally Counter.xcodeproj"; path = "Smart Tally Counter/Smart Tally Counter.xcodeproj"; sourceTree = "<group>"; };
+		FD6588731CFCEB7A00D77F95 /* counting.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = counting.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,25 +98,16 @@
 			isa = PBXGroup;
 			children = (
 				FD2836321CF5CA94002AE3A5 /* Smart Tally Counter */,
-				FD2836471CF5CA94002AE3A5 /* Smart Tally CounterTests */,
-				FD2836521CF5CA94002AE3A5 /* Smart Tally CounterUITests */,
-				FD2836311CF5CA94002AE3A5 /* Products */,
+				FD2CB34F1CFD76CA0060D7B5 /* Smart Tally Counter.app */,
+				FD2CB3501CFD76CA0060D7B5 /* Smart Tally CounterTests.xctest */,
+				FD2CB3511CFD76CA0060D7B5 /* Smart Tally CounterUITests.xctest */,
 			);
-			sourceTree = "<group>";
-		};
-		FD2836311CF5CA94002AE3A5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FD2836301CF5CA94002AE3A5 /* Smart Tally Counter.app */,
-				FD2836441CF5CA94002AE3A5 /* Smart Tally CounterTests.xctest */,
-				FD28364F1CF5CA94002AE3A5 /* Smart Tally CounterUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		FD2836321CF5CA94002AE3A5 /* Smart Tally Counter */ = {
 			isa = PBXGroup;
 			children = (
+				FD6588731CFCEB7A00D77F95 /* counting.wav */,
 				FD2E91BA1CF755AB00246004 /* Smart Tally Counter.xcodeproj */,
 				FD2836331CF5CA94002AE3A5 /* AppDelegate.swift */,
 				FD2836351CF5CA94002AE3A5 /* ViewController.swift */,
@@ -130,30 +119,12 @@
 			path = "Smart Tally Counter";
 			sourceTree = "<group>";
 		};
-		FD2836471CF5CA94002AE3A5 /* Smart Tally CounterTests */ = {
-			isa = PBXGroup;
-			children = (
-				FD2836481CF5CA94002AE3A5 /* Smart_Tally_CounterTests.swift */,
-				FD28364A1CF5CA94002AE3A5 /* Info.plist */,
-			);
-			path = "Smart Tally CounterTests";
-			sourceTree = "<group>";
-		};
-		FD2836521CF5CA94002AE3A5 /* Smart Tally CounterUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FD2836531CF5CA94002AE3A5 /* Smart_Tally_CounterUITests.swift */,
-				FD2836551CF5CA94002AE3A5 /* Info.plist */,
-			);
-			path = "Smart Tally CounterUITests";
-			sourceTree = "<group>";
-		};
 		FD2E91BB1CF755AB00246004 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FD2E91C11CF755AE00246004 /* Smart Tally Counter.app */,
-				FD2E91C31CF755AE00246004 /* Smart Tally CounterTests.xctest */,
-				FD2E91C51CF755AE00246004 /* Smart Tally CounterUITests.xctest */,
+				FD2CB3561CFD76D30060D7B5 /* Smart Tally Counter.app */,
+				FD2CB3581CFD76D30060D7B5 /* Smart Tally CounterTests.xctest */,
+				FD2CB35A1CFD76D30060D7B5 /* Smart Tally CounterUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,7 +146,7 @@
 			);
 			name = "Smart Tally Counter";
 			productName = "Smart Tally Counter";
-			productReference = FD2836301CF5CA94002AE3A5 /* Smart Tally Counter.app */;
+			productReference = FD2CB34F1CFD76CA0060D7B5 /* Smart Tally Counter.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FD2836431CF5CA94002AE3A5 /* Smart Tally CounterTests */ = {
@@ -193,7 +164,7 @@
 			);
 			name = "Smart Tally CounterTests";
 			productName = "Smart Tally CounterTests";
-			productReference = FD2836441CF5CA94002AE3A5 /* Smart Tally CounterTests.xctest */;
+			productReference = FD2CB3501CFD76CA0060D7B5 /* Smart Tally CounterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		FD28364E1CF5CA94002AE3A5 /* Smart Tally CounterUITests */ = {
@@ -211,7 +182,7 @@
 			);
 			name = "Smart Tally CounterUITests";
 			productName = "Smart Tally CounterUITests";
-			productReference = FD28364F1CF5CA94002AE3A5 /* Smart Tally CounterUITests.xctest */;
+			productReference = FD2CB3511CFD76CA0060D7B5 /* Smart Tally CounterUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -247,7 +218,7 @@
 				Base,
 			);
 			mainGroup = FD2836271CF5CA94002AE3A5;
-			productRefGroup = FD2836311CF5CA94002AE3A5 /* Products */;
+			productRefGroup = FD2836271CF5CA94002AE3A5;
 			projectDirPath = "";
 			projectReferences = (
 				{
@@ -265,25 +236,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		FD2E91C11CF755AE00246004 /* Smart Tally Counter.app */ = {
+		FD2CB3561CFD76D30060D7B5 /* Smart Tally Counter.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = "Smart Tally Counter.app";
-			remoteRef = FD2E91C01CF755AE00246004 /* PBXContainerItemProxy */;
+			remoteRef = FD2CB3551CFD76D30060D7B5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FD2E91C31CF755AE00246004 /* Smart Tally CounterTests.xctest */ = {
+		FD2CB3581CFD76D30060D7B5 /* Smart Tally CounterTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "Smart Tally CounterTests.xctest";
-			remoteRef = FD2E91C21CF755AE00246004 /* PBXContainerItemProxy */;
+			remoteRef = FD2CB3571CFD76D30060D7B5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FD2E91C51CF755AE00246004 /* Smart Tally CounterUITests.xctest */ = {
+		FD2CB35A1CFD76D30060D7B5 /* Smart Tally CounterUITests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "Smart Tally CounterUITests.xctest";
-			remoteRef = FD2E91C41CF755AE00246004 /* PBXContainerItemProxy */;
+			remoteRef = FD2CB3591CFD76D30060D7B5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -296,6 +267,7 @@
 				FD28363E1CF5CA94002AE3A5 /* LaunchScreen.storyboard in Resources */,
 				FD28363B1CF5CA94002AE3A5 /* Assets.xcassets in Resources */,
 				FD2836391CF5CA94002AE3A5 /* Main.storyboard in Resources */,
+				FD6588741CFCEB7A00D77F95 /* counting.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD6588751CFCEB7A00D77F95 /* counting.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD6588761CFCEB7A00D77F95 /* counting.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +303,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD2836491CF5CA94002AE3A5 /* Smart_Tally_CounterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +310,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD2836541CF5CA94002AE3A5 /* Smart_Tally_CounterUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +440,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.forethink.nu.Smart-Tally-Counter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -480,6 +453,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.forethink.nu.Smart-Tally-Counter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

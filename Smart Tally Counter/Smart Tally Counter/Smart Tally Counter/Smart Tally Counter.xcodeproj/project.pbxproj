@@ -6,16 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		FD2E918D1CF755AB00246004 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E918C1CF755AB00246004 /* AppDelegate.swift */; };
-		FD2E918F1CF755AB00246004 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E918E1CF755AB00246004 /* ViewController.swift */; };
-		FD2E91921CF755AB00246004 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2E91901CF755AB00246004 /* Main.storyboard */; };
-		FD2E91941CF755AB00246004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD2E91931CF755AB00246004 /* Assets.xcassets */; };
-		FD2E91971CF755AB00246004 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2E91951CF755AB00246004 /* LaunchScreen.storyboard */; };
-		FD2E91A21CF755AB00246004 /* Smart_Tally_CounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E91A11CF755AB00246004 /* Smart_Tally_CounterTests.swift */; };
-		FD2E91AD1CF755AB00246004 /* Smart_Tally_CounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E91AC1CF755AB00246004 /* Smart_Tally_CounterUITests.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		FD2E919E1CF755AB00246004 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -34,19 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FD2E91891CF755AB00246004 /* Smart Tally Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Tally Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD2E918C1CF755AB00246004 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD2E918E1CF755AB00246004 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FD2E91911CF755AB00246004 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FD2E91931CF755AB00246004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FD2E91961CF755AB00246004 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FD2E91981CF755AB00246004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD2E919D1CF755AB00246004 /* Smart Tally CounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart Tally CounterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD2E91A11CF755AB00246004 /* Smart_Tally_CounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_Tally_CounterTests.swift; sourceTree = "<group>"; };
-		FD2E91A31CF755AB00246004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD2E91A81CF755AB00246004 /* Smart Tally CounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart Tally CounterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD2E91AC1CF755AB00246004 /* Smart_Tally_CounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_Tally_CounterUITests.swift; sourceTree = "<group>"; };
-		FD2E91AE1CF755AB00246004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD2E91891CF755AB00246004 /* Smart Tally Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Smart Tally Counter.app"; path = "/Applications/MAMP/htdocs/Smart Tally Counter/Smart Tally Counter/Smart Tally Counter/build/Debug-iphoneos/Smart Tally Counter.app"; sourceTree = "<absolute>"; };
+		FD2E919D1CF755AB00246004 /* Smart Tally CounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Smart Tally CounterTests.xctest"; path = "/Applications/MAMP/htdocs/Smart Tally Counter/Smart Tally Counter/Smart Tally Counter/build/Debug-iphoneos/Smart Tally CounterTests.xctest"; sourceTree = "<absolute>"; };
+		FD2E91A81CF755AB00246004 /* Smart Tally CounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Smart Tally CounterUITests.xctest"; path = "/Applications/MAMP/htdocs/Smart Tally Counter/Smart Tally Counter/Smart Tally Counter/build/Debug-iphoneos/Smart Tally CounterUITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,52 +57,7 @@
 		FD2E91801CF755AB00246004 = {
 			isa = PBXGroup;
 			children = (
-				FD2E918B1CF755AB00246004 /* Smart Tally Counter */,
-				FD2E91A01CF755AB00246004 /* Smart Tally CounterTests */,
-				FD2E91AB1CF755AB00246004 /* Smart Tally CounterUITests */,
-				FD2E918A1CF755AB00246004 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		FD2E918A1CF755AB00246004 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FD2E91891CF755AB00246004 /* Smart Tally Counter.app */,
-				FD2E919D1CF755AB00246004 /* Smart Tally CounterTests.xctest */,
-				FD2E91A81CF755AB00246004 /* Smart Tally CounterUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FD2E918B1CF755AB00246004 /* Smart Tally Counter */ = {
-			isa = PBXGroup;
-			children = (
-				FD2E918C1CF755AB00246004 /* AppDelegate.swift */,
-				FD2E918E1CF755AB00246004 /* ViewController.swift */,
-				FD2E91901CF755AB00246004 /* Main.storyboard */,
-				FD2E91931CF755AB00246004 /* Assets.xcassets */,
-				FD2E91951CF755AB00246004 /* LaunchScreen.storyboard */,
-				FD2E91981CF755AB00246004 /* Info.plist */,
-			);
-			path = "Smart Tally Counter";
-			sourceTree = "<group>";
-		};
-		FD2E91A01CF755AB00246004 /* Smart Tally CounterTests */ = {
-			isa = PBXGroup;
-			children = (
-				FD2E91A11CF755AB00246004 /* Smart_Tally_CounterTests.swift */,
-				FD2E91A31CF755AB00246004 /* Info.plist */,
-			);
-			path = "Smart Tally CounterTests";
-			sourceTree = "<group>";
-		};
-		FD2E91AB1CF755AB00246004 /* Smart Tally CounterUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FD2E91AC1CF755AB00246004 /* Smart_Tally_CounterUITests.swift */,
-				FD2E91AE1CF755AB00246004 /* Info.plist */,
-			);
-			path = "Smart Tally CounterUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,7 +149,7 @@
 				Base,
 			);
 			mainGroup = FD2E91801CF755AB00246004;
-			productRefGroup = FD2E918A1CF755AB00246004 /* Products */;
+			productRefGroup = FD2E91801CF755AB00246004;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -230,9 +165,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD2E91971CF755AB00246004 /* LaunchScreen.storyboard in Resources */,
-				FD2E91941CF755AB00246004 /* Assets.xcassets in Resources */,
-				FD2E91921CF755AB00246004 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +189,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD2E918F1CF755AB00246004 /* ViewController.swift in Sources */,
-				FD2E918D1CF755AB00246004 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +196,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD2E91A21CF755AB00246004 /* Smart_Tally_CounterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +203,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD2E91AD1CF755AB00246004 /* Smart_Tally_CounterUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,25 +220,6 @@
 			targetProxy = FD2E91A91CF755AB00246004 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		FD2E91901CF755AB00246004 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FD2E91911CF755AB00246004 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FD2E91951CF755AB00246004 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FD2E91961CF755AB00246004 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FD2E91AF1CF755AB00246004 /* Debug */ = {
@@ -487,6 +396,7 @@
 				FD2E91B31CF755AB00246004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD2E91B41CF755AB00246004 /* Build configuration list for PBXNativeTarget "Smart Tally CounterTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +405,7 @@
 				FD2E91B61CF755AB00246004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD2E91B71CF755AB00246004 /* Build configuration list for PBXNativeTarget "Smart Tally CounterUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +414,7 @@
 				FD2E91B91CF755AB00246004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
