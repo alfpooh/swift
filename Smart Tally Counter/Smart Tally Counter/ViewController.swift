@@ -46,12 +46,16 @@ extension UILabel {
 
 class ViewController: UIViewController {
     var isGraphViewShowing = false
+    let synth = AVSpeechSynthesizer()
+    var sayCount = AVSpeechUtterance(string: "")
+    var soundMute = false
 
     var CountedNumber: Int = 0
     var lengthCountedNumber: Int = 0
     var countingSound: AVAudioPlayer!
     var startTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .ShortStyle, timeStyle: .ShortStyle)
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -71,6 +75,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var CurrentCount: UILabel!
     @IBOutlet weak var graphView: UIView!
     @IBOutlet weak var LenseView: UIView!
+    
+    @IBOutlet weak var Abouttext: UILabel!
     
     @IBAction func AddCount(sender: UIButton) {
         CountedNumber = CountedNumber + 1
@@ -107,7 +113,7 @@ class ViewController: UIViewController {
             CurrentCount.text = String(countnumb)
         } else if countnumb >= 10000 {
             CurrentCount.text = "00000"
-            let countnumb = 0
+            var countnumb = 0
         }
     }
     
@@ -120,12 +126,27 @@ class ViewController: UIViewController {
     }
     
     func playSound () {
+        if !soundMute {
         if countingSound.playing {
             countingSound.stop()
         } else {
             countingSound.play()
         }
+        }
     }
+    
+    @IBAction func VoiceOut(sender: AnyObject) {
+        sayCount = AVSpeechUtterance(string: String(CountedNumber))
+        sayCount.rate = 0.5
+        synth.speakUtterance(sayCount)
+        
+    }
+
+
+    
+
+        
+    
     @IBAction func counterViewSwipe (gesture:UISwipeGestureRecognizer?) {
         if (isGraphViewShowing) {
             
@@ -147,6 +168,7 @@ class ViewController: UIViewController {
                                       duration: 1.0,
                                       options: [UIViewAnimationOptions.TransitionFlipFromLeft, UIViewAnimationOptions.ShowHideTransitionViews],
                                       completion: nil)
+        Abouttext.text = "Thanks for using the Smart Tally Counter.\n\r All app design including graphic, font, background, sound, and coding \n by Dr. Alf Bae.\n\r All Right Reserved. Forethink. 2016\r support@forethink.nu "
         }
         isGraphViewShowing = !isGraphViewShowing
 }

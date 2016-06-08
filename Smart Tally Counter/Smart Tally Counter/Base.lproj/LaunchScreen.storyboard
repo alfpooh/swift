@@ -4,12 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="TallyCounter-Regular.ttf">
-            <string>TallyCounter-Regular</string>
-            <string>TallyCounter-Regular</string>
-        </mutableArray>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -23,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Vi-uV-9Mr" userLabel="background">
-                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Vi-uV-9Mr" userLabel="background">
+                                <rect key="frame" x="0.0" y="32" width="600" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TallyCounterLoading.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xa1-22-CTA">
-                                        <rect key="frame" x="-180" y="-243" width="600" height="614"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TallyCounterLoading.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xa1-22-CTA">
+                                        <rect key="frame" x="9" y="0.0" width="582" height="568"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,41 +32,52 @@
                                     <constraint firstAttribute="trailing" secondItem="xa1-22-CTA" secondAttribute="trailing" constant="9" id="kTn-TI-TC9"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SMART TALLY COUNTER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfj-py-ZuW" userLabel="STCtitle">
-                                <rect key="frame" x="124" y="270" width="301" height="54"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzO-b1-zJq">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Tally Counter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="818-S3-5Mk" userLabel="apptitle">
+                                        <rect key="frame" x="168" y="200" width="263" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                                        <color key="textColor" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUX-4j-zq4" userLabel="Catches">
+                                        <rect key="frame" x="159" y="237" width="281" height="105"/>
+                                        <string key="text">Easy and fast counting
+Export count to other app
+Visualized counting records
+</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpZ-OH-hhg" userLabel="Thanks">
+                                        <rect key="frame" x="162" y="346" width="192" height="79"/>
+                                        <string key="text">Thanks for using the Smart Tally Counter.  All app design including graphic, font, background, sound, and coding by Dr. Alf Bae. All Right Reserved. Forethink. 2016
+support@forethink.nu 
+</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="11"/>
+                                        <color key="textColor" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="8In-Cj-Ckd"/>
+                                    <constraint firstItem="wUX-4j-zq4" firstAttribute="centerY" secondItem="zzO-b1-zJq" secondAttribute="centerY" id="6e3-3b-13c"/>
+                                    <constraint firstItem="818-S3-5Mk" firstAttribute="centerX" secondItem="zzO-b1-zJq" secondAttribute="centerX" id="itQ-Xe-rqK"/>
+                                    <constraint firstItem="818-S3-5Mk" firstAttribute="top" secondItem="zzO-b1-zJq" secondAttribute="top" constant="200" id="met-Rd-RQQ"/>
+                                    <constraint firstItem="wUX-4j-zq4" firstAttribute="centerX" secondItem="zzO-b1-zJq" secondAttribute="centerX" id="rb8-lw-1dn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="32"/>
-                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ALL RIGHT RESERVED FORETHINK 2016" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGM-Fm-jfK" userLabel="right">
-                                <rect key="frame" x="114" y="358" width="373" height="67"/>
-                                <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="17"/>
-                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Coding, Graphic Design, Font Design, Interaction Design By Alf Abe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKK-wF-Xvv" userLabel="Designedby">
-                                <rect key="frame" x="180" y="426" width="229" height="92"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="f2r-79-whp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="zzO-b1-zJq" secondAttribute="bottom" id="FTr-VR-7FV"/>
+                            <constraint firstItem="9Vi-uV-9Mr" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="IUJ-8b-hBQ"/>
+                            <constraint firstItem="zzO-b1-zJq" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="JDa-tw-c32"/>
+                            <constraint firstAttribute="trailing" secondItem="zzO-b1-zJq" secondAttribute="trailing" id="JuQ-hY-5kE"/>
+                            <constraint firstItem="9Vi-uV-9Mr" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="12" id="PB3-E9-3Aj"/>
                             <constraint firstItem="9Vi-uV-9Mr" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="RZV-rt-Ok1"/>
-                            <constraint firstItem="xKK-wF-Xvv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="TAx-Pp-ReH"/>
-                            <constraint firstItem="jfj-py-ZuW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Zfd-Wd-TPC"/>
-                            <constraint firstItem="jfj-py-ZuW" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="150" id="c4K-pJ-HnW"/>
-                            <constraint firstItem="9Vi-uV-9Mr" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="eQM-xD-Mox"/>
-                            <constraint firstItem="CGM-Fm-jfK" firstAttribute="top" secondItem="jfj-py-ZuW" secondAttribute="bottom" constant="5" id="ezQ-Lh-UHu"/>
-                            <constraint firstItem="xKK-wF-Xvv" firstAttribute="top" secondItem="CGM-Fm-jfK" secondAttribute="bottom" constant="5" id="rBC-HY-WZJ"/>
-                            <constraint firstItem="CGM-Fm-jfK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rHY-Oh-WIk"/>
+                            <constraint firstItem="zzO-b1-zJq" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ctu-1L-qJw"/>
                             <constraint firstItem="9Vi-uV-9Mr" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="uPc-ld-BcT"/>
                             <constraint firstItem="9Vi-uV-9Mr" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="zQS-mV-GG1"/>
                         </constraints>
@@ -80,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-39" y="347"/>
         </scene>
     </scenes>
     <resources>

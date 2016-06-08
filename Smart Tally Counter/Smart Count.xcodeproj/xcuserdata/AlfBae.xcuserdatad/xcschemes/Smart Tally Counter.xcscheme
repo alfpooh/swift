@@ -17,7 +17,7 @@
                BlueprintIdentifier = "FD28362F1CF5CA94002AE3A5"
                BuildableName = "Smart Tally Counter.app"
                BlueprintName = "Smart Tally Counter"
-               ReferencedContainer = "container:SmartCounter.xcodeproj">
+               ReferencedContainer = "container:Smart Count.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "FD2836431CF5CA94002AE3A5"
                BuildableName = "Smart Tally CounterTests.xctest"
                BlueprintName = "Smart Tally CounterTests"
-               ReferencedContainer = "container:SmartCounter.xcodeproj">
+               ReferencedContainer = "container:Smart Count.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "FD28364E1CF5CA94002AE3A5"
                BuildableName = "Smart Tally CounterUITests.xctest"
                BlueprintName = "Smart Tally CounterUITests"
-               ReferencedContainer = "container:SmartCounter.xcodeproj">
+               ReferencedContainer = "container:Smart Count.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "FD28362F1CF5CA94002AE3A5"
             BuildableName = "Smart Tally Counter.app"
             BlueprintName = "Smart Tally Counter"
-            ReferencedContainer = "container:SmartCounter.xcodeproj">
+            ReferencedContainer = "container:Smart Count.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "FD28362F1CF5CA94002AE3A5"
             BuildableName = "Smart Tally Counter.app"
             BlueprintName = "Smart Tally Counter"
-            ReferencedContainer = "container:SmartCounter.xcodeproj">
+            ReferencedContainer = "container:Smart Count.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "FD28362F1CF5CA94002AE3A5"
             BuildableName = "Smart Tally Counter.app"
             BlueprintName = "Smart Tally Counter"
-            ReferencedContainer = "container:SmartCounter.xcodeproj">
+            ReferencedContainer = "container:Smart Count.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
