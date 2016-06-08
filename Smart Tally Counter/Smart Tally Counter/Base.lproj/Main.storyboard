@@ -3,9 +3,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="TallyCounter-Regular.ttf">
+            <string>TallyCounter-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -15,86 +18,183 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleAspectFill" id="8bC-Xf-vdC" customClass="BackgroundPattern" customModule="Smart_Tally_Counter" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="HL4-gk-h6e">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="621"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Counterframe" translatesAutoresizingMaskIntoConstraints="NO" id="SoG-yH-nSw">
-                                <rect key="frame" x="180" y="60" width="240" height="128"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7Z-dS-Qfq" userLabel="Reset">
-                                <rect key="frame" x="426" y="477" width="88" height="88"/>
-                                <state key="normal" image="Reset"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7Z-dS-Qfq" userLabel="Reset" customClass="UniButtonView" customModule="Smart_Tally_Counter" customModuleProvider="target">
+                                <rect key="frame" x="366" y="477" width="88" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="6hz-xl-Wbg"/>
+                                    <constraint firstAttribute="height" constant="90" id="GsA-mM-lBf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="ResetCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EjK-uZ-Z6l"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6G-a9-FPK" userLabel="Minus">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6G-a9-FPK" userLabel="Minus" customClass="UniButtonView" customModule="Smart_Tally_Counter" customModuleProvider="target">
                                 <rect key="frame" x="255" y="477" width="90" height="90"/>
-                                <state key="normal" image="Minus"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="Y9k-UI-l3X"/>
+                                    <constraint firstAttribute="width" constant="90" id="fUL-IP-WqQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.77254901960784317" green="0.14509803921568626" blue="0.58823529411764708" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="MinusCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EKX-bF-9P0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO3-hE-Osc" userLabel="Menu">
-                                <rect key="frame" x="78" y="476" width="90" height="90"/>
-                                <state key="normal" image="Menu"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FAc-w0-Bf4">
+                                <rect key="frame" x="180" y="100" width="300" height="300"/>
+                                <subviews>
+                                    <view tag="100" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6y1-Ot-vPQ" userLabel="LenseView">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="lens" translatesAutoresizingMaskIntoConstraints="NO" id="SoG-yH-nSw">
+                                                <rect key="frame" x="25" y="25" width="250" height="250"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="CJL-Cy-dvb"/>
+                                                    <constraint firstAttribute="height" constant="250" id="SRe-8W-Cd3"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkC-hL-JXS" userLabel="Lever">
+                                                <rect key="frame" x="25" y="25" width="250" height="250"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="LzB-ue-RrE"/>
+                                                    <constraint firstAttribute="width" constant="250" id="jxp-Xx-9fO"/>
+                                                </constraints>
+                                                <state key="normal" image="lens"/>
+                                                <connections>
+                                                    <action selector="AddCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQy-YU-fxN"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="TAP ME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbk-4F-ycg" userLabel="Numbcounter">
+                                                <rect key="frame" x="33" y="110" width="233" height="60"/>
+                                                <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="65"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="HkC-hL-JXS" firstAttribute="centerX" secondItem="6y1-Ot-vPQ" secondAttribute="centerX" id="Qb6-l7-1BR"/>
+                                            <constraint firstItem="SoG-yH-nSw" firstAttribute="centerY" secondItem="6y1-Ot-vPQ" secondAttribute="centerY" id="Wx9-kP-LoL"/>
+                                            <constraint firstItem="bbk-4F-ycg" firstAttribute="centerY" secondItem="6y1-Ot-vPQ" secondAttribute="centerY" constant="-10" id="a4t-7X-50j"/>
+                                            <constraint firstAttribute="trailing" secondItem="bbk-4F-ycg" secondAttribute="trailing" constant="30" id="lIh-e7-aCu"/>
+                                            <constraint firstItem="SoG-yH-nSw" firstAttribute="centerX" secondItem="6y1-Ot-vPQ" secondAttribute="centerX" id="x1U-SE-aqa"/>
+                                            <constraint firstItem="HkC-hL-JXS" firstAttribute="centerY" secondItem="6y1-Ot-vPQ" secondAttribute="centerY" id="xVA-95-wYE"/>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iPl-VV-Hcb" userLabel="graphView">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <color key="backgroundColor" red="1" green="0.96422511339187622" blue="0.00037132872967049479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="73h-ul-1sz"/>
+                                    <constraint firstAttribute="width" constant="300" id="gzN-dJ-jMb"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="c6a-1u-hcb" appends="YES" id="jvv-A5-d2i"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO3-hE-Osc" userLabel="Export" customClass="UniButtonView" customModule="Smart_Tally_Counter" customModuleProvider="target">
+                                <rect key="frame" x="130" y="475" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="yi8-GD-TUs"/>
+                                    <constraint firstAttribute="height" constant="90" id="zq1-R5-zkA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor2">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="CopyCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="amz-Xw-bWb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkC-hL-JXS" userLabel="Lever">
-                                <rect key="frame" x="201" y="244" width="199" height="182"/>
-                                <state key="normal" image="Lever"/>
-                                <connections>
-                                    <action selector="AddCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQy-YU-fxN"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbk-4F-ycg" userLabel="Numbcounter">
-                                <rect key="frame" x="232" y="107" width="137" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HkC-hL-JXS" firstAttribute="top" secondItem="SoG-yH-nSw" secondAttribute="bottom" constant="30" id="BHK-Hk-NB5"/>
-                            <constraint firstAttribute="leading" secondItem="HL4-gk-h6e" secondAttribute="leading" id="CSa-c2-0JS"/>
-                            <constraint firstItem="SoG-yH-nSw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OVV-8J-mtZ"/>
-                            <constraint firstAttribute="trailing" secondItem="HL4-gk-h6e" secondAttribute="trailing" id="Px6-R3-4AX"/>
-                            <constraint firstAttribute="bottom" secondItem="HL4-gk-h6e" secondAttribute="bottom" id="Te9-bk-Nyo"/>
-                            <constraint firstItem="bbk-4F-ycg" firstAttribute="centerYWithinMargins" secondItem="SoG-yH-nSw" secondAttribute="centerY" id="U4n-En-oE5"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oO3-hE-Osc" secondAttribute="bottom" constant="60" id="Upa-3E-ary"/>
-                            <constraint firstAttribute="top" secondItem="HL4-gk-h6e" secondAttribute="top" id="XR2-bE-lXI"/>
-                            <constraint firstItem="A6G-a9-FPK" firstAttribute="leading" secondItem="oO3-hE-Osc" secondAttribute="trailing" constant="20" id="XZy-xb-d2U"/>
-                            <constraint firstItem="SoG-yH-nSw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Xi3-BG-Fg5"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="s7Z-dS-Qfq" secondAttribute="bottom" constant="60" id="b79-Ha-XRM"/>
-                            <constraint firstItem="bbk-4F-ycg" firstAttribute="trailing" secondItem="SoG-yH-nSw" secondAttribute="trailing" constant="-50" id="d0m-gv-vZ8"/>
+                            <constraint firstItem="FAc-w0-Bf4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Wa-ZQ-uhw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oO3-hE-Osc" secondAttribute="bottom" constant="60" id="BHh-dm-fLX"/>
+                            <constraint firstItem="FAc-w0-Bf4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="LY6-TO-8Fl"/>
+                            <constraint firstItem="A6G-a9-FPK" firstAttribute="leading" secondItem="oO3-hE-Osc" secondAttribute="trailing" constant="15" id="M9u-Rz-Aql"/>
+                            <constraint firstItem="A6G-a9-FPK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RBc-ag-YcU"/>
+                            <constraint firstItem="s7Z-dS-Qfq" firstAttribute="leading" secondItem="A6G-a9-FPK" secondAttribute="trailing" constant="15" id="Swy-fB-9ge"/>
                             <constraint firstAttribute="centerX" secondItem="A6G-a9-FPK" secondAttribute="centerX" id="d6U-uO-li0"/>
-                            <constraint firstItem="s7Z-dS-Qfq" firstAttribute="leading" secondItem="A6G-a9-FPK" secondAttribute="trailing" constant="27" id="gJE-3e-4Yf"/>
-                            <constraint firstAttribute="centerX" secondItem="HkC-hL-JXS" secondAttribute="centerX" id="wbT-kF-Svx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="s7Z-dS-Qfq" secondAttribute="bottom" constant="60" id="ldL-PG-wBO"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="A6G-a9-FPK" secondAttribute="bottom" constant="60" id="wsQ-mW-1Gv"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
+                                <color key="value" red="0.74215938969201956" green="0.42529598898260779" blue="0.95621318717277481" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="darkColor">
+                                <color key="value" red="0.31962761356794539" green="0.46701846734701186" blue="0.90590232329842935" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="patternSize">
+                                <real key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="medColor">
+                                <color key="value" red="0.99484080076217651" green="0.30112874507904053" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="backColor">
+                                <color key="value" red="0.96866590627200944" green="0.7766948675529296" blue="0.47181755461730157" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="drawScale">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="CurrentCount" destination="bbk-4F-ycg" id="upV-z8-Got"/>
+                        <outlet property="LenseView" destination="6y1-Ot-vPQ" id="NeH-ko-ceK"/>
+                        <outlet property="graphView" destination="iPl-VV-Hcb" id="fEv-Wq-MWn"/>
+                        <outlet property="lenseView" destination="6y1-Ot-vPQ" id="TGq-iy-Ojp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="c6a-1u-hcb">
+                    <connections>
+                        <action selector="counterViewSwipe:" destination="BYZ-38-t0r" id="Zzd-Fh-Wwy"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="245" y="316"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Background" width="432" height="691"/>
-        <image name="Counterframe" width="296" height="126"/>
-        <image name="Lever" width="290" height="102"/>
-        <image name="Menu" width="90" height="90"/>
-        <image name="Minus" width="90" height="90"/>
-        <image name="Reset" width="88" height="88"/>
+        <image name="lens" width="272" height="272"/>
     </resources>
 </document>

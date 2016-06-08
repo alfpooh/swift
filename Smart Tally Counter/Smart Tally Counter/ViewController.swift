@@ -45,6 +45,7 @@ extension UILabel {
 
 
 class ViewController: UIViewController {
+    var isGraphViewShowing = false
 
     var CountedNumber: Int = 0
     var lengthCountedNumber: Int = 0
@@ -54,7 +55,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let path = NSBundle.mainBundle().pathForResource("counting", ofType: "wav")
+        let path = NSBundle.mainBundle().pathForResource("counterclick", ofType: "m4a")
         let soundUrl = NSURL (fileURLWithPath: path!)
         
         do {
@@ -67,8 +68,9 @@ class ViewController: UIViewController {
         
     }
     
-    @IBOutlet weak var CurrentCount:
-    UILabel!
+    @IBOutlet weak var CurrentCount: UILabel!
+    @IBOutlet weak var graphView: UIView!
+    @IBOutlet weak var LenseView: UIView!
     
     @IBAction func AddCount(sender: UIButton) {
         CountedNumber = CountedNumber + 1
@@ -78,8 +80,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func ResetCount(sender: UIButton) {
-        CountedNumber = 0
-        SetCount (CountedNumber)
+            CountedNumber = 0
+            SetCount (CountedNumber)
+        
+        
     }
     
     @IBAction func MinusCount(sender: UIButton) {
@@ -91,10 +95,20 @@ class ViewController: UIViewController {
         playSound ()
     }
     
-    func SetCount (countnumb: Int) {
-        CurrentCount.text = String(countnumb)
+    func SetCount ( countnumb: Int) {
          CurrentCount.kerning = 15
-    
+        if countnumb < 10 {
+        CurrentCount.text = "000" + String(countnumb)
+        } else if countnumb < 100 && countnumb >= 10 {
+        CurrentCount.text = "00" + String(countnumb)
+        } else if countnumb < 1000 && countnumb >= 100 {
+            CurrentCount.text = "0" + String(countnumb)
+        } else if countnumb < 10000 && countnumb >= 1000 {
+            CurrentCount.text = String(countnumb)
+        } else if countnumb >= 10000 {
+            CurrentCount.text = "00000"
+            let countnumb = 0
+        }
     }
     
 
@@ -102,7 +116,7 @@ class ViewController: UIViewController {
     @IBAction func CopyCount(sender: UIButton) {
         let endTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .ShortStyle, timeStyle: .ShortStyle)
         
-        UIPasteboard.generalPasteboard().string = "Counted: " + String(CountedNumber) + " times " + "from \(startTime) to \(endTime)"
+        UIPasteboard.generalPasteboard().string = "Counted: " + String(CountedNumber) + " times " + " from \(startTime)" + " to \(endTime)." 
     }
     
     func playSound () {
@@ -112,8 +126,29 @@ class ViewController: UIViewController {
             countingSound.play()
         }
     }
-    
+    @IBAction func counterViewSwipe (gesture:UISwipeGestureRecognizer?) {
+        if (isGraphViewShowing) {
+            
+            //hide Graph
+            UIView.transitionFromView(graphView,
+                                      toView: LenseView,
+                                      duration: 1.0,
+                                      options: [UIViewAnimationOptions.TransitionFlipFromLeft, UIViewAnimationOptions.ShowHideTransitionViews],
+                                      completion:nil)
+            
+        } else {
+            
+            //show Graph
+            
+            // set hide for now setupGraphDisplay()
+            
+            UIView.transitionFromView(LenseView,
+                                      toView: graphView,
+                                      duration: 1.0,
+                                      options: [UIViewAnimationOptions.TransitionFlipFromLeft, UIViewAnimationOptions.ShowHideTransitionViews],
+                                      completion: nil)
+        }
+        isGraphViewShowing = !isGraphViewShowing
 }
 
-
-
+}
