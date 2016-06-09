@@ -43,22 +43,18 @@ support@forethink.nu
                                         <color key="textColor" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Coungtinghand" translatesAutoresizingMaskIntoConstraints="NO" id="TOw-Ah-jw4" userLabel="CounginghandImage">
-                                        <rect key="frame" x="50" y="64" width="150" height="200"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="OPq-TR-cc0"/>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="fDy-w0-YAL"/>
-                                        </constraints>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Coungtinghand" translatesAutoresizingMaskIntoConstraints="NO" id="1a9-1O-2Oo">
+                                        <rect key="frame" x="87" y="78" width="260" height="293"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="zpZ-OH-hhg" firstAttribute="leading" secondItem="zzO-b1-zJq" secondAttribute="leading" constant="50" id="0mL-XY-VlZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="TOw-Ah-jw4" secondAttribute="trailing" constant="150" id="1hp-ae-aLR"/>
+                                    <constraint firstItem="1a9-1O-2Oo" firstAttribute="centerY" secondItem="zzO-b1-zJq" secondAttribute="centerY" id="HZZ-NZ-yZt"/>
                                     <constraint firstItem="818-S3-5Mk" firstAttribute="centerY" secondItem="zzO-b1-zJq" secondAttribute="centerY" id="JbR-1Q-qXi"/>
                                     <constraint firstItem="818-S3-5Mk" firstAttribute="leading" secondItem="zzO-b1-zJq" secondAttribute="leading" constant="50" id="OcV-8V-Feb"/>
-                                    <constraint firstItem="TOw-Ah-jw4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zzO-b1-zJq" secondAttribute="leadingMargin" constant="50" id="bGV-Yq-AtI"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="1a9-1O-2Oo" secondAttribute="trailing" id="aFy-gm-R8B"/>
+                                    <constraint firstItem="1a9-1O-2Oo" firstAttribute="centerX" secondItem="zzO-b1-zJq" secondAttribute="centerX" id="fNG-ZE-DEW"/>
                                     <constraint firstAttribute="bottom" secondItem="zpZ-OH-hhg" secondAttribute="bottom" constant="50" id="hNm-Zj-Qrk"/>
-                                    <constraint firstItem="TOw-Ah-jw4" firstAttribute="top" secondItem="zzO-b1-zJq" secondAttribute="topMargin" constant="50" id="xeA-Mk-g7q"/>
                                 </constraints>
                             </view>
                         </subviews>
