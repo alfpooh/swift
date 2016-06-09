@@ -35,37 +35,56 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzO-b1-zJq">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Tally Counter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="818-S3-5Mk" userLabel="apptitle">
-                                        <rect key="frame" x="168" y="200" width="263" height="33.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Smart Tally Counter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="818-S3-5Mk" userLabel="apptitle">
+                                        <rect key="frame" x="8" y="89" width="584" height="150"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29506870567375887" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="zTD-Ex-Oog"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="28"/>
                                         <color key="textColor" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUX-4j-zq4" userLabel="Catches">
-                                        <rect key="frame" x="159" y="237" width="281" height="105"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpZ-OH-hhg" userLabel="Thanks">
+                                        <rect key="frame" x="-114" y="376" width="828" height="159"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29506870567375887" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="OnF-RF-1W2"/>
+                                        </constraints>
+                                        <string key="text">Thanks for using the Smart Tally Counter.  All app design including graphic, font, background, sound, and coding by Dr. Alf Bae. All Right Reserved. Forethink. 2016
+support@forethink.nu 
+</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUX-4j-zq4" userLabel="Catches">
+                                        <rect key="frame" x="8" y="237" width="584" height="105"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="3kh-LA-DTU"/>
+                                        </constraints>
                                         <string key="text">Easy and fast counting
 Export count to other app
 Visualized counting records
 </string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
-                                        <color key="textColor" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpZ-OH-hhg" userLabel="Thanks">
-                                        <rect key="frame" x="162" y="346" width="192" height="79"/>
-                                        <string key="text">Thanks for using the Smart Tally Counter.  All app design including graphic, font, background, sound, and coding by Dr. Alf Bae. All Right Reserved. Forethink. 2016
-support@forethink.nu 
-</string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="11"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                         <color key="textColor" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="wUX-4j-zq4" firstAttribute="centerX" secondItem="zzO-b1-zJq" secondAttribute="centerX" id="2z7-e1-xdY"/>
                                     <constraint firstItem="wUX-4j-zq4" firstAttribute="centerY" secondItem="zzO-b1-zJq" secondAttribute="centerY" id="6e3-3b-13c"/>
-                                    <constraint firstItem="818-S3-5Mk" firstAttribute="centerX" secondItem="zzO-b1-zJq" secondAttribute="centerX" id="itQ-Xe-rqK"/>
-                                    <constraint firstItem="818-S3-5Mk" firstAttribute="top" secondItem="zzO-b1-zJq" secondAttribute="top" constant="200" id="met-Rd-RQQ"/>
-                                    <constraint firstItem="wUX-4j-zq4" firstAttribute="centerX" secondItem="zzO-b1-zJq" secondAttribute="centerX" id="rb8-lw-1dn"/>
+                                    <constraint firstItem="wUX-4j-zq4" firstAttribute="leading" secondItem="zzO-b1-zJq" secondAttribute="leading" id="7WM-ar-YMj"/>
+                                    <constraint firstAttribute="trailing" secondItem="818-S3-5Mk" secondAttribute="trailing" id="NL0-qq-fY3"/>
+                                    <constraint firstItem="818-S3-5Mk" firstAttribute="leading" secondItem="zzO-b1-zJq" secondAttribute="leading" id="V5G-yq-D9P"/>
+                                    <constraint firstItem="818-S3-5Mk" firstAttribute="centerX" secondItem="zzO-b1-zJq" secondAttribute="centerX" id="YV9-k1-mRu"/>
+                                    <constraint firstAttribute="bottom" secondItem="zpZ-OH-hhg" secondAttribute="bottom" constant="50" id="c7q-Er-MS4"/>
+                                    <constraint firstItem="818-S3-5Mk" firstAttribute="top" secondItem="zzO-b1-zJq" secondAttribute="top" constant="100" id="met-Rd-RQQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="wUX-4j-zq4" secondAttribute="trailing" id="nV8-EB-lPE"/>
+                                    <constraint firstItem="zpZ-OH-hhg" firstAttribute="top" secondItem="wUX-4j-zq4" secondAttribute="bottom" constant="10" id="tVl-Vp-rbb"/>
+                                    <constraint firstItem="zpZ-OH-hhg" firstAttribute="centerX" secondItem="zzO-b1-zJq" secondAttribute="centerX" id="yS6-Qu-amR"/>
                                 </constraints>
                             </view>
                         </subviews>
