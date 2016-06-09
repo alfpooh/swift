@@ -30,8 +30,6 @@ class UniButtonView: UIButton {
         
         if self.tag == 1 {
             // Draw reset
-           
-            let plusDiameter: CGFloat = min(bounds.width, bounds.height) * 0.5
             let arcCenter = CGPoint(x: bounds.width/2, y: bounds.height/2)
             let radius = (bounds.width/2) * 0.4
             //create the path

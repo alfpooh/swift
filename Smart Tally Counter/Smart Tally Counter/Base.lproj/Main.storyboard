@@ -23,53 +23,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FAc-w0-Bf4" userLabel="LensesView">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FAc-w0-Bf4" userLabel="LensGroup">
                                 <rect key="frame" x="180" y="100" width="300" height="300"/>
                                 <subviews>
-                                    <view tag="100" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6y1-Ot-vPQ" userLabel="LenseView">
+                                    <view tag="100" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6y1-Ot-vPQ" userLabel="LenseView" customClass="UniLensView" customModule="Smart_Tally_Counter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="lens" translatesAutoresizingMaskIntoConstraints="NO" id="SoG-yH-nSw">
+                                            <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkC-hL-JXS" userLabel="Lever">
                                                 <rect key="frame" x="25" y="25" width="250" height="250"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="250" id="CJL-Cy-dvb"/>
-                                                    <constraint firstAttribute="height" constant="250" id="SRe-8W-Cd3"/>
-                                                </constraints>
-                                            </imageView>
-                                            <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkC-hL-JXS" userLabel="Lever">
-                                                <rect key="frame" x="25" y="25" width="250" height="250"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="250" id="LzB-ue-RrE"/>
-                                                    <constraint firstAttribute="width" constant="250" id="jxp-Xx-9fO"/>
-                                                </constraints>
-                                                <state key="normal" image="lens"/>
                                                 <connections>
                                                     <action selector="AddCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQy-YU-fxN"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="TAP ME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbk-4F-ycg" userLabel="Numbcounter">
-                                                <rect key="frame" x="33" y="110" width="233" height="60"/>
+                                                <rect key="frame" x="33" y="110" width="248" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="260" id="AMo-cB-YmA"/>
+                                                    <constraint firstAttribute="height" constant="60" id="ihq-W4-bpC"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="65"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="HkC-hL-JXS" firstAttribute="centerX" secondItem="6y1-Ot-vPQ" secondAttribute="centerX" id="Qb6-l7-1BR"/>
-                                            <constraint firstItem="SoG-yH-nSw" firstAttribute="centerY" secondItem="6y1-Ot-vPQ" secondAttribute="centerY" id="Wx9-kP-LoL"/>
-                                            <constraint firstItem="bbk-4F-ycg" firstAttribute="centerY" secondItem="6y1-Ot-vPQ" secondAttribute="centerY" constant="-10" id="a4t-7X-50j"/>
-                                            <constraint firstAttribute="trailing" secondItem="bbk-4F-ycg" secondAttribute="trailing" constant="30" id="lIh-e7-aCu"/>
-                                            <constraint firstItem="SoG-yH-nSw" firstAttribute="centerX" secondItem="6y1-Ot-vPQ" secondAttribute="centerX" id="x1U-SE-aqa"/>
-                                            <constraint firstItem="HkC-hL-JXS" firstAttribute="centerY" secondItem="6y1-Ot-vPQ" secondAttribute="centerY" id="xVA-95-wYE"/>
+                                            <constraint firstItem="bbk-4F-ycg" firstAttribute="centerY" secondItem="6y1-Ot-vPQ" secondAttribute="centerY" constant="-10" id="AT1-Lu-aB7"/>
+                                            <constraint firstItem="bbk-4F-ycg" firstAttribute="centerX" secondItem="6y1-Ot-vPQ" secondAttribute="centerX" id="sxG-BT-Luk"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="lensfillColor">
+                                                <color key="value" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="lensstrokeColor">
+                                                <color key="value" red="0.44666230369999999" green="0.082882337809999998" blue="0.33949620190000002" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iPl-VV-Hcb" userLabel="graphView" customClass="GraphView" customModule="Smart_Tally_Counter" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                    <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iPl-VV-Hcb" userLabel="graphView" customClass="GraphView" customModule="Smart_Tally_Counter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzQ-8Z-GtW">
-                                                <rect key="frame" x="8" y="49" width="200" height="227"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzQ-8Z-GtW">
+                                                <rect key="frame" x="8" y="49" width="194" height="227"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="200" id="dSZ-RM-oWZ"/>
+                                                    <constraint firstAttribute="width" constant="200" id="5r1-2Q-mt0"/>
+                                                    <constraint firstAttribute="height" constant="100" id="nda-Gc-Ox6"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -78,10 +76,12 @@
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.90667354292454849" blue="0.95172601546589264" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="0ZD-Ml-QSi"/>
-                                            <constraint firstItem="KzQ-8Z-GtW" firstAttribute="centerX" secondItem="iPl-VV-Hcb" secondAttribute="centerX" id="6qt-UX-YFu"/>
-                                            <constraint firstAttribute="height" constant="250" id="Knd-HR-3jQ"/>
-                                            <constraint firstItem="KzQ-8Z-GtW" firstAttribute="centerY" secondItem="iPl-VV-Hcb" secondAttribute="centerY" id="Xai-2L-gKB"/>
+                                            <constraint firstItem="KzQ-8Z-GtW" firstAttribute="centerY" secondItem="iPl-VV-Hcb" secondAttribute="centerY" id="76q-qt-YIO"/>
+                                            <constraint firstItem="KzQ-8Z-GtW" firstAttribute="centerY" secondItem="iPl-VV-Hcb" secondAttribute="centerY" id="HwN-FX-mVc"/>
+                                            <constraint firstItem="KzQ-8Z-GtW" firstAttribute="centerX" secondItem="iPl-VV-Hcb" secondAttribute="centerX" id="IxV-xz-ymd"/>
+                                            <constraint firstAttribute="height" constant="300" id="g8c-15-xE0"/>
+                                            <constraint firstAttribute="width" constant="300" id="hJf-GZ-IH2"/>
+                                            <constraint firstItem="KzQ-8Z-GtW" firstAttribute="centerX" secondItem="iPl-VV-Hcb" secondAttribute="centerX" id="uhN-4K-b5n"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="graphColor">
@@ -97,10 +97,8 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="73h-ul-1sz"/>
-                                    <constraint firstItem="iPl-VV-Hcb" firstAttribute="centerY" secondItem="FAc-w0-Bf4" secondAttribute="centerY" id="DYH-Om-MaA"/>
-                                    <constraint firstAttribute="width" constant="300" id="gzN-dJ-jMb"/>
-                                    <constraint firstItem="iPl-VV-Hcb" firstAttribute="centerX" secondItem="FAc-w0-Bf4" secondAttribute="centerX" id="ior-4P-Ypa"/>
+                                    <constraint firstAttribute="height" constant="300" id="0bG-rX-uqm"/>
+                                    <constraint firstAttribute="width" constant="300" id="4HG-5u-emy"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="c6a-1u-hcb" appends="YES" id="jvv-A5-d2i"/>
@@ -111,10 +109,6 @@
                                 <subviews>
                                     <button opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO3-hE-Osc" userLabel="Export" customClass="UniButtonView" customModule="Smart_Tally_Counter" customModuleProvider="target">
                                         <rect key="frame" x="124" y="19" width="90" height="90"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="bTx-S4-cVb"/>
-                                            <constraint firstAttribute="width" constant="80" id="tM8-Wj-rzL"/>
-                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
                                                 <color key="value" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
@@ -136,10 +130,6 @@
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6G-a9-FPK" userLabel="Minus" customClass="UniButtonView" customModule="Smart_Tally_Counter" customModuleProvider="target">
                                         <rect key="frame" x="282" y="19" width="90" height="90"/>
                                         <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="PCv-ro-4OM"/>
-                                            <constraint firstAttribute="width" constant="80" id="uY4-ac-ZZ2"/>
-                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
@@ -158,10 +148,6 @@
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7Z-dS-Qfq" userLabel="Reset" customClass="UniButtonView" customModule="Smart_Tally_Counter" customModuleProvider="target">
                                         <rect key="frame" x="455" y="19" width="88" height="88"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="bwo-MY-J0u"/>
-                                            <constraint firstAttribute="height" constant="80" id="t41-DL-AK8"/>
-                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
                                                 <color key="value" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
@@ -179,12 +165,12 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="s7Z-dS-Qfq" firstAttribute="centerY" secondItem="ksg-1a-s3t" secondAttribute="centerY" id="1GQ-Hh-hKL"/>
-                                    <constraint firstItem="A6G-a9-FPK" firstAttribute="centerY" secondItem="ksg-1a-s3t" secondAttribute="centerY" id="5s7-Fv-dI2"/>
-                                    <constraint firstItem="oO3-hE-Osc" firstAttribute="centerY" secondItem="ksg-1a-s3t" secondAttribute="centerY" id="8YJ-5a-wZo"/>
-                                    <constraint firstItem="oO3-hE-Osc" firstAttribute="trailing" secondItem="A6G-a9-FPK" secondAttribute="leading" constant="-40" id="PEu-PQ-jV5"/>
-                                    <constraint firstItem="A6G-a9-FPK" firstAttribute="centerX" secondItem="ksg-1a-s3t" secondAttribute="centerX" id="mGQ-qr-VRY"/>
-                                    <constraint firstItem="s7Z-dS-Qfq" firstAttribute="leading" secondItem="A6G-a9-FPK" secondAttribute="trailing" constant="40" id="mpH-kl-A3n"/>
+                                    <constraint firstItem="s7Z-dS-Qfq" firstAttribute="leading" secondItem="A6G-a9-FPK" secondAttribute="trailing" constant="30" id="7ee-em-P55"/>
+                                    <constraint firstItem="oO3-hE-Osc" firstAttribute="centerY" secondItem="ksg-1a-s3t" secondAttribute="centerY" id="ADV-5S-Ho7"/>
+                                    <constraint firstItem="A6G-a9-FPK" firstAttribute="centerX" secondItem="ksg-1a-s3t" secondAttribute="centerX" id="C4H-bY-uWJ"/>
+                                    <constraint firstItem="A6G-a9-FPK" firstAttribute="leading" secondItem="oO3-hE-Osc" secondAttribute="trailing" constant="30" id="F75-Uv-YEX"/>
+                                    <constraint firstItem="A6G-a9-FPK" firstAttribute="centerY" secondItem="ksg-1a-s3t" secondAttribute="centerY" id="OfN-2Q-wm7"/>
+                                    <constraint firstItem="s7Z-dS-Qfq" firstAttribute="centerY" secondItem="ksg-1a-s3t" secondAttribute="centerY" id="b1i-kf-rdx"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YB6-f6-69P" userLabel="LowerButtonView">
@@ -192,10 +178,6 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxK-yb-Ugf" userLabel="Voice" customClass="UniButtonView" customModule="Smart_Tally_Counter" customModuleProvider="target">
                                         <rect key="frame" x="304" y="8" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="f5x-Xm-fcN"/>
-                                            <constraint firstAttribute="width" constant="50" id="kUU-O9-yFj"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="13"/>
                                         <state key="normal" title="VOICE">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -211,23 +193,19 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="pxK-yb-Ugf" firstAttribute="centerY" secondItem="YB6-f6-69P" secondAttribute="centerY" id="Q8W-Nf-NLD"/>
-                                    <constraint firstAttribute="centerX" secondItem="pxK-yb-Ugf" secondAttribute="centerX" id="wZB-Ni-eUc"/>
+                                    <constraint firstItem="pxK-yb-Ugf" firstAttribute="centerY" secondItem="YB6-f6-69P" secondAttribute="centerY" id="95r-vM-nog"/>
+                                    <constraint firstItem="pxK-yb-Ugf" firstAttribute="centerX" secondItem="YB6-f6-69P" secondAttribute="centerX" id="nub-nR-IHd"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YB6-f6-69P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3JJ-Ch-CQd"/>
-                            <constraint firstItem="FAc-w0-Bf4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Wa-ZQ-uhw"/>
-                            <constraint firstItem="YB6-f6-69P" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="CX6-e0-Fvy"/>
-                            <constraint firstItem="FAc-w0-Bf4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="LY6-TO-8Fl"/>
-                            <constraint firstItem="ksg-1a-s3t" firstAttribute="top" secondItem="FAc-w0-Bf4" secondAttribute="bottom" constant="15" id="OUh-5j-aoQ"/>
-                            <constraint firstItem="YB6-f6-69P" firstAttribute="top" secondItem="ksg-1a-s3t" secondAttribute="bottom" constant="15" id="VPu-J2-nHy"/>
-                            <constraint firstItem="ksg-1a-s3t" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="aF0-2h-DHa"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YB6-f6-69P" secondAttribute="bottom" constant="15" id="giF-1E-qTL"/>
-                            <constraint firstItem="YB6-f6-69P" firstAttribute="top" secondItem="ksg-1a-s3t" secondAttribute="bottom" constant="15" id="t8l-GP-stL"/>
-                            <constraint firstItem="ksg-1a-s3t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vf4-8y-3x6"/>
+                            <constraint firstItem="FAc-w0-Bf4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ENZ-lH-M8M"/>
+                            <constraint firstItem="ksg-1a-s3t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LUs-io-ipQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YB6-f6-69P" secondAttribute="bottom" constant="50" id="Muv-j4-NYd"/>
+                            <constraint firstItem="YB6-f6-69P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PLB-mU-639"/>
+                            <constraint firstItem="YB6-f6-69P" firstAttribute="top" secondItem="ksg-1a-s3t" secondAttribute="bottom" constant="50" id="cTT-dr-EVh"/>
+                            <constraint firstItem="FAc-w0-Bf4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-120" id="iWW-V5-HIm"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -267,7 +245,4 @@
             <point key="canvasLocation" x="245" y="316"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="lens" width="272" height="272"/>
-    </resources>
 </document>
