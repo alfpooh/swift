@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,97 +18,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Vi-uV-9Mr" userLabel="background">
-                                <rect key="frame" x="0.0" y="32" width="600" height="568"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TallyCounterLoading.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xa1-22-CTA">
-                                        <rect key="frame" x="9" y="0.0" width="582" height="568"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="xa1-22-CTA" secondAttribute="bottom" id="3Yp-pK-tOf"/>
-                                    <constraint firstItem="xa1-22-CTA" firstAttribute="top" secondItem="9Vi-uV-9Mr" secondAttribute="top" id="9ef-4B-rgl"/>
-                                    <constraint firstItem="xa1-22-CTA" firstAttribute="leading" secondItem="9Vi-uV-9Mr" secondAttribute="leading" constant="9" id="D4g-7F-ci4"/>
-                                    <constraint firstAttribute="trailing" secondItem="xa1-22-CTA" secondAttribute="trailing" constant="9" id="kTn-TI-TC9"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzO-b1-zJq">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Smart Tally Counter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="818-S3-5Mk" userLabel="apptitle">
-                                        <rect key="frame" x="8" y="89" width="584" height="150"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29506870567375887" colorSpace="calibratedRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpZ-OH-hhg" userLabel="Thanks">
+                                        <rect key="frame" x="50" y="438" width="250" height="92"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="zTD-Ex-Oog"/>
+                                            <constraint firstAttribute="width" constant="250" id="Mqx-q8-frl"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="28"/>
-                                        <color key="textColor" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpZ-OH-hhg" userLabel="Thanks">
-                                        <rect key="frame" x="-114" y="376" width="828" height="159"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29506870567375887" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="130" id="OnF-RF-1W2"/>
-                                        </constraints>
-                                        <string key="text">Thanks for using the Smart Tally Counter.  All app design including graphic, font, background, sound, and coding by Dr. Alf Bae. All Right Reserved. Forethink. 2016
+                                        <string key="text">Thanks for using the Smart Tally Counter.  All app design including graphic, font, background, sound, and coding by Dr. Alf. All Right Reserved. Forethink. 2016
 support@forethink.nu 
 </string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="18"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUX-4j-zq4" userLabel="Catches">
-                                        <rect key="frame" x="8" y="237" width="584" height="105"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="3kh-LA-DTU"/>
-                                        </constraints>
-                                        <string key="text">Easy and fast counting
-Export count to other app
-Visualized counting records
-</string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="16"/>
                                         <color key="textColor" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Tally Counter" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="818-S3-5Mk" userLabel="apptitle">
+                                        <rect key="frame" x="50" y="232" width="85" height="115"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="115" id="gfV-OK-8RH"/>
+                                            <constraint firstAttribute="width" constant="85" id="mcj-85-Kqf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Coungtinghand" translatesAutoresizingMaskIntoConstraints="NO" id="TOw-Ah-jw4" userLabel="CounginghandImage">
+                                        <rect key="frame" x="50" y="64" width="150" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="OPq-TR-cc0"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="fDy-w0-YAL"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="wUX-4j-zq4" firstAttribute="centerX" secondItem="zzO-b1-zJq" secondAttribute="centerX" id="2z7-e1-xdY"/>
-                                    <constraint firstItem="wUX-4j-zq4" firstAttribute="centerY" secondItem="zzO-b1-zJq" secondAttribute="centerY" id="6e3-3b-13c"/>
-                                    <constraint firstItem="wUX-4j-zq4" firstAttribute="leading" secondItem="zzO-b1-zJq" secondAttribute="leading" id="7WM-ar-YMj"/>
-                                    <constraint firstAttribute="trailing" secondItem="818-S3-5Mk" secondAttribute="trailing" id="NL0-qq-fY3"/>
-                                    <constraint firstItem="818-S3-5Mk" firstAttribute="leading" secondItem="zzO-b1-zJq" secondAttribute="leading" id="V5G-yq-D9P"/>
-                                    <constraint firstItem="818-S3-5Mk" firstAttribute="centerX" secondItem="zzO-b1-zJq" secondAttribute="centerX" id="YV9-k1-mRu"/>
-                                    <constraint firstAttribute="bottom" secondItem="zpZ-OH-hhg" secondAttribute="bottom" constant="50" id="c7q-Er-MS4"/>
-                                    <constraint firstItem="818-S3-5Mk" firstAttribute="top" secondItem="zzO-b1-zJq" secondAttribute="top" constant="100" id="met-Rd-RQQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="wUX-4j-zq4" secondAttribute="trailing" id="nV8-EB-lPE"/>
-                                    <constraint firstItem="zpZ-OH-hhg" firstAttribute="top" secondItem="wUX-4j-zq4" secondAttribute="bottom" constant="10" id="tVl-Vp-rbb"/>
-                                    <constraint firstItem="zpZ-OH-hhg" firstAttribute="centerX" secondItem="zzO-b1-zJq" secondAttribute="centerX" id="yS6-Qu-amR"/>
+                                    <constraint firstItem="zpZ-OH-hhg" firstAttribute="leading" secondItem="zzO-b1-zJq" secondAttribute="leading" constant="50" id="0mL-XY-VlZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="TOw-Ah-jw4" secondAttribute="trailing" constant="150" id="1hp-ae-aLR"/>
+                                    <constraint firstItem="818-S3-5Mk" firstAttribute="centerY" secondItem="zzO-b1-zJq" secondAttribute="centerY" id="JbR-1Q-qXi"/>
+                                    <constraint firstItem="818-S3-5Mk" firstAttribute="leading" secondItem="zzO-b1-zJq" secondAttribute="leading" constant="50" id="OcV-8V-Feb"/>
+                                    <constraint firstItem="TOw-Ah-jw4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zzO-b1-zJq" secondAttribute="leadingMargin" constant="50" id="bGV-Yq-AtI"/>
+                                    <constraint firstAttribute="bottom" secondItem="zpZ-OH-hhg" secondAttribute="bottom" constant="50" id="hNm-Zj-Qrk"/>
+                                    <constraint firstItem="TOw-Ah-jw4" firstAttribute="top" secondItem="zzO-b1-zJq" secondAttribute="topMargin" constant="50" id="xeA-Mk-g7q"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="zzO-b1-zJq" secondAttribute="bottom" id="FTr-VR-7FV"/>
-                            <constraint firstItem="9Vi-uV-9Mr" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="IUJ-8b-hBQ"/>
-                            <constraint firstItem="zzO-b1-zJq" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="JDa-tw-c32"/>
-                            <constraint firstAttribute="trailing" secondItem="zzO-b1-zJq" secondAttribute="trailing" id="JuQ-hY-5kE"/>
-                            <constraint firstItem="9Vi-uV-9Mr" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="12" id="PB3-E9-3Aj"/>
-                            <constraint firstItem="9Vi-uV-9Mr" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="RZV-rt-Ok1"/>
-                            <constraint firstItem="zzO-b1-zJq" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ctu-1L-qJw"/>
-                            <constraint firstItem="9Vi-uV-9Mr" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="uPc-ld-BcT"/>
-                            <constraint firstItem="9Vi-uV-9Mr" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="zQS-mV-GG1"/>
+                            <constraint firstAttribute="trailing" secondItem="zzO-b1-zJq" secondAttribute="trailing" id="OKb-UL-fk6"/>
+                            <constraint firstItem="zzO-b1-zJq" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="bBQ-4l-bPb"/>
+                            <constraint firstItem="zzO-b1-zJq" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="c5C-hh-OvY"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="zzO-b1-zJq" secondAttribute="bottom" id="ivh-9b-GNF"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-39" y="347"/>
+            <point key="canvasLocation" x="-39" y="263"/>
         </scene>
     </scenes>
     <resources>
-        <image name="TallyCounterLoading.jpg" width="893" height="1457"/>
+        <image name="Coungtinghand" width="310" height="431"/>
     </resources>
 </document>

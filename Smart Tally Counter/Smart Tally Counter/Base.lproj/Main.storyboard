@@ -109,7 +109,7 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ksg-1a-s3t" userLabel="HighierButtonView">
                                 <rect key="frame" x="0.0" y="400" width="600" height="128"/>
                                 <subviews>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO3-hE-Osc" userLabel="Export" customClass="UniButtonView" customModule="Smart_Tally_Counter" customModuleProvider="target">
+                                    <button opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO3-hE-Osc" userLabel="Export" customClass="UniButtonView" customModule="Smart_Tally_Counter" customModuleProvider="target">
                                         <rect key="frame" x="124" y="19" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="bTx-S4-cVb"/>
