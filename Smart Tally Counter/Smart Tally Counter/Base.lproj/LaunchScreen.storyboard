@@ -33,28 +33,28 @@ support@forethink.nu
                                         <color key="textColor" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Tally Counter" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="818-S3-5Mk" userLabel="apptitle">
-                                        <rect key="frame" x="50" y="232" width="85" height="115"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="115" id="gfV-OK-8RH"/>
-                                            <constraint firstAttribute="width" constant="85" id="mcj-85-Kqf"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="22"/>
-                                        <color key="textColor" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Coungtinghand" translatesAutoresizingMaskIntoConstraints="NO" id="1a9-1O-2Oo">
                                         <rect key="frame" x="87" y="78" width="260" height="293"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Smart Tally Counter" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="818-S3-5Mk" userLabel="apptitle">
+                                        <rect key="frame" x="50" y="8" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="gfV-OK-8RH"/>
+                                            <constraint firstAttribute="width" constant="100" id="mcj-85-Kqf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
+                                        <color key="textColor" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="zpZ-OH-hhg" firstAttribute="leading" secondItem="zzO-b1-zJq" secondAttribute="leading" constant="50" id="0mL-XY-VlZ"/>
                                     <constraint firstItem="1a9-1O-2Oo" firstAttribute="centerY" secondItem="zzO-b1-zJq" secondAttribute="centerY" id="HZZ-NZ-yZt"/>
-                                    <constraint firstItem="818-S3-5Mk" firstAttribute="centerY" secondItem="zzO-b1-zJq" secondAttribute="centerY" id="JbR-1Q-qXi"/>
                                     <constraint firstItem="818-S3-5Mk" firstAttribute="leading" secondItem="zzO-b1-zJq" secondAttribute="leading" constant="50" id="OcV-8V-Feb"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="1a9-1O-2Oo" secondAttribute="trailing" id="aFy-gm-R8B"/>
                                     <constraint firstItem="1a9-1O-2Oo" firstAttribute="centerX" secondItem="zzO-b1-zJq" secondAttribute="centerX" id="fNG-ZE-DEW"/>
                                     <constraint firstAttribute="bottom" secondItem="zpZ-OH-hhg" secondAttribute="bottom" constant="50" id="hNm-Zj-Qrk"/>
+                                    <constraint firstItem="818-S3-5Mk" firstAttribute="top" secondItem="zzO-b1-zJq" secondAttribute="top" constant="50" id="lJl-Ew-Kzh"/>
                                 </constraints>
                             </view>
                         </subviews>

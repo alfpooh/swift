@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     let synth = AVSpeechSynthesizer()
     var sayCount = AVSpeechUtterance(string: "")
     var soundMute = false
-
+    var countLog = [Int]()
     var CountedNumber: Int = 0
     var lengthCountedNumber: Int = 0
     var countingSound: AVAudioPlayer!
@@ -88,8 +88,7 @@ class ViewController: UIViewController {
     @IBAction func ResetCount(sender: UIButton) {
             CountedNumber = 0
             SetCount (CountedNumber)
-        
-        
+            countlogging (CountedNumber)
     }
     
     @IBAction func MinusCount(sender: UIButton) {
@@ -99,6 +98,21 @@ class ViewController: UIViewController {
         }
         SetCount (CountedNumber)
         playSound ()
+    }
+    
+    func ResetCountf () {
+        countlogging (CountedNumber)
+        CountedNumber = 0
+        SetCount (CountedNumber)
+    }
+    
+    func countlogging (countforlog: Int) {
+        
+        if countLog.count == 10 {
+            countLog.removeAtIndex(0)
+            countLog.append(countforlog)}
+        else {
+            countLog.append(countforlog)}
     }
     
     func SetCount ( countnumb: Int) {
@@ -119,12 +133,6 @@ class ViewController: UIViewController {
     
 
     
-    @IBAction func CopyCount(sender: UIButton) {
-        let endTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .ShortStyle, timeStyle: .ShortStyle)
-        
-        UIPasteboard.generalPasteboard().string = "Counted: " + String(CountedNumber) + " times " + " from \(startTime)" + " to \(endTime)." 
-    }
-    
     func playSound () {
         if !soundMute {
         if countingSound.playing {
@@ -143,6 +151,15 @@ class ViewController: UIViewController {
     }
 
 
+
+    @IBAction func LogExport(sender: AnyObject) {
+        let endTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .ShortStyle, timeStyle: .ShortStyle)
+        
+        UIPasteboard.generalPasteboard().string = "Counted: " + String(CountedNumber) + " times " + " from \(startTime)" + " to \(endTime)."
+
+    playSound()
+        
+    }
     
 
         

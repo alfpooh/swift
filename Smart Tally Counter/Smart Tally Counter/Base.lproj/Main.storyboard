@@ -66,8 +66,8 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzQ-8Z-GtW">
                                                 <rect key="frame" x="8" y="49" width="194" height="227"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="200" id="5r1-2Q-mt0"/>
-                                                    <constraint firstAttribute="height" constant="100" id="nda-Gc-Ox6"/>
+                                                    <constraint firstAttribute="width" constant="240" id="5r1-2Q-mt0"/>
+                                                    <constraint firstAttribute="height" constant="140" id="nda-Gc-Ox6"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -107,26 +107,6 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ksg-1a-s3t" userLabel="HighierButtonView">
                                 <rect key="frame" x="0.0" y="400" width="600" height="128"/>
                                 <subviews>
-                                    <button opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO3-hE-Osc" userLabel="Export" customClass="UniButtonView" customModule="Smart_Tally_Counter" customModuleProvider="target">
-                                        <rect key="frame" x="124" y="19" width="90" height="90"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor2">
-                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="CopyCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="amz-Xw-bWb"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6G-a9-FPK" userLabel="Minus" customClass="UniButtonView" customModule="Smart_Tally_Counter" customModuleProvider="target">
                                         <rect key="frame" x="282" y="19" width="90" height="90"/>
                                         <gestureRecognizers/>
@@ -163,22 +143,36 @@
                                             <action selector="ResetCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EjK-uZ-Z6l"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bv9-zR-eu8" customClass="UniButtonView" customModule="Smart_Tally_Counter" customModuleProvider="target">
+                                        <rect key="frame" x="124" y="22" width="90" height="90"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="LogExport:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FWp-KG-fEc"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="s7Z-dS-Qfq" firstAttribute="leading" secondItem="A6G-a9-FPK" secondAttribute="trailing" constant="30" id="7ee-em-P55"/>
-                                    <constraint firstItem="oO3-hE-Osc" firstAttribute="centerY" secondItem="ksg-1a-s3t" secondAttribute="centerY" id="ADV-5S-Ho7"/>
                                     <constraint firstItem="A6G-a9-FPK" firstAttribute="centerX" secondItem="ksg-1a-s3t" secondAttribute="centerX" id="C4H-bY-uWJ"/>
-                                    <constraint firstItem="A6G-a9-FPK" firstAttribute="leading" secondItem="oO3-hE-Osc" secondAttribute="trailing" constant="30" id="F75-Uv-YEX"/>
                                     <constraint firstItem="A6G-a9-FPK" firstAttribute="centerY" secondItem="ksg-1a-s3t" secondAttribute="centerY" id="OfN-2Q-wm7"/>
                                     <constraint firstItem="s7Z-dS-Qfq" firstAttribute="centerY" secondItem="ksg-1a-s3t" secondAttribute="centerY" id="b1i-kf-rdx"/>
+                                    <constraint firstItem="Bv9-zR-eu8" firstAttribute="centerY" secondItem="ksg-1a-s3t" secondAttribute="centerY" id="uLr-kP-sXK"/>
+                                    <constraint firstItem="A6G-a9-FPK" firstAttribute="leading" secondItem="Bv9-zR-eu8" secondAttribute="trailing" constant="30" id="xCD-vJ-qsf"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YB6-f6-69P" userLabel="LowerButtonView">
                                 <rect key="frame" x="0.0" y="530" width="600" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxK-yb-Ugf" userLabel="Voice" customClass="UniButtonView" customModule="Smart_Tally_Counter" customModuleProvider="target">
-                                        <rect key="frame" x="304" y="8" width="50" height="50"/>
-                                        <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="13"/>
+                                        <rect key="frame" x="304" y="8" width="70" height="70"/>
+                                        <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="19"/>
                                         <state key="normal" title="VOICE">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
