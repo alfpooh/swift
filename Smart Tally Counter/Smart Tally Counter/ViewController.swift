@@ -156,7 +156,6 @@ class ViewController: UIViewController {
         let endTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .ShortStyle, timeStyle: .ShortStyle)
         
         UIPasteboard.generalPasteboard().string = "Counted: " + String(CountedNumber) + " times " + " from \(startTime)" + " to \(endTime)."
-
     playSound()
         
     }
