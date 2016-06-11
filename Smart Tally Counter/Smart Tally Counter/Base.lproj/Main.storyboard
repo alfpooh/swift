@@ -194,13 +194,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ksg-1a-s3t" firstAttribute="top" relation="greaterThanOrEqual" secondItem="FAc-w0-Bf4" secondAttribute="bottom" constant="10" id="Adp-f8-d88"/>
+                            <constraint firstItem="ksg-1a-s3t" firstAttribute="top" relation="lessThanOrEqual" secondItem="FAc-w0-Bf4" secondAttribute="bottom" constant="10" id="Adp-f8-d88"/>
                             <constraint firstItem="FAc-w0-Bf4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ENZ-lH-M8M"/>
                             <constraint firstItem="ksg-1a-s3t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LUs-io-ipQ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YB6-f6-69P" secondAttribute="bottom" constant="50" id="Muv-j4-NYd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="YB6-f6-69P" secondAttribute="bottom" priority="750" constant="20" id="Muv-j4-NYd"/>
                             <constraint firstItem="YB6-f6-69P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PLB-mU-639"/>
-                            <constraint firstItem="YB6-f6-69P" firstAttribute="top" secondItem="ksg-1a-s3t" secondAttribute="bottom" constant="2" id="fiO-J5-GNg"/>
-                            <constraint firstItem="FAc-w0-Bf4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-120" id="iWW-V5-HIm"/>
+                            <constraint firstItem="YB6-f6-69P" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ksg-1a-s3t" secondAttribute="bottom" priority="750" constant="5" id="fiO-J5-GNg"/>
+                            <constraint firstItem="FAc-w0-Bf4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-170" id="iWW-V5-HIm"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
