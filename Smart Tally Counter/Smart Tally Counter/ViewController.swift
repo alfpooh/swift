@@ -198,10 +198,11 @@ class ViewController: UIViewController {
         let elapsedTime = NSDate().timeIntervalSinceDate(endTime)
         let datecomponenets = calendar.components(NSCalendarUnit.Second, fromDate:startTimestamp, toDate:endTime, options: [])
         let seconds = datecomponenets.second
-        print("Seconds: \(seconds)")
+        var perMin = Float(Float(CountedNumber)/(Float(seconds)/60))
         
         
-        UIPasteboard.generalPasteboard().string = "Counted: " + String(CountedNumber) + " times " + " for \(seconds) seconds , from \(startTime)"
+        
+        UIPasteboard.generalPasteboard().string = "Counted: " + String(CountedNumber) + " times " + " for \(seconds) seconds , from \(startTime) , \(perMin) per a minutes."
         playSound()
     }
 
