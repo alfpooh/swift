@@ -50,6 +50,7 @@ class ViewController: UIViewController {
     var sayCount = AVSpeechUtterance(string: "")
     var soundMute = false
     var countLog = [Int]()
+    var countperminLog = [Float]()
     var CountedNumber: Int = 0
     var lengthCountedNumber: Int = 0
     var countingSound: AVAudioPlayer!
@@ -113,15 +114,23 @@ class ViewController: UIViewController {
     }
     
     func countlogging (countforlog: Int) {
-        
+        var CountlogperMin = countperMin(countforlog)
         if countLog.count == 6 {
             countLog.removeAtIndex(0)
             countLog.append(countforlog)
-        print ("first array deleted and add this: \(countforlog)")
+        //print ("first array deleted and add this: \(countforlog)")
             Abouttext.text = ""}
         else {
             countLog.append(countforlog)
     }
+        if countperminLog.count == 6 {
+            countperminLog.removeAtIndex(0)
+            countperminLog.append(CountlogperMin)
+            //print ("first array deleted and add this: \(countforlog)")
+            }
+        else {
+            countperminLog.append(CountlogperMin)
+        }
     
 }
     
@@ -200,10 +209,12 @@ class ViewController: UIViewController {
             if countLog.count == 0 {
             numberofLog = countLog.count
                 logtext = "No count log."
-            } else {numberofLog = countLog.count - 1
+            } else {
+            
+                numberofLog = countLog.count - 1
                 
             for countindex in 0...numberofLog {
-                    logtext = logtext + ("Lap no. \(countindex) : \(countLog[countindex])\n")
+                    logtext = logtext + ("Lap \(countindex) : \(countLog[countindex]) permin: \(countperminLog[countindex]) for \((Float(countLog[countindex])*60)/countperminLog[countindex]) secs.\n")
                 }}
 
         }
@@ -231,24 +242,34 @@ class ViewController: UIViewController {
                                       duration: 1.0,
                                       options: [UIViewAnimationOptions.TransitionFlipFromRight, UIViewAnimationOptions.ShowHideTransitionViews],
                                       completion: nil)
-            Abouttext.text = "Thanks for using the Smart Tally Counter.\n\r All app design including graphic, font, background, sound, and coding \n by Dr. Alf Bae.\n\r All Right Reserved. Forethink. 2016\r support@forethink.nu "
+            Abouttext.text = "All app design including graphic, font, background, sound, and coding \n by Dr. Alf.\n\r All Right Reserved. Forethink. 2016\r support@forethink.nu "
         }
         isGraphViewShowing = !isGraphViewShowing
     }
-
-    
-    func copytoclipboard() {
-    
+    func countperMin (countedpara: Int) -> Float{
         let endTime = NSDate()
         let calendar = NSCalendar.currentCalendar()
         let elapsedTime = NSDate().timeIntervalSinceDate(endTime)
         let datecomponenets = calendar.components(NSCalendarUnit.Second, fromDate:startTimestamp, toDate:endTime, options: [])
         let seconds = datecomponenets.second
-        var perMin = Float(Float(CountedNumber)/(Float(seconds)/60))
+        var perMin = Float(Float(countedpara)/(Float(seconds)/60))
+        return perMin
+    }
+    
+    func copytoclipboard() {
+        let endTime = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let elapsedTime = NSDate().timeIntervalSinceDate(endTime)
+        let datecomponenets = calendar.components(NSCalendarUnit.Second, fromDate:startTimestamp, toDate:endTime, options: [])
+        let seconds = datecomponenets.second
+
+        //let seconds = datecomponenets.second
+        
+        //var perMin = Float(Float(CountedNumber)/(Float(seconds)/60))
+        var CountlogperMin = countperMin(CountedNumber)
         
         
-        
-        UIPasteboard.generalPasteboard().string = "Counted: " + String(CountedNumber) + " times " + " for \(seconds) seconds , from \(startTime) , \(perMin) per a minutes."
+        UIPasteboard.generalPasteboard().string = "Counted: " + String(CountedNumber) + " times " + " for \(seconds) seconds , from \(startTime) , \(CountlogperMin ) per a minutes."
         playSound()
     }
 
