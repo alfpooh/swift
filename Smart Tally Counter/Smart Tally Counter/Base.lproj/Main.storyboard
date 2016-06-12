@@ -151,7 +151,7 @@
                                             <action selector="ResetCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EjK-uZ-Z6l"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bv9-zR-eu8" customClass="UniButtonView" customModule="Smart_Tally_Counter" customModuleProvider="target">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bv9-zR-eu8" userLabel="Export" customClass="UniButtonView" customModule="Smart_Tally_Counter" customModuleProvider="target">
                                         <rect key="frame" x="124" y="22" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="9e5-Eu-q6K"/>
@@ -166,7 +166,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="LogExport:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FWp-KG-fEc"/>
+                                            <action selector="showAlertTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H6J-CG-X5d"/>
                                         </connections>
                                     </button>
                                 </subviews>

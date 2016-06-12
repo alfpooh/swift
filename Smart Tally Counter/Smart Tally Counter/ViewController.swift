@@ -158,16 +158,7 @@ class ViewController: UIViewController {
 
     @IBAction func LogExport(sender: AnyObject) {
         
-        let endTime = NSDate()
-        let calendar = NSCalendar.currentCalendar()
-        let elapsedTime = NSDate().timeIntervalSinceDate(endTime)
-        let datecomponenets = calendar.components(NSCalendarUnit.Second, fromDate:startTimestamp, toDate:endTime, options: [])
-        let seconds = datecomponenets.second
-        print("Seconds: \(seconds)")
-        
-
-        UIPasteboard.generalPasteboard().string = "Counted: " + String(CountedNumber) + " times " + " for \(seconds) seconds , from \(startTime)"
-    playSound()
+       copytoclipboard()
         
     }
     
@@ -198,6 +189,42 @@ class ViewController: UIViewController {
         Abouttext.text = "Thanks for using the Smart Tally Counter.\n\r All app design including graphic, font, background, sound, and coding \n by Dr. Alf Bae.\n\r All Right Reserved. Forethink. 2016\r support@forethink.nu "
         }
         isGraphViewShowing = !isGraphViewShowing
-}
+    }
+    
+    func copytoclipboard() {
+    
+        let endTime = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let elapsedTime = NSDate().timeIntervalSinceDate(endTime)
+        let datecomponenets = calendar.components(NSCalendarUnit.Second, fromDate:startTimestamp, toDate:endTime, options: [])
+        let seconds = datecomponenets.second
+        print("Seconds: \(seconds)")
+        
+        
+        UIPasteboard.generalPasteboard().string = "Counted: " + String(CountedNumber) + " times " + " for \(seconds) seconds , from \(startTime)"
+        playSound()
+    }
+
+    @IBAction func showAlertTapped(sender: AnyObject) {
+        //Create the AlertController
+        let countResult = "Counted: " + String(CountedNumber) + " times "
+        let myAlertController: UIAlertController = UIAlertController(title: "Copying to Clipboard", message: countResult, preferredStyle: .Alert)
+        
+        //Create and add the Cancel action
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+            //Do some stuff
+        }
+        myAlertController.addAction(cancelAction)
+        //Create and an option action
+        let nextAction: UIAlertAction = UIAlertAction(title: "Copy", style: .Default) { action -> Void in
+            
+            self.copytoclipboard()
+                    }
+        myAlertController.addAction(nextAction)
+        
+        
+        //Present the AlertController
+        self.presentViewController(myAlertController, animated: true, completion: nil)
+    }
 
 }
