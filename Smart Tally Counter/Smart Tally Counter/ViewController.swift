@@ -54,6 +54,7 @@ class ViewController: UIViewController {
     var lengthCountedNumber: Int = 0
     var countingSound: AVAudioPlayer!
     var startTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .ShortStyle, timeStyle: .ShortStyle)
+    var startTimestamp = NSDate()
     
 
     override func viewDidLoad() {
@@ -80,7 +81,10 @@ class ViewController: UIViewController {
     
     @IBAction func AddCount(sender: UIButton) {
         CountedNumber = CountedNumber + 1
-        if CountedNumber == 1 { startTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .ShortStyle, timeStyle: .ShortStyle)}
+        if CountedNumber == 1 {
+            startTimestamp = NSDate()
+            startTime = NSDateFormatter.localizedStringFromDate(startTimestamp, dateStyle: .ShortStyle, timeStyle: .ShortStyle)
+        }
         SetCount (CountedNumber)
         playSound ()
     }
@@ -153,9 +157,16 @@ class ViewController: UIViewController {
 
 
     @IBAction func LogExport(sender: AnyObject) {
-        let endTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .ShortStyle, timeStyle: .ShortStyle)
         
-        UIPasteboard.generalPasteboard().string = "Counted: " + String(CountedNumber) + " times " + " from \(startTime)" + " to \(endTime)."
+        let endTime = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let elapsedTime = NSDate().timeIntervalSinceDate(endTime)
+        let datecomponenets = calendar.components(NSCalendarUnit.Second, fromDate:startTimestamp, toDate:endTime, options: [])
+        let seconds = datecomponenets.second
+        print("Seconds: \(seconds)")
+        
+
+        UIPasteboard.generalPasteboard().string = "Counted: " + String(CountedNumber) + " times " + " for \(seconds) seconds , from \(startTime)"
     playSound()
         
     }
