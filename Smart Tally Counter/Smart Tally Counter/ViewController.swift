@@ -114,7 +114,7 @@ class ViewController: UIViewController {
     
     func countlogging (countforlog: Int) {
         
-        if countLog.count == 4 {
+        if countLog.count == 6 {
             countLog.removeAtIndex(0)
             countLog.append(countforlog)
         print ("first array deleted and add this: \(countforlog)")
@@ -196,10 +196,16 @@ class ViewController: UIViewController {
                                       completion: nil)
         
             logtext = ""
-            for countindex in 0...3 {
+            var numberofLog = 0
+            if countLog.count == 0 {
+            numberofLog = countLog.count
+                logtext = "No count log."
+            } else {numberofLog = countLog.count - 1
+                
+            for countindex in 0...numberofLog {
+                    logtext = logtext + ("Lap no. \(countindex) : \(countLog[countindex])\n")
+                }}
 
-               logtext = logtext + ("Lap no. \(countindex) : \(countLog[countindex])\n")
-            }
         }
         Abouttext.text = logtext
         isGraphViewShowing = !isGraphViewShowing
