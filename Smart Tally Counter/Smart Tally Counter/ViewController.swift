@@ -55,6 +55,7 @@ class ViewController: UIViewController {
     var countingSound: AVAudioPlayer!
     var startTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .ShortStyle, timeStyle: .ShortStyle)
     var startTimestamp = NSDate()
+    var logtext = ""
     
 
     override func viewDidLoad() {
@@ -90,9 +91,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func ResetCount(sender: UIButton) {
+            countlogging (CountedNumber)        
             CountedNumber = 0
             SetCount (CountedNumber)
-            countlogging (CountedNumber)
+        
     }
     
     @IBAction func MinusCount(sender: UIButton) {
@@ -112,13 +114,18 @@ class ViewController: UIViewController {
     
     func countlogging (countforlog: Int) {
         
-        if countLog.count == 10 {
+        if countLog.count == 4 {
             countLog.removeAtIndex(0)
-            countLog.append(countforlog)}
+            countLog.append(countforlog)
+        print ("first array deleted and add this: \(countforlog)")
+            Abouttext.text = ""}
         else {
-            countLog.append(countforlog)}
+            countLog.append(countforlog)
     }
     
+}
+    
+        
     func SetCount ( countnumb: Int) {
          CurrentCount.kerning = 15
         if countnumb < 10 {
@@ -175,6 +182,7 @@ class ViewController: UIViewController {
                                       options: [UIViewAnimationOptions.TransitionFlipFromLeft, UIViewAnimationOptions.ShowHideTransitionViews],
                                       completion:nil)
             
+            
         } else {
             
             //show Graph
@@ -186,8 +194,14 @@ class ViewController: UIViewController {
                                       duration: 1.0,
                                       options: [UIViewAnimationOptions.TransitionFlipFromLeft, UIViewAnimationOptions.ShowHideTransitionViews],
                                       completion: nil)
-        Abouttext.text = "Thanks for using the Smart Tally Counter.\n\r All app design including graphic, font, background, sound, and coding \n by Dr. Alf Bae.\n\r All Right Reserved. Forethink. 2016\r support@forethink.nu "
+        
+            logtext = ""
+            for countindex in 0...3 {
+
+               logtext = logtext + ("Lap no. \(countindex) : \(countLog[countindex])\n")
+            }
         }
+        Abouttext.text = logtext
         isGraphViewShowing = !isGraphViewShowing
     }
     @IBAction func counterViewSwipeleft (gesture:UISwipeGestureRecognizer?) {
