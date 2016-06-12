@@ -102,6 +102,7 @@
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="c6a-1u-hcb" appends="YES" id="jvv-A5-d2i"/>
+                                    <outletCollection property="gestureRecognizers" destination="Zf4-w1-OiT" appends="YES" id="qU6-8O-XFo"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ksg-1a-s3t" userLabel="HighierButtonView">
@@ -250,6 +251,11 @@
                 <swipeGestureRecognizer direction="right" id="c6a-1u-hcb">
                     <connections>
                         <action selector="counterViewSwipe:" destination="BYZ-38-t0r" id="Zzd-Fh-Wwy"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Zf4-w1-OiT">
+                    <connections>
+                        <action selector="counterViewSwipeleft:" destination="BYZ-38-t0r" id="XzK-dt-p2s"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>

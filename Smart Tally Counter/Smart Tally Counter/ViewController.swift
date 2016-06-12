@@ -190,6 +190,32 @@ class ViewController: UIViewController {
         }
         isGraphViewShowing = !isGraphViewShowing
     }
+    @IBAction func counterViewSwipeleft (gesture:UISwipeGestureRecognizer?) {
+        if (isGraphViewShowing) {
+            
+            //hide Graph
+            UIView.transitionFromView(graphView,
+                                      toView: LenseView,
+                                      duration: 1.0,
+                                      options: [UIViewAnimationOptions.TransitionFlipFromRight, UIViewAnimationOptions.ShowHideTransitionViews],
+                                      completion:nil)
+            
+        } else {
+            
+            //show Graph
+            
+            // set hide for now setupGraphDisplay()
+            
+            UIView.transitionFromView(LenseView,
+                                      toView: graphView,
+                                      duration: 1.0,
+                                      options: [UIViewAnimationOptions.TransitionFlipFromRight, UIViewAnimationOptions.ShowHideTransitionViews],
+                                      completion: nil)
+            Abouttext.text = "Thanks for using the Smart Tally Counter.\n\r All app design including graphic, font, background, sound, and coding \n by Dr. Alf Bae.\n\r All Right Reserved. Forethink. 2016\r support@forethink.nu "
+        }
+        isGraphViewShowing = !isGraphViewShowing
+    }
+
     
     func copytoclipboard() {
     
