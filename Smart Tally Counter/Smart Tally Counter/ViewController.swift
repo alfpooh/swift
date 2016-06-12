@@ -214,7 +214,9 @@ class ViewController: UIViewController {
                 numberofLog = countLog.count - 1
                 
             for countindex in 0...numberofLog {
-                    logtext = logtext + ("Lap \(countindex) : \(countLog[countindex]) permin: \(countperminLog[countindex]) for \((Float(countLog[countindex])*60)/countperminLog[countindex]) secs.\n")
+                let cpm = String(format: "%.1f", countperminLog[countindex])
+                let csec = String(format: "%.0f", (Float(countLog[countindex])*60)/countperminLog[countindex])
+                    logtext = logtext + ("Lap \(countindex) : \(countLog[countindex]) permin: \(cpm) for \(csec) secs.\n")
                 }}
 
         }
