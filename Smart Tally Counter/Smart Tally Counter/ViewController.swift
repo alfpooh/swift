@@ -203,24 +203,26 @@ class ViewController: UIViewController {
                                       duration: 1.0,
                                       options: [UIViewAnimationOptions.TransitionFlipFromLeft, UIViewAnimationOptions.ShowHideTransitionViews],
                                       completion: nil)
-        
-            logtext = ""
-            var numberofLog = 0
-            if countLog.count == 0 {
-            numberofLog = countLog.count
-                logtext = "No count log."
-            } else {
-            
-                numberofLog = countLog.count - 1
-                
-            for countindex in 0...numberofLog {
-                let cpm = String(format: "%.1f", countperminLog[countindex])
-                let csec = String(format: "%.0f", (Float(countLog[countindex])*60)/countperminLog[countindex])
-                    logtext = logtext + ("Lap \(countindex) : \(countLog[countindex]) permin: \(cpm) for \(csec) secs.\n")
-                }}
+        //old text log list start
+        //    logtext = ""
+        //    var numberofLog = 0
+        //    if countLog.count == 0 {
+        //    numberofLog = countLog.count
+        //        logtext = "No count log."
+        //    } else {
+        //
+        //        numberofLog = countLog.count - 1
+        //
+        //    for countindex in 0...numberofLog {
+        //        let cpm = String(format: "%.1f", countperminLog[countindex])
+        //        let csec = String(format: "%.0f", (Float(countLog[countindex])*60)/countperminLog[countindex])
+        //            logtext = logtext + ("Lap \(countindex) : \(countLog[countindex]) permin: \(cpm) for \(csec) secs.\n")
+        //        }}
 
         }
-        Abouttext.text = logtext
+        //Abouttext.text = logtext
+        //old text log list end
+            
         isGraphViewShowing = !isGraphViewShowing
     }
     @IBAction func counterViewSwipeleft (gesture:UISwipeGestureRecognizer?) {
