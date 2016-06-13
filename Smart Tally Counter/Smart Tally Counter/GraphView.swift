@@ -11,15 +11,43 @@
     class GraphView: UIView {
         @IBInspectable var graphColor: UIColor = UIColor.blueColor()
         @IBInspectable var graphstrokeColor: UIColor = UIColor.blueColor()
+        @IBInspectable var fillColor: UIColor = UIColor.whiteColor()
         @IBInspectable var lineWidth: CGFloat = 3.0
         
         override func drawRect(rect: CGRect) {
-            var graphbasePath = UIBezierPath(ovalInRect: rect)
-            graphbasePath.lineWidth = lineWidth
-            graphColor.setFill()
+            // Draw base circle
+            var basePath = UIBezierPath(ovalInRect: rect)
+            basePath.lineWidth = lineWidth
+            fillColor.setFill()
+            basePath.fill()
+            
+            //Draw base axis
+            
+            let boxWidth: CGFloat = (min(bounds.width, bounds.height)) * 0.7
+            
+            //create the path
+            let boxPath = UIBezierPath()
+            
+            //set the path's line width to the height of the stroke
+            boxPath.lineWidth = lineWidth
+            
+            //move the initial point of the path
+            //to the start of the horizontal stroke
+            boxPath.moveToPoint(CGPoint(
+                x:bounds.width/2 - boxWidth/2 + 0.5,
+                y:(bounds.height*0.75) ))
+            
+            //add a point to the path at the end of the stroke
+            boxPath.addLineToPoint(CGPoint(
+                x:bounds.width/2 + boxWidth/2 + 0.5,
+                y:(bounds.height*0.75)))
+            
+            //set the stroke color
+            boxPath.lineCapStyle = .Round
+            //draw the stroke
             graphstrokeColor.setStroke()
-            graphbasePath.stroke()
-            graphbasePath.fill()
+            boxPath.lineWidth = lineWidth
+            boxPath.stroke()
             
             
         }

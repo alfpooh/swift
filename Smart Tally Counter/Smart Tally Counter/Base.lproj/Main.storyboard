@@ -88,10 +88,13 @@
                                                 <color key="value" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="graphstrokeColor">
-                                                <color key="value" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="1" green="0.96983449915331343" blue="0.9510851870437772" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.7725490196" green="0.1450980392" blue="0.58823529409999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
