@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     var startTime = ""
     var startTimestamp = NSDate()
     var logtext = ""
+    var logtextMid = ""
+    var logtextRight = ""
     var numberofLog = 0
 
     override func viewDidLoad() {
@@ -48,7 +50,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var countdata62: UILabel!
 //
+    @IBOutlet weak var countdataMid: UILabel!
     
+    @IBOutlet weak var countdatarRight: UILabel!
     @IBOutlet weak var CurrentCount: UILabel!
     @IBOutlet weak var graphView: UIView!
     @IBOutlet weak var LenseView: UIView!
@@ -203,6 +207,8 @@ class ViewController: UIViewController {
 
         //Show Graph view content
             logtext = ""
+            logtextMid = ""
+            logtextRight = ""
             // if there is no log. Never reset.
             if countLog.count == 0 {
                 numberofLog = countLog.count
@@ -215,13 +221,23 @@ class ViewController: UIViewController {
                     numberofLog = countLog.count - 1
                     for countindex in 0...numberofLog {
                     var seconds = String(countsecLog[countindex])
-                        if seconds == "nan" {
+                    var counter = String(countLog[countindex])
+                    var countperminutes = String(countperminLog[countindex])
+                        // if count is 0 all others will be displayed as 0
+                        if counter == "0" {
                             seconds = "0"
+                            counter = "0"
+                            countperminutes = "0"
                             }
                     Abouttext.text = ""
-                        logtext =   logtext + ("\(countindex) :\t \(seconds) :\t \(countLog[countindex]) :\t \(countperminLog[countindex])\n")
+                        logtext =   logtext + ("\(counter)\n")
+                        logtextMid = logtextMid + "\(seconds)\n"
+                        logtextRight = logtextRight + "\(countperminutes)\n"
                         
                      countdata62.text = logtext
+                    countdataMid.text = logtextMid
+                    countdatarRight.text = logtextRight
+                        
                      print (logtext)
                     }
                 }

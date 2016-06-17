@@ -35,18 +35,18 @@
             //to the start of the horizontal stroke
             boxPath.moveToPoint(CGPoint(
                 x:bounds.width/2 - boxWidth/2 + 0.5,
-                y:(bounds.height*0.78) ))
+                y:(bounds.height*0.72) ))
             
             //add a point to the path at the end of the stroke
             boxPath.addLineToPoint(CGPoint(
                 x:bounds.width/2 + boxWidth/2 + 0.5,
-                y:(bounds.height*0.78)))
+                y:(bounds.height*0.72)))
             
             //set the stroke color
             boxPath.lineCapStyle = .Round
             //draw the stroke
             graphstrokeColor.setStroke()
-            boxPath.lineWidth = 2
+            boxPath.lineWidth = 1
             boxPath.stroke()
             
             //Lines

@@ -13,6 +13,8 @@
             <string>TallyCounter-Regular</string>
             <string>TallyCounter-Regular</string>
             <string>TallyCounter-Regular</string>
+            <string>TallyCounter-Regular</string>
+            <string>TallyCounter-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -74,11 +76,31 @@
                                                     <view contentMode="bottom" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2UI-9A-O3q" userLabel="Datarow6">
                                                         <rect key="frame" x="50" y="0.0" width="200" height="200"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQV-Hk-u37" userLabel="SEC6">
-                                                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQV-Hk-u37" userLabel="left">
+                                                                <rect key="frame" x="0.0" y="0.0" width="65" height="200"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="200" id="nq8-V5-xJt"/>
-                                                                    <constraint firstAttribute="width" constant="200" id="zji-is-wYY"/>
+                                                                    <constraint firstAttribute="width" constant="65" id="zji-is-wYY"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="16"/>
+                                                                <color key="textColor" red="1" green="0.99143752770000004" blue="0.99628986340000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtg-Qj-cHA" userLabel="mid">
+                                                                <rect key="frame" x="67" y="0.0" width="65" height="200"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="200" id="Soc-nz-KDy"/>
+                                                                    <constraint firstAttribute="width" constant="65" id="x9z-Mu-UJE"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="16"/>
+                                                                <color key="textColor" red="1" green="0.99143752770000004" blue="0.99628986340000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyV-vJ-F9G" userLabel="right">
+                                                                <rect key="frame" x="120" y="0.0" width="65" height="200"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="65" id="WcL-Mu-DW1"/>
+                                                                    <constraint firstAttribute="height" constant="200" id="ih1-CT-iJn"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="16"/>
                                                                 <color key="textColor" red="1" green="0.99143752770000004" blue="0.99628986340000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -87,10 +109,14 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
+                                                            <constraint firstItem="Rtg-Qj-cHA" firstAttribute="centerY" secondItem="2UI-9A-O3q" secondAttribute="centerY" id="4eV-As-T3D"/>
+                                                            <constraint firstItem="YyV-vJ-F9G" firstAttribute="centerX" secondItem="2UI-9A-O3q" secondAttribute="centerX" constant="70" id="Htk-GM-Y3R"/>
+                                                            <constraint firstItem="Rtg-Qj-cHA" firstAttribute="centerX" secondItem="2UI-9A-O3q" secondAttribute="centerX" id="OYI-cn-1ew"/>
                                                             <constraint firstItem="hQV-Hk-u37" firstAttribute="centerY" secondItem="2UI-9A-O3q" secondAttribute="centerY" id="gOl-mf-9oq"/>
-                                                            <constraint firstItem="hQV-Hk-u37" firstAttribute="centerX" secondItem="2UI-9A-O3q" secondAttribute="centerX" id="iCl-bj-wVP"/>
+                                                            <constraint firstItem="hQV-Hk-u37" firstAttribute="centerX" secondItem="2UI-9A-O3q" secondAttribute="centerX" constant="-70" id="iCl-bj-wVP"/>
                                                             <constraint firstAttribute="height" constant="200" id="lZZ-qQ-7vO"/>
                                                             <constraint firstAttribute="width" constant="200" id="rIr-Gg-S1Y"/>
+                                                            <constraint firstItem="YyV-vJ-F9G" firstAttribute="centerY" secondItem="2UI-9A-O3q" secondAttribute="centerY" id="sVD-2n-cUB"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="bottom" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tNd-kR-Px9" userLabel="LegendGraph">
@@ -108,7 +134,7 @@
                                                                 <color key="textColor" red="0.64706154250000003" green="0.94734859419999995" blue="0.68893031179999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="/MIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiP-1F-qXG" userLabel="Permin">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="/MIN " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiP-1F-qXG" userLabel="Permin">
                                                                 <rect key="frame" x="200" y="0.0" width="50" height="15"/>
                                                                 <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="16"/>
                                                                 <color key="textColor" red="0.64706154250000003" green="0.94734859419999995" blue="0.68893031179999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
@@ -117,8 +143,8 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="fiP-1F-qXG" secondAttribute="trailing" constant="10" id="Bw4-LA-gqB"/>
-                                                            <constraint firstItem="dlg-OV-7Pz" firstAttribute="leading" secondItem="tNd-kR-Px9" secondAttribute="leading" constant="10" id="IEe-dR-OqE"/>
+                                                            <constraint firstItem="fiP-1F-qXG" firstAttribute="trailing" secondItem="tNd-kR-Px9" secondAttribute="trailing" constant="-15" id="Bw4-LA-gqB"/>
+                                                            <constraint firstItem="dlg-OV-7Pz" firstAttribute="leading" secondItem="tNd-kR-Px9" secondAttribute="leading" constant="15" id="IEe-dR-OqE"/>
                                                             <constraint firstItem="VkE-mY-Qfe" firstAttribute="centerX" secondItem="tNd-kR-Px9" secondAttribute="centerX" id="K7g-Xi-LZi"/>
                                                             <constraint firstItem="fiP-1F-qXG" firstAttribute="centerY" secondItem="tNd-kR-Px9" secondAttribute="centerY" id="jlr-6O-Os3"/>
                                                             <constraint firstItem="VkE-mY-Qfe" firstAttribute="centerY" secondItem="tNd-kR-Px9" secondAttribute="centerY" id="mFF-ON-jtZ"/>
@@ -132,7 +158,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="2UI-9A-O3q" secondAttribute="trailing" constant="50" id="Nce-01-slj"/>
                                                     <constraint firstItem="2UI-9A-O3q" firstAttribute="top" secondItem="HFj-w7-TkF" secondAttribute="top" constant="50" id="Quj-xT-yI7"/>
                                                     <constraint firstItem="2UI-9A-O3q" firstAttribute="leading" secondItem="HFj-w7-TkF" secondAttribute="leading" constant="50" id="azS-dP-d1b"/>
-                                                    <constraint firstAttribute="bottom" secondItem="tNd-kR-Px9" secondAttribute="bottom" id="oBb-Wx-iq7"/>
+                                                    <constraint firstAttribute="bottom" secondItem="tNd-kR-Px9" secondAttribute="bottom" constant="5" id="oBb-Wx-iq7"/>
                                                     <constraint firstItem="tNd-kR-Px9" firstAttribute="leading" secondItem="HFj-w7-TkF" secondAttribute="leading" id="pkz-eE-7cQ"/>
                                                     <constraint firstAttribute="bottom" secondItem="2UI-9A-O3q" secondAttribute="bottom" constant="50" id="zUy-Fl-W32"/>
                                                 </constraints>
@@ -333,6 +359,8 @@
                         <outlet property="CurrentCount" destination="bbk-4F-ycg" id="upV-z8-Got"/>
                         <outlet property="LenseView" destination="6y1-Ot-vPQ" id="NeH-ko-ceK"/>
                         <outlet property="countdata62" destination="hQV-Hk-u37" id="Cny-9C-vTt"/>
+                        <outlet property="countdataMid" destination="Rtg-Qj-cHA" id="Oze-DF-DRj"/>
+                        <outlet property="countdatarRight" destination="YyV-vJ-F9G" id="1SS-Kp-bf8"/>
                         <outlet property="graphView" destination="iPl-VV-Hcb" id="fEv-Wq-MWn"/>
                     </connections>
                 </viewController>
