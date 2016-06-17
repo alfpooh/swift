@@ -105,7 +105,7 @@ class UniButtonView: UIButton {
             boxPath.addLineToPoint(CGPoint(x:(bounds.width*2/3), y:(bounds.height*3)/4))
             boxPath.addLineToPoint(CGPoint(x:(bounds.width*2/3), y:(bounds.height*5)/12))
             boxPath.addLineToPoint(CGPoint(x:(bounds.width*7)/12, y:(bounds.height*5)/12))
-                        // lineCapStyle can be .Round .Square .Butt
+            // lineCapStyle can be .Round .Square .Butt
             boxPath.lineCapStyle = .Round
             boxPath.usesEvenOddFillRule = true
             

@@ -13,7 +13,6 @@
 		FD28363E1CF5CA94002AE3A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD28363C1CF5CA94002AE3A5 /* LaunchScreen.storyboard */; };
 		FD36C7121D042A830085B62F /* TallyCounter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD36C7111D0428D30085B62F /* TallyCounter-Regular.ttf */; };
 		FD3BBAFF1D0989FB00C0A441 /* TabLens.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3BBAFE1D0989FB00C0A441 /* TabLens.swift */; };
-		FD60F9311D11EE81005FC2AA /* DataTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60F9301D11EE81005FC2AA /* DataTableView.swift */; };
 		FD6F86961D06FAA000060DDB /* TallyCounterLoading.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD6F86951D06FAA000060DDB /* TallyCounterLoading.jpg */; };
 		FD6F86981D07522F00060DDB /* counterclick.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FD6F86971D07502F00060DDB /* counterclick.m4a */; };
 		FD7C35181D06B40E0079E6D4 /* UniButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7C35171D06B40E0079E6D4 /* UniButton.swift */; };
@@ -73,7 +72,6 @@
 		FD2E91BA1CF755AB00246004 /* Smart Tally Counter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Smart Tally Counter.xcodeproj"; path = "Smart Tally Counter/Smart Tally Counter.xcodeproj"; sourceTree = "<group>"; };
 		FD36C7111D0428D30085B62F /* TallyCounter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TallyCounter-Regular.ttf"; sourceTree = "<group>"; };
 		FD3BBAFE1D0989FB00C0A441 /* TabLens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabLens.swift; path = ../TabLens.swift; sourceTree = "<group>"; };
-		FD60F9301D11EE81005FC2AA /* DataTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataTableView.swift; path = ../DataTableView.swift; sourceTree = "<group>"; };
 		FD6F86951D06FAA000060DDB /* TallyCounterLoading.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TallyCounterLoading.jpg; sourceTree = "<group>"; };
 		FD6F86971D07502F00060DDB /* counterclick.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = counterclick.m4a; sourceTree = "<group>"; };
 		FD7C35171D06B40E0079E6D4 /* UniButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniButton.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 				FD2836351CF5CA94002AE3A5 /* ViewController.swift */,
 				FD7C351C1D06ED8A0079E6D4 /* BackgroundPattern.swift */,
 				FDC6338F1D0816C90031CAEA /* GraphView.swift */,
-				FD60F9301D11EE81005FC2AA /* DataTableView.swift */,
 				FD3BBAFE1D0989FB00C0A441 /* TabLens.swift */,
 				FD7C35171D06B40E0079E6D4 /* UniButton.swift */,
 				FD2836371CF5CA94002AE3A5 /* Main.storyboard */,
@@ -325,7 +322,6 @@
 				FDC633901D0816C90031CAEA /* GraphView.swift in Sources */,
 				FD7C351D1D06ED8A0079E6D4 /* BackgroundPattern.swift in Sources */,
 				FD2836361CF5CA94002AE3A5 /* ViewController.swift in Sources */,
-				FD60F9311D11EE81005FC2AA /* DataTableView.swift in Sources */,
 				FD3BBAFF1D0989FB00C0A441 /* TabLens.swift in Sources */,
 				FDC633D41D08A2FD0031CAEA /* AppDelegate.swift in Sources */,
 				FD7C35181D06B40E0079E6D4 /* UniButton.swift in Sources */,

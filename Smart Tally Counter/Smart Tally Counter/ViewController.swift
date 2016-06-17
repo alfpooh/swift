@@ -2,9 +2,10 @@
 //  ViewController.swift
 //  Smart Tally Counter
 //
-//  Created by donghoon bae on 2016. 5. 25..
+//  Created by donghoon bae on (from 2016. 5. 25. to 6. 17).
 //  Copyright © 2016년 Forethink. All rights reserved.
 //
+// All app design including graphic, font, background, sound, and coding by Dr. Alf. support@forethink.nu
 
 import UIKit
 import AVFoundation
@@ -44,15 +45,11 @@ class ViewController: UIViewController {
         
         
     }
-    //
-
     
-
+    
     
     @IBOutlet weak var countdata62: UILabel!
-//
     @IBOutlet weak var countdataMid: UILabel!
-    
     @IBOutlet weak var countdatarRight: UILabel!
     @IBOutlet weak var CurrentCount: UILabel!
     @IBOutlet weak var graphView: UIView!
@@ -72,14 +69,14 @@ class ViewController: UIViewController {
     
     @IBAction func ResetCount(sender: UIButton) {
         let CountisNaN = Float(CountedNumber)
+        // if count was Nan.
         if CountisNaN.isNaN { CountedNumber = 0
-            print ("count was Nan.")
             return
         } else {
+        //count logged and reset.
         countlogging (CountedNumber)
             CountedNumber = 0
             SetCount (CountedNumber)}
-                    print ("count was logged and reset.")
         return
     }
     
@@ -92,6 +89,8 @@ class ViewController: UIViewController {
         SetCount (CountedNumber)
         playSound ()
     }
+    
+    
     func setStartTime () -> String{
         let tformat = NSDateFormatter()
         tformat.dateFormat = "HH:mm:ss.SSS"
@@ -100,7 +99,6 @@ class ViewController: UIViewController {
     }
 
 
-    // keep count logs up to 6
     
     func countlogging (countforlog: Int) {
         let CountlogperMin = countperMin(countforlog)
@@ -126,31 +124,26 @@ class ViewController: UIViewController {
             // otherwise just add new log
                 appendnewLog()
             }
-
-
     }
     
-
-
     
     func timenow() -> String {
         let format = NSDateFormatter()
         format.dateFormat = "HH:mm:ss.SSS"
         let now = format.stringFromDate(NSDate())
-        print(now)
         return now
     }
 
     func countSec() -> Float {
         //createendTime
         let elapsedTime = round((NSDate().timeIntervalSinceDate(startTimestamp))*10)/10
-        //test code by print
-        print ("starttime:\(startTimestamp), elapsedTime: \(elapsedTime)")
+        //test code by print ("starttime:\(startTimestamp), elapsedTime: \(elapsedTime)")
         return Float(elapsedTime)
 }
     
         
     func SetCount (countnumb: Int) {
+        // keep counter 4 digits 0000
         if countnumb < 10 {
         CurrentCount.text = "000" + String(countnumb)
         } else if countnumb < 100 && countnumb >= 10 {
@@ -163,7 +156,6 @@ class ViewController: UIViewController {
             CurrentCount.text = "00000"
         }
     }
-    
 
     
     func playSound () {
@@ -176,17 +168,16 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    
+
     
     @IBAction func VoiceOut(sender: AnyObject) {
         sayCount = AVSpeechUtterance(string: String(CountedNumber))
         sayCount.rate = 0.5
         synth.speakUtterance(sayCount)
-        
     }
-    //Swife left
     
+    
+    //Swipe left
     @IBAction func counterViewSwipe (gesture:UISwipeGestureRecognizer?) {
         if (isGraphViewShowing) {
             UIView.transitionFromView(graphView,
@@ -194,26 +185,23 @@ class ViewController: UIViewController {
                                       duration: 1.0,
                                       options: [UIViewAnimationOptions.TransitionFlipFromLeft, UIViewAnimationOptions.ShowHideTransitionViews],
                                       completion:nil)
-            
-            
         } else {
             UIView.transitionFromView(LenseView,
                                       toView: graphView,
                                       duration: 1.0,
                                       options: [UIViewAnimationOptions.TransitionFlipFromLeft, UIViewAnimationOptions.ShowHideTransitionViews],
                                       completion: nil)
-
         //Show Graph view content
             logtext = ""
             logtextMid = ""
             logtextRight = ""
+            
             // if there is no log. Never reset.
             if countLog.count == 0 {
                 numberofLog = countLog.count
                 logtext = "    NO COUNT LOG"
                 var seconds = 0
                 Abouttext.text = logtext
-                print (logtext)
                 } else {
                     // for range count minus one
                     numberofLog = countLog.count - 1
@@ -227,16 +215,15 @@ class ViewController: UIViewController {
                             counter = "0"
                             countperminutes = "0"
                             }
-                    Abouttext.text = ""
+                        Abouttext.text = ""
                         logtext =   logtext + ("\(counter)\n")
                         logtextMid = logtextMid + "\(seconds)\n"
                         logtextRight = logtextRight + "\(countperminutes)\n"
                         
-                     countdata62.text = logtext
-                    countdataMid.text = logtextMid
-                    countdatarRight.text = logtextRight
-                        
-                     print (logtext)
+                        countdata62.text = logtext
+                        countdataMid.text = logtextMid
+                        countdatarRight.text = logtextRight
+    
                     }
                 }
 
@@ -245,7 +232,7 @@ class ViewController: UIViewController {
     }
     
     
-    //Swiferight
+    //Swipe right
     @IBAction func counterViewSwipeleft (gesture:UISwipeGestureRecognizer?) {
         if (isGraphViewShowing) {
             
@@ -266,10 +253,12 @@ class ViewController: UIViewController {
                                       duration: 1.0,
                                       options: [UIViewAnimationOptions.TransitionFlipFromRight, UIViewAnimationOptions.ShowHideTransitionViews],
                                       completion: nil)
-            // Abouttext.text = "All app design including graphic, font, background, sound, and coding \n by Dr. Alf.\n\r All Right Reserved. Forethink. 2016\r support@forethink.nu "
+
         }
         isGraphViewShowing = !isGraphViewShowing
     }
+    
+    
     func countperMin (countedpara: Int) -> Float{
         let seconds = countSec()
         let perMin = round(Float(countedpara)/(seconds/60)*10)/10
@@ -286,11 +275,10 @@ class ViewController: UIViewController {
                 let CountlogperMin = countperMin(CountedNumber)
                 let resulttocopy = "Counted: " + String(CountedNumber) + " times " + " for \(seconds) seconds , \(CountlogperMin) per a minute."
                 UIPasteboard.generalPasteboard().string = resulttocopy
-                print (resulttocopy)
-            
-        }
+            }
     
     }
+    
     
     func exportCSV() -> String {
         var wholeLog = ""
@@ -300,10 +288,10 @@ class ViewController: UIViewController {
         }
         let headerCSV = "counted number,count per a minute,counting seconds\n"
         let wholeLogstring = headerCSV + "\(wholeLog)"
-        print (wholeLogstring)
-    return wholeLogstring
+        return wholeLogstring
     }
 
+    
     @IBAction func showAlertTapped(sender: AnyObject) {
         //Create the AlertController
         
@@ -313,7 +301,7 @@ class ViewController: UIViewController {
         
         //Create and add the Cancel action
         let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
-            //Do some stuff
+            //Nothing to do
             }
         myAlertController.addAction(cancelAction)
             
@@ -329,12 +317,11 @@ class ViewController: UIViewController {
         }
         // if graphview is displayed copying popup is shown like this
         else {
-        print("copy testing here")
-            let logResult = "This will copy whole log to clipboard."
-            let logAlertController: UIAlertController = UIAlertController(title: "Copying log to Clipboard", message: logResult, preferredStyle: .Alert)
+            let logResult = "Copying whole log to clipboard in CSV format"
+            let logAlertController: UIAlertController = UIAlertController(title: "Copying log", message: logResult, preferredStyle: .Alert)
             //Create and add the Cancel action
             let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
-                //Do some stuff
+                //Nothing to do
             }
             logAlertController.addAction(cancelAction)
             
