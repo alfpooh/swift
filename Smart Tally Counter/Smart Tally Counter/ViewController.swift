@@ -9,41 +9,6 @@
 import UIKit
 import AVFoundation
 
-// UILabel Kerining extention
-// refered from http://stackoverflow.com/questions/7370013/how-to-set-kerning-in-iphone-uilabel?lq=1
-
-extension UILabel {
-    
-    @IBInspectable var kerning: Float {
-        get {
-            var range = NSMakeRange(0, (text ?? "").characters.count)
-            guard let kern = attributedText?.attribute(NSKernAttributeName, atIndex: 0, effectiveRange: &range),
-                value = kern as? NSNumber
-                else {
-                    return 0
-            }
-            return value.floatValue
-        }
-        set {
-            var attText:NSMutableAttributedString?
-            
-            if let attributedText = attributedText {
-                attText = NSMutableAttributedString(attributedString: attributedText)
-            } else if let text = text {
-                attText = NSMutableAttributedString(string: text)
-            } else {
-                attText = NSMutableAttributedString(string: "")
-            }
-            
-            let range = NSMakeRange(0, attText!.length)
-            attText!.addAttribute(NSKernAttributeName, value: NSNumber(float: newValue), range: range)
-            self.attributedText = attText
-        }
-    }
-}
-
-
-
 class ViewController: UIViewController {
     var isGraphViewShowing = false
     let synth = AVSpeechSynthesizer()
@@ -51,17 +16,19 @@ class ViewController: UIViewController {
     var soundMute = false
     var countLog = [Int]()
     var countperminLog = [Float]()
+    var countsecLog = [Float]()
     var CountedNumber: Int = 0
     var lengthCountedNumber: Int = 0
     var countingSound: AVAudioPlayer!
-    var startTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .ShortStyle, timeStyle: .ShortStyle)
+    var startTime = ""
     var startTimestamp = NSDate()
     var logtext = ""
-    
+    var numberofLog = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // for sound
         let path = NSBundle.mainBundle().pathForResource("counterclick", ofType: "m4a")
         let soundUrl = NSURL (fileURLWithPath: path!)
         
@@ -74,69 +41,111 @@ class ViewController: UIViewController {
         
         
     }
+    //
+
+    
+
+    
+    @IBOutlet weak var countdata62: UILabel!
+//
     
     @IBOutlet weak var CurrentCount: UILabel!
     @IBOutlet weak var graphView: UIView!
     @IBOutlet weak var LenseView: UIView!
-    
     @IBOutlet weak var Abouttext: UILabel!
     
     @IBAction func AddCount(sender: UIButton) {
         CountedNumber = CountedNumber + 1
-        if CountedNumber == 1 {
-            startTimestamp = NSDate()
-            startTime = NSDateFormatter.localizedStringFromDate(startTimestamp, dateStyle: .ShortStyle, timeStyle: .ShortStyle)
-        }
+            // start time stamp
+            if CountedNumber == 1 {
+                startTimestamp = NSDate()
+                print (startTimestamp)
+            }
         SetCount (CountedNumber)
         playSound ()
     }
     
     @IBAction func ResetCount(sender: UIButton) {
-            countlogging (CountedNumber)        
+        let CountisNaN = Float(CountedNumber)
+        if CountisNaN.isNaN { CountedNumber = 0
+            print ("count was Nan.")
+            return
+        } else {
+        countlogging (CountedNumber)
             CountedNumber = 0
-            SetCount (CountedNumber)
-        
+            SetCount (CountedNumber)}
+                    print ("count was logged and reset.")
+        return
     }
     
     @IBAction func MinusCount(sender: UIButton) {
         CountedNumber = CountedNumber - 1
-        if CountedNumber < 0 {
-        CountedNumber = 0
-        }
+            //number cannot be minus.
+            if CountedNumber < 0 {
+                CountedNumber = 0
+            }
         SetCount (CountedNumber)
         playSound ()
     }
-    
-    func ResetCountf () {
-        countlogging (CountedNumber)
-        CountedNumber = 0
-        SetCount (CountedNumber)
+    func setStartTime () -> String{
+        let tformat = NSDateFormatter()
+        tformat.dateFormat = "HH:mm:ss.SSS"
+        let startTime = tformat.stringFromDate(NSDate())
+        return startTime
     }
+
+
+    // keep count logs up to 6
     
     func countlogging (countforlog: Int) {
-        var CountlogperMin = countperMin(countforlog)
+        let CountlogperMin = countperMin(countforlog)
+        let countlogSec = countSec()
+        
+        func appendnewLog() {
+            countLog.append(countforlog)
+            countsecLog.append(countlogSec)
+            countperminLog.append(CountlogperMin)}
+        
         if countLog.count == 6 {
+            // delete oldest log
             countLog.removeAtIndex(0)
-            countLog.append(countforlog)
-        //print ("first array deleted and add this: \(countforlog)")
-            Abouttext.text = ""}
-        else {
-            countLog.append(countforlog)
-    }
-        if countperminLog.count == 6 {
+            countsecLog.removeAtIndex(0)
             countperminLog.removeAtIndex(0)
-            countperminLog.append(CountlogperMin)
-            //print ("first array deleted and add this: \(countforlog)")
+            
+            // add new log at end
+            appendnewLog()
+            
             }
-        else {
-            countperminLog.append(CountlogperMin)
-        }
+        else
+            {
+            // otherwise just add new log
+                appendnewLog()
+            }
+
+
+    }
     
+
+
+    
+    func timenow() -> String {
+        let format = NSDateFormatter()
+        format.dateFormat = "HH:mm:ss.SSS"
+        let now = format.stringFromDate(NSDate())
+        print(now)
+        return now
+    }
+
+    func countSec() -> Float {
+        //createendTime
+        let elapsedTime = round((NSDate().timeIntervalSinceDate(startTimestamp))*10)/10
+        //test code by print
+        print ("starttime:\(startTimestamp), elapsedTime: \(elapsedTime)")
+        return Float(elapsedTime)
 }
     
         
-    func SetCount ( countnumb: Int) {
-         CurrentCount.kerning = 15
+    func SetCount (countnumb: Int) {
         if countnumb < 10 {
         CurrentCount.text = "000" + String(countnumb)
         } else if countnumb < 100 && countnumb >= 10 {
@@ -147,7 +156,6 @@ class ViewController: UIViewController {
             CurrentCount.text = String(countnumb)
         } else if countnumb >= 10000 {
             CurrentCount.text = "00000"
-            var countnumb = 0
         }
     }
     
@@ -163,28 +171,22 @@ class ViewController: UIViewController {
         }
     }
     
+    func LogExport(sender: AnyObject) {
+        copytoclipboard()
+    }
+    
+    
+    
     @IBAction func VoiceOut(sender: AnyObject) {
         sayCount = AVSpeechUtterance(string: String(CountedNumber))
         sayCount.rate = 0.5
         synth.speakUtterance(sayCount)
         
     }
-
-
-
-    @IBAction func LogExport(sender: AnyObject) {
-        
-       copytoclipboard()
-        
-    }
-    
-
-        
+    //Swife left
     
     @IBAction func counterViewSwipe (gesture:UISwipeGestureRecognizer?) {
         if (isGraphViewShowing) {
-            
-            //hide Graph
             UIView.transitionFromView(graphView,
                                       toView: LenseView,
                                       duration: 1.0,
@@ -193,38 +195,43 @@ class ViewController: UIViewController {
             
             
         } else {
-            
-            //show Graph
-            
-            // set hide for now setupGraphDisplay()
-            
             UIView.transitionFromView(LenseView,
                                       toView: graphView,
                                       duration: 1.0,
                                       options: [UIViewAnimationOptions.TransitionFlipFromLeft, UIViewAnimationOptions.ShowHideTransitionViews],
                                       completion: nil)
-        //old text log list start
-        //    logtext = ""
-        //    var numberofLog = 0
-        //    if countLog.count == 0 {
-        //    numberofLog = countLog.count
-        //        logtext = "No count log."
-        //    } else {
-        //
-        //        numberofLog = countLog.count - 1
-        //
-        //    for countindex in 0...numberofLog {
-        //        let cpm = String(format: "%.1f", countperminLog[countindex])
-        //        let csec = String(format: "%.0f", (Float(countLog[countindex])*60)/countperminLog[countindex])
-        //            logtext = logtext + ("Lap \(countindex) : \(countLog[countindex]) permin: \(cpm) for \(csec) secs.\n")
-        //        }}
+
+        //Show Graph view content
+            logtext = ""
+            // if there is no log. Never reset.
+            if countLog.count == 0 {
+                numberofLog = countLog.count
+                logtext = "    NO COUNT LOG"
+                var seconds = 0
+                Abouttext.text = logtext
+                print (logtext)
+                } else {
+                    // for range count minus one
+                    numberofLog = countLog.count - 1
+                    for countindex in 0...numberofLog {
+                    var seconds = String(countsecLog[countindex])
+                        if seconds == "nan" {
+                            seconds = "0"
+                            }
+                    Abouttext.text = ""
+                        logtext =   logtext + ("\(countindex) :\t \(seconds) :\t \(countLog[countindex]) :\t \(countperminLog[countindex])\n")
+                        
+                     countdata62.text = logtext
+                     print (logtext)
+                    }
+                }
 
         }
-        //Abouttext.text = logtext
-        //old text log list end
-            
         isGraphViewShowing = !isGraphViewShowing
     }
+    
+    
+    //Swiferight
     @IBAction func counterViewSwipeleft (gesture:UISwipeGestureRecognizer?) {
         if (isGraphViewShowing) {
             
@@ -234,7 +241,6 @@ class ViewController: UIViewController {
                                       duration: 1.0,
                                       options: [UIViewAnimationOptions.TransitionFlipFromRight, UIViewAnimationOptions.ShowHideTransitionViews],
                                       completion:nil)
-            
         } else {
             
             //show Graph
@@ -246,35 +252,27 @@ class ViewController: UIViewController {
                                       duration: 1.0,
                                       options: [UIViewAnimationOptions.TransitionFlipFromRight, UIViewAnimationOptions.ShowHideTransitionViews],
                                       completion: nil)
-            Abouttext.text = "All app design including graphic, font, background, sound, and coding \n by Dr. Alf.\n\r All Right Reserved. Forethink. 2016\r support@forethink.nu "
+            // Abouttext.text = "All app design including graphic, font, background, sound, and coding \n by Dr. Alf.\n\r All Right Reserved. Forethink. 2016\r support@forethink.nu "
         }
         isGraphViewShowing = !isGraphViewShowing
     }
     func countperMin (countedpara: Int) -> Float{
-        let endTime = NSDate()
-        let calendar = NSCalendar.currentCalendar()
-        let elapsedTime = NSDate().timeIntervalSinceDate(endTime)
-        let datecomponenets = calendar.components(NSCalendarUnit.Second, fromDate:startTimestamp, toDate:endTime, options: [])
-        let seconds = datecomponenets.second
-        var perMin = Float(Float(countedpara)/(Float(seconds)/60))
+        let seconds = countSec()
+        let perMin = round(Float(countedpara)/(seconds/60)*10)/10
+        print ("duration: \(seconds),counting per minutes: \(perMin)")
         return perMin
     }
     
     func copytoclipboard() {
-        let endTime = NSDate()
-        let calendar = NSCalendar.currentCalendar()
-        let elapsedTime = NSDate().timeIntervalSinceDate(endTime)
-        let datecomponenets = calendar.components(NSCalendarUnit.Second, fromDate:startTimestamp, toDate:endTime, options: [])
-        let seconds = datecomponenets.second
-
-        //let seconds = datecomponenets.second
-        
-        //var perMin = Float(Float(CountedNumber)/(Float(seconds)/60))
-        var CountlogperMin = countperMin(CountedNumber)
-        
-        
-        UIPasteboard.generalPasteboard().string = "Counted: " + String(CountedNumber) + " times " + " for \(seconds) seconds , from \(startTime) , \(CountlogperMin ) per a minutes."
-        playSound()
+        if CountedNumber == 0 {
+        UIPasteboard.generalPasteboard().string = "No count."
+        } else {
+        let seconds = countSec()
+        let CountlogperMin = countperMin(CountedNumber)
+        let resulttocopy = "Counted: " + String(CountedNumber) + " times " + " for \(seconds) seconds , \(CountlogperMin) per a minutes."
+        UIPasteboard.generalPasteboard().string = resulttocopy
+        print (resulttocopy)
+            playSound()}
     }
 
     @IBAction func showAlertTapped(sender: AnyObject) {

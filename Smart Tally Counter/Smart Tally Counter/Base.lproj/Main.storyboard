@@ -11,6 +11,8 @@
             <string>TallyCounter-Regular</string>
             <string>TallyCounter-Regular</string>
             <string>TallyCounter-Regular</string>
+            <string>TallyCounter-Regular</string>
+            <string>TallyCounter-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -66,61 +68,100 @@
                                     <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iPl-VV-Hcb" userLabel="graphView" customClass="GraphView" customModule="Smart_Tally_Counter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="301"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tNd-kR-Px9">
-                                                <rect key="frame" x="65" y="257" width="173" height="20"/>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HFj-w7-TkF" userLabel="Dataview">
+                                                <rect key="frame" x="0.0" y="37" width="299" height="227"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="SEC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkE-mY-Qfe">
-                                                        <rect key="frame" x="75" y="0.0" width="24" height="15"/>
-                                                        <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="16"/>
-                                                        <color key="textColor" red="1" green="0.99143752768535798" blue="0.99628986336620651" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="COUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlg-OV-7Pz">
-                                                        <rect key="frame" x="111" y="0.0" width="53" height="15"/>
-                                                        <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="16"/>
-                                                        <color key="textColor" red="1" green="0.99143752768535798" blue="0.99628986336620651" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="/MIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiP-1F-qXG" userLabel="Permin">
-                                                        <rect key="frame" x="20" y="-1" width="29" height="15"/>
-                                                        <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="16"/>
-                                                        <color key="textColor" red="1" green="0.99143752768535798" blue="0.99628986336620651" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <view contentMode="bottom" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2UI-9A-O3q" userLabel="Datarow6">
+                                                        <rect key="frame" x="50" y="0.0" width="200" height="200"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQV-Hk-u37" userLabel="SEC6">
+                                                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="200" id="nq8-V5-xJt"/>
+                                                                    <constraint firstAttribute="width" constant="200" id="zji-is-wYY"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="16"/>
+                                                                <color key="textColor" red="1" green="0.99143752770000004" blue="0.99628986340000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="hQV-Hk-u37" firstAttribute="centerY" secondItem="2UI-9A-O3q" secondAttribute="centerY" id="gOl-mf-9oq"/>
+                                                            <constraint firstItem="hQV-Hk-u37" firstAttribute="centerX" secondItem="2UI-9A-O3q" secondAttribute="centerX" id="iCl-bj-wVP"/>
+                                                            <constraint firstAttribute="height" constant="200" id="lZZ-qQ-7vO"/>
+                                                            <constraint firstAttribute="width" constant="200" id="rIr-Gg-S1Y"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="bottom" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tNd-kR-Px9" userLabel="LegendGraph">
+                                                        <rect key="frame" x="0.0" y="190" width="299" height="20"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="COUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlg-OV-7Pz">
+                                                                <rect key="frame" x="30" y="0.0" width="53" height="15"/>
+                                                                <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="16"/>
+                                                                <color key="textColor" red="0.64706154249021153" green="0.94734859420732986" blue="0.68893031176390951" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="SEC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkE-mY-Qfe">
+                                                                <rect key="frame" x="110" y="0.0" width="50" height="15"/>
+                                                                <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="16"/>
+                                                                <color key="textColor" red="0.64706154250000003" green="0.94734859419999995" blue="0.68893031179999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="/MIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiP-1F-qXG" userLabel="Permin">
+                                                                <rect key="frame" x="200" y="0.0" width="50" height="15"/>
+                                                                <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="16"/>
+                                                                <color key="textColor" red="0.64706154250000003" green="0.94734859419999995" blue="0.68893031179999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="fiP-1F-qXG" secondAttribute="trailing" constant="10" id="Bw4-LA-gqB"/>
+                                                            <constraint firstItem="dlg-OV-7Pz" firstAttribute="leading" secondItem="tNd-kR-Px9" secondAttribute="leading" constant="10" id="IEe-dR-OqE"/>
+                                                            <constraint firstItem="VkE-mY-Qfe" firstAttribute="centerX" secondItem="tNd-kR-Px9" secondAttribute="centerX" id="K7g-Xi-LZi"/>
+                                                            <constraint firstItem="fiP-1F-qXG" firstAttribute="centerY" secondItem="tNd-kR-Px9" secondAttribute="centerY" id="jlr-6O-Os3"/>
+                                                            <constraint firstItem="VkE-mY-Qfe" firstAttribute="centerY" secondItem="tNd-kR-Px9" secondAttribute="centerY" id="mFF-ON-jtZ"/>
+                                                            <constraint firstItem="dlg-OV-7Pz" firstAttribute="centerY" secondItem="tNd-kR-Px9" secondAttribute="centerY" id="sEd-kx-6sZ"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="VkE-mY-Qfe" firstAttribute="centerX" secondItem="tNd-kR-Px9" secondAttribute="centerX" id="2CM-1N-OEc"/>
-                                                    <constraint firstItem="fiP-1F-qXG" firstAttribute="leading" secondItem="tNd-kR-Px9" secondAttribute="leading" constant="7" id="6eL-cB-py7"/>
-                                                    <constraint firstAttribute="trailing" secondItem="dlg-OV-7Pz" secondAttribute="trailing" constant="7" id="ArL-1f-epp"/>
-                                                    <constraint firstItem="fiP-1F-qXG" firstAttribute="centerY" secondItem="tNd-kR-Px9" secondAttribute="centerY" id="OaX-A4-HvJ"/>
-                                                    <constraint firstItem="VkE-mY-Qfe" firstAttribute="leading" secondItem="fiP-1F-qXG" secondAttribute="trailing" constant="7" id="QZM-P1-T5h"/>
-                                                    <constraint firstItem="dlg-OV-7Pz" firstAttribute="centerY" secondItem="tNd-kR-Px9" secondAttribute="centerY" id="Tsi-XA-B56"/>
-                                                    <constraint firstItem="VkE-mY-Qfe" firstAttribute="centerY" secondItem="tNd-kR-Px9" secondAttribute="centerY" id="U5a-qK-4dv"/>
-                                                    <constraint firstItem="dlg-OV-7Pz" firstAttribute="leading" secondItem="VkE-mY-Qfe" secondAttribute="trailing" constant="7" id="xuM-cy-k0O"/>
+                                                    <constraint firstAttribute="trailing" secondItem="tNd-kR-Px9" secondAttribute="trailing" id="EKr-KF-1yT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="2UI-9A-O3q" secondAttribute="trailing" constant="50" id="Nce-01-slj"/>
+                                                    <constraint firstItem="2UI-9A-O3q" firstAttribute="top" secondItem="HFj-w7-TkF" secondAttribute="top" constant="50" id="Quj-xT-yI7"/>
+                                                    <constraint firstItem="2UI-9A-O3q" firstAttribute="leading" secondItem="HFj-w7-TkF" secondAttribute="leading" constant="50" id="azS-dP-d1b"/>
+                                                    <constraint firstAttribute="bottom" secondItem="tNd-kR-Px9" secondAttribute="bottom" id="oBb-Wx-iq7"/>
+                                                    <constraint firstItem="tNd-kR-Px9" firstAttribute="leading" secondItem="HFj-w7-TkF" secondAttribute="leading" id="pkz-eE-7cQ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="2UI-9A-O3q" secondAttribute="bottom" constant="50" id="zUy-Fl-W32"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzQ-8Z-GtW">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzQ-8Z-GtW" userLabel="count">
                                                 <rect key="frame" x="8" y="49" width="194" height="227"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="240" id="5r1-2Q-mt0"/>
                                                     <constraint firstAttribute="height" constant="140" id="nda-Gc-Ox6"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                                <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.90667354292454849" blue="0.95172601546589264" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="KzQ-8Z-GtW" firstAttribute="centerY" secondItem="iPl-VV-Hcb" secondAttribute="centerY" id="76q-qt-YIO"/>
-                                            <constraint firstItem="KzQ-8Z-GtW" firstAttribute="centerY" secondItem="iPl-VV-Hcb" secondAttribute="centerY" id="HwN-FX-mVc"/>
-                                            <constraint firstItem="KzQ-8Z-GtW" firstAttribute="centerX" secondItem="iPl-VV-Hcb" secondAttribute="centerX" id="IxV-xz-ymd"/>
-                                            <constraint firstItem="tNd-kR-Px9" firstAttribute="centerX" secondItem="iPl-VV-Hcb" secondAttribute="centerX" id="Q1S-zv-h9L"/>
+                                            <constraint firstItem="HFj-w7-TkF" firstAttribute="leading" secondItem="iPl-VV-Hcb" secondAttribute="leading" constant="40" id="3ke-EF-kY5"/>
+                                            <constraint firstAttribute="bottom" secondItem="HFj-w7-TkF" secondAttribute="bottom" constant="40" id="8U5-G3-GZ9"/>
+                                            <constraint firstItem="KzQ-8Z-GtW" firstAttribute="top" secondItem="iPl-VV-Hcb" secondAttribute="top" id="O7e-fh-QCo"/>
+                                            <constraint firstItem="HFj-w7-TkF" firstAttribute="centerY" secondItem="iPl-VV-Hcb" secondAttribute="centerY" id="Rkc-mR-E1u"/>
+                                            <constraint firstAttribute="trailing" secondItem="KzQ-8Z-GtW" secondAttribute="trailing" constant="50" id="VPb-P7-GaG"/>
+                                            <constraint firstItem="HFj-w7-TkF" firstAttribute="centerX" secondItem="iPl-VV-Hcb" secondAttribute="centerX" id="YFr-wI-Tc1"/>
+                                            <constraint firstAttribute="bottom" secondItem="KzQ-8Z-GtW" secondAttribute="bottom" id="bhO-Tc-gq3"/>
                                             <constraint firstAttribute="height" constant="300" id="g8c-15-xE0"/>
                                             <constraint firstAttribute="width" constant="300" id="hJf-GZ-IH2"/>
-                                            <constraint firstAttribute="bottom" secondItem="tNd-kR-Px9" secondAttribute="bottom" constant="30" id="rwC-NS-HpO"/>
-                                            <constraint firstItem="KzQ-8Z-GtW" firstAttribute="centerX" secondItem="iPl-VV-Hcb" secondAttribute="centerX" id="uhN-4K-b5n"/>
+                                            <constraint firstAttribute="trailing" secondItem="HFj-w7-TkF" secondAttribute="trailing" constant="40" id="oAk-kT-myM"/>
+                                            <constraint firstItem="HFj-w7-TkF" firstAttribute="top" secondItem="iPl-VV-Hcb" secondAttribute="top" constant="45" id="t4C-ZQ-OJb"/>
+                                            <constraint firstItem="KzQ-8Z-GtW" firstAttribute="leading" secondItem="iPl-VV-Hcb" secondAttribute="leading" constant="50" id="zQw-vB-Ly6"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="graphColor">
@@ -141,6 +182,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="0bG-rX-uqm"/>
                                     <constraint firstAttribute="width" constant="300" id="4HG-5u-emy"/>
+                                    <constraint firstAttribute="bottom" secondItem="iPl-VV-Hcb" secondAttribute="bottom" id="RD2-Mu-nxl"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="c6a-1u-hcb" appends="YES" id="jvv-A5-d2i"/>
@@ -290,6 +332,7 @@
                         <outlet property="Abouttext" destination="KzQ-8Z-GtW" id="acY-me-NlI"/>
                         <outlet property="CurrentCount" destination="bbk-4F-ycg" id="upV-z8-Got"/>
                         <outlet property="LenseView" destination="6y1-Ot-vPQ" id="NeH-ko-ceK"/>
+                        <outlet property="countdata62" destination="hQV-Hk-u37" id="Cny-9C-vTt"/>
                         <outlet property="graphView" destination="iPl-VV-Hcb" id="fEv-Wq-MWn"/>
                     </connections>
                 </viewController>
@@ -306,23 +349,6 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="245" y="316"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="XYI-ie-Pvh">
-            <objects>
-                <viewController id="Wfk-ib-pb6" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="k4m-x3-vME"/>
-                        <viewControllerLayoutGuide type="bottom" id="ljT-pz-eQA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DpW-jx-oJI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zh5-OA-1cy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
 </document>

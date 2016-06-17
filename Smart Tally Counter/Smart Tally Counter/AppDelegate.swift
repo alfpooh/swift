@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         // 지연코드 3초간
-        NSThread.sleepForTimeInterval(3)
+        NSThread.sleepForTimeInterval(1)
         return true
     }
 
