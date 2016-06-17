@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var countLog = [Int]()
     var countperminLog = [Float]()
     var countsecLog = [Float]()
+    var wholeLog = ""
     var CountedNumber: Int = 0
     var lengthCountedNumber: Int = 0
     var countingSound: AVAudioPlayer!
@@ -175,9 +176,6 @@ class ViewController: UIViewController {
         }
     }
     
-    func LogExport(sender: AnyObject) {
-        copytoclipboard()
-    }
     
     
     
@@ -280,37 +278,82 @@ class ViewController: UIViewController {
     }
     
     func copytoclipboard() {
-        if CountedNumber == 0 {
-        UIPasteboard.generalPasteboard().string = "No count."
-        } else {
-        let seconds = countSec()
-        let CountlogperMin = countperMin(CountedNumber)
-        let resulttocopy = "Counted: " + String(CountedNumber) + " times " + " for \(seconds) seconds , \(CountlogperMin) per a minutes."
-        UIPasteboard.generalPasteboard().string = resulttocopy
-        print (resulttocopy)
-            playSound()}
+
+            if CountedNumber == 0 {
+                UIPasteboard.generalPasteboard().string = "No count."
+            } else {
+                let seconds = countSec()
+                let CountlogperMin = countperMin(CountedNumber)
+                let resulttocopy = "Counted: " + String(CountedNumber) + " times " + " for \(seconds) seconds , \(CountlogperMin) per a minute."
+                UIPasteboard.generalPasteboard().string = resulttocopy
+                print (resulttocopy)
+            
+        }
+    
+    }
+    
+    func exportCSV() -> String {
+        var wholeLog = ""
+        numberofLog = countLog.count - 1
+        for countindex in 0...numberofLog {
+        wholeLog = wholeLog + "\(countLog[countindex]),\(countperminLog[countindex]),\(countsecLog[countindex])\n"
+        }
+        let headerCSV = "counted number,count per a minute,counting seconds\n"
+        let wholeLogstring = headerCSV + "\(wholeLog)"
+        print (wholeLogstring)
+    return wholeLogstring
     }
 
     @IBAction func showAlertTapped(sender: AnyObject) {
         //Create the AlertController
+        
+        if isGraphViewShowing == false {
         let countResult = "Counted: " + String(CountedNumber) + " times "
         let myAlertController: UIAlertController = UIAlertController(title: "Copying to Clipboard", message: countResult, preferredStyle: .Alert)
         
         //Create and add the Cancel action
         let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
             //Do some stuff
-        }
+            }
         myAlertController.addAction(cancelAction)
+            
         //Create and an option action
         let nextAction: UIAlertAction = UIAlertAction(title: "Copy", style: .Default) { action -> Void in
-            
             self.copytoclipboard()
                     }
         myAlertController.addAction(nextAction)
         
         
         //Present the AlertController
-        self.presentViewController(myAlertController, animated: true, completion: nil)
+            self.presentViewController(myAlertController, animated: true, completion: nil)
+        }
+        // if graphview is displayed copying popup is shown like this
+        else {
+        print("copy testing here")
+            let logResult = "This will copy whole log to clipboard."
+            let logAlertController: UIAlertController = UIAlertController(title: "Copying log to Clipboard", message: logResult, preferredStyle: .Alert)
+            //Create and add the Cancel action
+            let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+                //Do some stuff
+            }
+            logAlertController.addAction(cancelAction)
+            
+            //Create and an option action
+
+            let nextAction: UIAlertAction = UIAlertAction(title: "Copy", style: .Default) { action -> Void in
+                //copyinglogwillbehere
+                //
+                let exporttext = self.exportCSV()
+                UIPasteboard.generalPasteboard().string = exporttext
+
+            }
+            logAlertController.addAction(nextAction)
+            
+            
+            //Present the AlertController
+            self.presentViewController(logAlertController, animated: true, completion: nil)
+        
+        }
     }
 
 }
