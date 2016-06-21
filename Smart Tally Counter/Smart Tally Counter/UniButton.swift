@@ -22,7 +22,7 @@ class UniButtonView: UIButton {
     override func drawRect(rect: CGRect) {
         
         // Drawing base circle
-        var basePath = UIBezierPath(ovalInRect: rect)
+        let basePath = UIBezierPath(ovalInRect: rect)
         basePath.lineWidth = lineWidth
         fillColor.setFill()
         basePath.fill()

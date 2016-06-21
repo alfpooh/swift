@@ -21,7 +21,7 @@ class UniLensView: UIButton {
     override func drawRect(rect: CGRect) {
         
         // Drawing base circle
-        var lensPath = UIBezierPath(ovalInRect: rect)
+        let lensPath = UIBezierPath(ovalInRect: rect)
         lensfillColor.setFill()
         lensPath.fill()
         
