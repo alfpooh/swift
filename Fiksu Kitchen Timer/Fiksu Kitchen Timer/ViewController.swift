@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     var sayCount = AVSpeechUtterance(string: "")
     let targetTime = "00:15"
     var isPaused = false
-    var pausedTime: Float!
+    var pausedTime: NSTimeInterval!
     var timer = NSTimer()
     
     @IBOutlet weak var targetTimeLabel: UILabel!
@@ -41,8 +41,9 @@ class ViewController: UIViewController {
             
         else {
             // for pause
-            pausedTime = Float(watch.elapsedTime)
+            pausedTime = watch.elapsedTime
             print ("Paused recorded at \(self.pausedTime)")
+            watch.pause(pausedTime)
             timer.invalidate()
             //watch.stop()
         }
@@ -63,7 +64,7 @@ class ViewController: UIViewController {
         watch.stop()
     }
     
-    func resumeTimer(lastTime: Float) {
+    func resumeTimer(lastTime: NSTimeInterval) {
  
         print("\(lastTime)")
         if !timer.valid {NSTimer.scheduledTimerWithTimeInterval(0.1, target: self,
