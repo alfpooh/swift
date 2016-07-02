@@ -10,11 +10,13 @@ import Foundation
 
 class Watch {
     
-    private var startTime: NSDate?
+   var startTime: NSDate!
     
     var elapsedTime: NSTimeInterval {
         if let startTime = self.startTime {
+            print (-startTime.timeIntervalSinceNow)
             return -startTime.timeIntervalSinceNow
+            
         } else {
             return 0
         }
@@ -32,6 +34,7 @@ class Watch {
     func start() {
         startTime = NSDate()
     }
+
     
     func stop() {
         startTime = nil

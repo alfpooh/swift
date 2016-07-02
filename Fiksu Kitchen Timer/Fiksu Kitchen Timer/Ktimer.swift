@@ -17,7 +17,7 @@ class Ktimer : NSObject {
         NSLog("timer action")
     }
     
-    func pauseTimer() {
+    func pauseTimer(any: AnyObject) {
         timer.invalidate()
     }
     
