@@ -12,6 +12,7 @@ class Watch {
     
    var startTime: NSDate!
     var pausedTime: NSTimeInterval = 0.0
+    var aMin:NSTimeInterval = 60.0
     
     var elapsedTime: NSTimeInterval {
         if let startTime = self.startTime {
@@ -36,10 +37,20 @@ class Watch {
         startTime = NSDate()
     }
     
-    func pause(pausedtime: NSTimeInterval) {
-        pausedTime = pausedtime
+    func pause() {
+       pausedTime = self.elapsedTime
+    }
+    
+    func addOneMinute() {
+        pausedTime = pausedTime + aMin
     }
 
+    func minusOneMinute() {
+        if pausedTime <= aMin {
+            pausedTime = 0.0
+            }
+            else {pausedTime = pausedTime - aMin}
+    }
     
     func stop() {
         startTime = nil

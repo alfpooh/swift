@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     let synth = AVSpeechSynthesizer()
     var sayCount = AVSpeechUtterance(string: "")
-    let targetTime = "00:15"
+    let targetTime = "03:15"
     var isPaused = false
     var pausedTime: NSTimeInterval!
     var timer = NSTimer()
@@ -31,6 +31,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func PlusMinute(sender: AnyObject) {
+        watch.addOneMinute()
+    }
+    
+    
+    @IBAction func MinusMinute(sender: AnyObject) {
+        watch.minusOneMinute()
+    }
+    
+    
     @IBAction func pauseButtonTapped(sender: AnyObject) {
         
         if isPaused == true {
@@ -41,9 +51,7 @@ class ViewController: UIViewController {
             
         else {
             // for pause
-            pausedTime = watch.elapsedTime
-            print ("Paused recorded at \(self.pausedTime)")
-            watch.pause(pausedTime)
+            watch.pause()
             timer.invalidate()
             //watch.stop()
         }
@@ -55,7 +63,7 @@ class ViewController: UIViewController {
     @IBAction func startButtonTapped(sender: UIButton) {
         if !timer.valid {timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self,
                                                                            selector: #selector(ViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)}
-        
+        //target time should be decided from selecting menu later!
         targetTimeLabel.text = targetTime
         watch.start()
     }
