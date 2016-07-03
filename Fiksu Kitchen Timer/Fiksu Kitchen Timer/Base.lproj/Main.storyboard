@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8Pc-Il-aui">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -16,6 +16,60 @@
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--Carousel View Controller-->
+        <scene sceneID="7di-OQ-eDs">
+            <objects>
+                <viewController id="8Pc-Il-aui" userLabel="Carousel View Controller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Eu-XI-dRR"/>
+                        <viewControllerLayoutGuide type="bottom" id="7eb-sx-j6z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tbe-Yw-FXd" customClass="iCarousel">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Qi-AK-RNb" customClass="BackgroundPattern" customModule="Fiksu_Kitchen_Timer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
+                                        <color key="value" red="1" green="0.9100867359" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="medColor">
+                                        <color key="value" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="darkColor">
+                                        <color key="value" red="0.6004592044" green="0.7725490196" blue="0.64785725930000004" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HEg-JU-fxS" customClass="iCarousel">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Rt-N2-okF" userLabel="Start">
+                                <rect key="frame" x="277" y="500" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="V8g-zL-MW6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7eb-sx-j6z" firstAttribute="top" secondItem="6Rt-N2-okF" secondAttribute="bottom" constant="70" id="MV4-5G-bd3"/>
+                            <constraint firstItem="9Qi-AK-RNb" firstAttribute="top" secondItem="6Eu-XI-dRR" secondAttribute="bottom" id="OEd-f2-zgb"/>
+                            <constraint firstItem="6Rt-N2-okF" firstAttribute="centerX" secondItem="Tbe-Yw-FXd" secondAttribute="centerX" id="iUe-1a-mTQ"/>
+                            <constraint firstItem="9Qi-AK-RNb" firstAttribute="leading" secondItem="Tbe-Yw-FXd" secondAttribute="leading" id="kcA-fh-XAe"/>
+                            <constraint firstAttribute="trailing" secondItem="9Qi-AK-RNb" secondAttribute="trailing" id="naA-4D-7cL"/>
+                            <constraint firstItem="6Rt-N2-okF" firstAttribute="top" secondItem="9Qi-AK-RNb" secondAttribute="bottom" id="r6a-Am-exp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rXa-Li-Ak1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-468" y="329"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -37,7 +91,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg0-sY-h3j" userLabel="targetTimeLabel">
                                                 <rect key="frame" x="23" y="19.5" width="204" height="91.5"/>
                                                 <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="60"/>
-                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQa-dZ-dYW" userLabel="elapsedTimeLabel">

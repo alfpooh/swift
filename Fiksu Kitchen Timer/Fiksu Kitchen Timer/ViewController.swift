@@ -12,6 +12,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    @IBOutlet var carousel: iCarousel!
     
     let synth = AVSpeechSynthesizer()
     var sayCount = AVSpeechUtterance(string: "")
