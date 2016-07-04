@@ -13,6 +13,7 @@
             <string>TallyCounter-Regular</string>
             <string>TallyCounter-Regular</string>
             <string>TallyCounter-Regular</string>
+            <string>TallyCounter-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -34,8 +35,8 @@
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kG8-Jc-SJA" customClass="UniLensView" customModule="Fiksu_Kitchen_Timer" customModuleProvider="target">
                                         <rect key="frame" x="175" y="65" width="250" height="250"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg0-sY-h3j" userLabel="targetTimeLabel">
-                                                <rect key="frame" x="23" y="19.5" width="204" height="91.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg0-sY-h3j" userLabel="targetTimeLabel">
+                                                <rect key="frame" x="44" y="29" width="161" height="72"/>
                                                 <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="60"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -236,10 +237,32 @@
                                             <action selector="MinusMinute:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kEU-ZN-IFc"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYu-yK-CQm" customClass="FtkToolBtn" customModule="Fiksu_Kitchen_Timer" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="88" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="FDD-XM-yzf"/>
+                                            <constraint firstAttribute="width" constant="50" id="eoP-SJ-n0H"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="17"/>
+                                        <state key="normal" title="BACK"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="1" green="0.10790181943746813" blue="0.37863291227119622" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="0YA-XT-kbZ" kind="show" id="s9S-qj-b3c"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="UYu-yK-CQm" firstAttribute="leading" secondItem="jS2-aj-xiA" secondAttribute="leading" constant="50" id="1P7-Mk-HYP"/>
                                     <constraint firstItem="A6e-PV-qxh" firstAttribute="top" secondItem="xYY-qv-Hi2" secondAttribute="bottom" constant="23" id="6Pf-vL-XMe"/>
+                                    <constraint firstItem="UYu-yK-CQm" firstAttribute="top" secondItem="jS2-aj-xiA" secondAttribute="top" constant="88" id="8Vn-XD-IDV"/>
                                     <constraint firstItem="kG8-Jc-SJA" firstAttribute="centerY" secondItem="jS2-aj-xiA" secondAttribute="centerY" constant="-100" id="DP6-6P-OOS"/>
                                     <constraint firstAttribute="bottom" secondItem="9WK-n6-ZNu" secondAttribute="bottom" constant="67" id="FWD-N8-Tif"/>
                                     <constraint firstAttribute="trailing" secondItem="9WK-n6-ZNu" secondAttribute="trailing" constant="50" id="HLI-5y-lkm"/>
@@ -280,30 +303,84 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="315"/>
+            <point key="canvasLocation" x="301" y="325"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="XFm-sH-Vd6">
             <objects>
-                <viewController id="0YA-XT-kbZ" sceneMemberID="viewController">
+                <viewController id="0YA-XT-kbZ" customClass="MenuViewController" customModule="Fiksu_Kitchen_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pqL-bG-uU7"/>
                         <viewControllerLayoutGuide type="bottom" id="c68-gc-lIc"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="c9C-Hm-OKO">
+                    <view key="view" opaque="NO" contentMode="scaleAspectFit" id="c9C-Hm-OKO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIH-9Y-irW">
-                                <rect key="frame" x="309" y="476" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="M6e-Dw-TxJ"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wgj-Hg-Ohy" customClass="BackgroundPattern" customModule="Fiksu_Kitchen_Timer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6m-CJ-dj1" userLabel="Carousel" customClass="ZCarousel" customModule="Fiksu_Kitchen_Timer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="l1f-Mu-oCr"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SS-Fk-WS6" customClass="FtkToolBtn" customModule="Fiksu_Kitchen_Timer" customModuleProvider="target">
+                                        <rect key="frame" x="250" y="417" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="YQX-7F-oOm"/>
+                                            <constraint firstAttribute="height" constant="100" id="iyQ-jg-wPu"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="1" green="0.6470588235294118" blue="0.070588235294117646" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="offsetX">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="GoTimer:" destination="0YA-XT-kbZ" eventType="touchUpInside" id="6aV-q8-pOP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1SS-Fk-WS6" secondAttribute="bottom" constant="83" id="DqU-rp-v2g"/>
+                                    <constraint firstItem="A6m-CJ-dj1" firstAttribute="leading" secondItem="Wgj-Hg-Ohy" secondAttribute="leading" id="Pnz-7S-Qdl"/>
+                                    <constraint firstItem="1SS-Fk-WS6" firstAttribute="centerX" secondItem="Wgj-Hg-Ohy" secondAttribute="centerX" id="Qbi-O8-xMD"/>
+                                    <constraint firstItem="A6m-CJ-dj1" firstAttribute="top" secondItem="Wgj-Hg-Ohy" secondAttribute="top" id="XtS-vV-MpJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="A6m-CJ-dj1" secondAttribute="trailing" id="dPe-1N-oXk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
+                                        <color key="value" red="0.99438130855560303" green="0.75010651350021362" blue="0.82674539089202881" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="medColor">
+                                        <color key="value" red="1" green="0.9100867359" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="darkColor">
+                                        <color key="value" red="0.42199236154556274" green="0.77674382925033569" blue="0.40590137243270874" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backColor">
+                                        <color key="value" red="1" green="0.89628775167785235" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wgj-Hg-Ohy" firstAttribute="top" secondItem="c9C-Hm-OKO" secondAttribute="top" id="FMN-kz-pKO"/>
+                            <constraint firstItem="c68-gc-lIc" firstAttribute="top" secondItem="Wgj-Hg-Ohy" secondAttribute="bottom" id="LIL-YB-91H"/>
+                            <constraint firstItem="Wgj-Hg-Ohy" firstAttribute="leading" secondItem="c9C-Hm-OKO" secondAttribute="leading" id="NvM-Vr-OWV"/>
+                            <constraint firstAttribute="trailing" secondItem="Wgj-Hg-Ohy" secondAttribute="trailing" id="Zbh-8v-YvJ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="GoTimer" id="rbo-lg-LXT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFc-Th-WeS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

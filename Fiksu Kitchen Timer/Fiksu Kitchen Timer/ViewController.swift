@@ -15,10 +15,11 @@ class ViewController: UIViewController {
     
     let synth = AVSpeechSynthesizer()
     var sayCount = AVSpeechUtterance(string: "")
-    let targetTime = "03:15"
+    let targetTime = ["12:00","15:00","10:00","04:00","14:00","05:00"]
     var isPaused = false
     var pausedTime: NSTimeInterval!
     var timer = NSTimer()
+    var transferText: String! = ""
     
     @IBOutlet weak var targetTimeLabel: UILabel!
 
@@ -29,6 +30,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        //target time should be decided from selecting menu later!
+        let timerindex = Int(transferText)!
+
+        targetTimeLabel.text = targetTime[timerindex]
+        print ("timerindex: \(timerindex), targetTimelabel: \(targetTimeLabel.text)")
     }
     
     @IBAction func PlusMinute(sender: AnyObject) {
@@ -63,8 +73,7 @@ class ViewController: UIViewController {
     @IBAction func startButtonTapped(sender: UIButton) {
         if !timer.valid {timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self,
                                                                            selector: #selector(ViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)}
-        //target time should be decided from selecting menu later!
-        targetTimeLabel.text = targetTime
+        
         watch.start()
     }
     
@@ -89,6 +98,7 @@ class ViewController: UIViewController {
         synth.speakUtterance(sayCount)
     }
     
+    
     func updateElapsedTimeLabel(timer: NSTimer) {
         
         // for paused.
@@ -101,10 +111,10 @@ class ViewController: UIViewController {
         if watch.isRunning {
             
             // if it is target time stop and alert
-            if targetTime == elapsedTimeLabel.text {
-                timer.invalidate()
-                watch.stop()
+            if targetTimeLabel.text == elapsedTimeLabel.text {
                 VoiceOut()
+                timer.invalidate()
+                
             }
             // normally update label with new elapsed time
             elapsedTimeLabel.text = watch.elapsedTimeAsString
