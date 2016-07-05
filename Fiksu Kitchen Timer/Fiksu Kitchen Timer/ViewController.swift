@@ -45,6 +45,7 @@ class ViewController: UIViewController {
     
     @IBAction func PlusMinute(sender: AnyObject) {
         watch.addOneMinute()
+        VoiceOut(5)
     }
     
     @IBAction func backtomenu(sender: AnyObject) {
@@ -54,7 +55,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func MinusMinute(sender: AnyObject) {
+        
         watch.minusOneMinute()
+        VoiceOut(6)
     }
     
     
@@ -68,7 +71,9 @@ class ViewController: UIViewController {
             
         else {
             // for pause
+            
             watch.pause()
+            VoiceOut(3)
             timer.invalidate()
         }
         self.pausedTime = 0.0
@@ -79,7 +84,7 @@ class ViewController: UIViewController {
     @IBAction func startButtonTapped(sender: UIButton) {
         if !timer.valid {timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self,
                                                                            selector: #selector(ViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)}
-        
+        VoiceOut(0)
         watch.start()
     }
     
@@ -120,6 +125,14 @@ class ViewController: UIViewController {
             sayCount = AVSpeechUtterance(string: "Timer continues")
             sayCount.rate = 0.5
             synth.speakUtterance(sayCount)}
+        else if index == 5 {
+            sayCount = AVSpeechUtterance(string: "Jump one minute")
+            sayCount.rate = 0.5
+            synth.speakUtterance(sayCount)}
+        else if index == 6 {
+            sayCount = AVSpeechUtterance(string: "One minute more")
+            sayCount.rate = 0.5
+            synth.speakUtterance(sayCount)}
     }
 
 
@@ -128,7 +141,6 @@ class ViewController: UIViewController {
         
         // for paused.
         if isPaused == true {
-             VoiceOut(3)
             watch.start()
             return
         }
