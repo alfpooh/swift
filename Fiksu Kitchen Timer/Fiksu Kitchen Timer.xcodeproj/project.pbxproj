@@ -15,6 +15,7 @@
 		FDEE19FB1D2AA17D00EE7F96 /* Somen.png in Resources */ = {isa = PBXBuildFile; fileRef = FDEE19F51D2AA17D00EE7F96 /* Somen.png */; };
 		FDEE19FC1D2AA17D00EE7F96 /* Egg.png in Resources */ = {isa = PBXBuildFile; fileRef = FDEE19F61D2AA17D00EE7F96 /* Egg.png */; };
 		FDEE19FE1D2B078C00EE7F96 /* ZCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE19FD1D2B078C00EE7F96 /* ZCarousel.swift */; };
+		FDEE1A021D2BC18000EE7F96 /* RecipeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE1A011D2BC18000EE7F96 /* RecipeButton.swift */; };
 		FDF2FDAE1D26697100F0CEC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF2FDAD1D26697100F0CEC5 /* AppDelegate.swift */; };
 		FDF2FDB01D26697100F0CEC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF2FDAF1D26697100F0CEC5 /* ViewController.swift */; };
 		FDF2FDB31D26697100F0CEC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF2FDB11D26697100F0CEC5 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		FDEE19F51D2AA17D00EE7F96 /* Somen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Somen.png; sourceTree = "<group>"; };
 		FDEE19F61D2AA17D00EE7F96 /* Egg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Egg.png; sourceTree = "<group>"; };
 		FDEE19FD1D2B078C00EE7F96 /* ZCarousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZCarousel.swift; sourceTree = "<group>"; };
+		FDEE1A011D2BC18000EE7F96 /* RecipeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeButton.swift; sourceTree = "<group>"; };
 		FDF2FDAA1D26697100F0CEC5 /* Fiksu Kitchen Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fiksu Kitchen Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF2FDAD1D26697100F0CEC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDF2FDAF1D26697100F0CEC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				FDEE19E11D2A709000EE7F96 /* MenuCarousel.swift */,
 				FDEE19FD1D2B078C00EE7F96 /* ZCarousel.swift */,
 				FDF2FDE11D266BE500F0CEC5 /* UniLense.swift */,
+				FDEE1A011D2BC18000EE7F96 /* RecipeButton.swift */,
 				FDF2FDDD1D266A0600F0CEC5 /* BackgroundPattern.swift */,
 				FDF2FDB41D26697100F0CEC5 /* Assets.xcassets */,
 				FDF2FDB61D26697100F0CEC5 /* LaunchScreen.storyboard */,
@@ -308,6 +311,7 @@
 				FDF2FDB01D26697100F0CEC5 /* ViewController.swift in Sources */,
 				FDF2FDAE1D26697100F0CEC5 /* AppDelegate.swift in Sources */,
 				FDF2FDE01D266ADF00F0CEC5 /* UniButton.swift in Sources */,
+				FDEE1A021D2BC18000EE7F96 /* RecipeButton.swift in Sources */,
 				FDEE19E21D2A709000EE7F96 /* MenuCarousel.swift in Sources */,
 				FDF2FDE61D267E9B00F0CEC5 /* Ktimer.swift in Sources */,
 				FDEE19FE1D2B078C00EE7F96 /* ZCarousel.swift in Sources */,

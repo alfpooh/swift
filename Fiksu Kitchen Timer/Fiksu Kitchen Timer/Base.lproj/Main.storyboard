@@ -244,7 +244,9 @@
                                             <constraint firstAttribute="width" constant="50" id="eoP-SJ-n0H"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="17"/>
-                                        <state key="normal" title="BACK"/>
+                                        <state key="normal" title="BACK">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
                                                 <color key="value" red="1" green="0.10790181943746813" blue="0.37863291227119622" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
@@ -254,6 +256,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="backtomenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s3y-Ko-mQ9"/>
                                             <segue destination="0YA-XT-kbZ" kind="show" id="s9S-qj-b3c"/>
                                         </connections>
                                     </button>
@@ -321,14 +324,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6m-CJ-dj1" userLabel="Carousel" customClass="ZCarousel" customModule="Fiksu_Kitchen_Timer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="250" id="l1f-Mu-oCr"/>
+                                            <constraint firstAttribute="height" constant="200" id="l1f-Mu-oCr"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SS-Fk-WS6" customClass="FtkToolBtn" customModule="Fiksu_Kitchen_Timer" customModuleProvider="target">
-                                        <rect key="frame" x="250" y="417" width="100" height="100"/>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SS-Fk-WS6" userLabel="StartTimer" customClass="FtkToolBtn" customModule="Fiksu_Kitchen_Timer" customModuleProvider="target">
+                                        <rect key="frame" x="250" y="460" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="YQX-7F-oOm"/>
                                             <constraint firstAttribute="height" constant="100" id="iyQ-jg-wPu"/>
@@ -348,7 +351,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="1SS-Fk-WS6" secondAttribute="bottom" constant="83" id="DqU-rp-v2g"/>
+                                    <constraint firstAttribute="bottom" secondItem="1SS-Fk-WS6" secondAttribute="bottom" constant="40" id="DqU-rp-v2g"/>
                                     <constraint firstItem="A6m-CJ-dj1" firstAttribute="leading" secondItem="Wgj-Hg-Ohy" secondAttribute="leading" id="Pnz-7S-Qdl"/>
                                     <constraint firstItem="1SS-Fk-WS6" firstAttribute="centerX" secondItem="Wgj-Hg-Ohy" secondAttribute="centerX" id="Qbi-O8-xMD"/>
                                     <constraint firstItem="A6m-CJ-dj1" firstAttribute="top" secondItem="Wgj-Hg-Ohy" secondAttribute="top" id="XtS-vV-MpJ"/>

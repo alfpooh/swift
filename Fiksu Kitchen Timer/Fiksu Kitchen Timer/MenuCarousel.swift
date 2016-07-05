@@ -19,6 +19,7 @@ class MenuViewController: UIViewController, ZCarouselDelegate {
     
     @IBAction func GoTimer(sender: AnyObject) {
         //Use SENDER to pass data
+        if currentIndex == nil {currentIndex = 0}
         let str = "\(currentIndex)"
         performSegueWithIdentifier("GoTimer", sender: str)
     }
@@ -46,7 +47,7 @@ class MenuViewController: UIViewController, ZCarouselDelegate {
         
         images.addImages(["InstantRamen", "Fusilli", "Potatoes", "Spagehtti","Somen","Egg"])
         
-        
+
         self.view.addSubview(images)
     }
     

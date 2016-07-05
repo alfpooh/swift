@@ -15,11 +15,11 @@ class ViewController: UIViewController {
     
     let synth = AVSpeechSynthesizer()
     var sayCount = AVSpeechUtterance(string: "")
-    let targetTime = ["12:00","15:00","10:00","04:00","14:00","05:00"]
+    let targetTime = [5,12,15,10,4,14]
     var isPaused = false
     var pausedTime: NSTimeInterval!
     var timer = NSTimer()
-    var transferText: String! = ""
+    var transferText: String! = "0"
     
     @IBOutlet weak var targetTimeLabel: UILabel!
 
@@ -36,8 +36,10 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         //target time should be decided from selecting menu later!
         let timerindex = Int(transferText)!
-
-        targetTimeLabel.text = targetTime[timerindex]
+        if targetTime[timerindex] < 10 {
+        targetTimeLabel.text = "0\(targetTime[timerindex]):00"
+        } else {
+        targetTimeLabel.text = "\(targetTime[timerindex]):00"}
         print ("timerindex: \(timerindex), targetTimelabel: \(targetTimeLabel.text)")
     }
     
@@ -45,6 +47,11 @@ class ViewController: UIViewController {
         watch.addOneMinute()
     }
     
+    @IBAction func backtomenu(sender: AnyObject) {
+        watch.pause()
+        timer.invalidate()
+        
+    }
     
     @IBAction func MinusMinute(sender: AnyObject) {
         watch.minusOneMinute()
@@ -63,7 +70,6 @@ class ViewController: UIViewController {
             // for pause
             watch.pause()
             timer.invalidate()
-            //watch.stop()
         }
         self.pausedTime = 0.0
         isPaused = !isPaused
@@ -84,6 +90,7 @@ class ViewController: UIViewController {
     func resumeTimer(lastTime: NSTimeInterval) {
  
         print("\(lastTime)")
+         VoiceOut(4)
         if !timer.valid {NSTimer.scheduledTimerWithTimeInterval(0.1, target: self,
                                                                 selector: #selector(ViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)
                         }
@@ -92,18 +99,36 @@ class ViewController: UIViewController {
         watch.start()
     }
     
-    func VoiceOut(){
-        sayCount = AVSpeechUtterance(string: "Time out!")
+    func VoiceOut(index: Int){
+        if index == 0 {
+        sayCount = AVSpeechUtterance(string: "Timer Starts")
         sayCount.rate = 0.5
-        synth.speakUtterance(sayCount)
+            synth.speakUtterance(sayCount)}
+        else if index == 1 {
+            sayCount = AVSpeechUtterance(string: "Time out!")
+            sayCount.rate = 0.5
+            synth.speakUtterance(sayCount)}
+         else if index == 2 {
+            sayCount = AVSpeechUtterance(string: "One minute left")
+            sayCount.rate = 0.5
+            synth.speakUtterance(sayCount)}
+        else if index == 3 {
+            sayCount = AVSpeechUtterance(string: "Timer paused")
+            sayCount.rate = 0.5
+            synth.speakUtterance(sayCount)}
+        else if index == 4 {
+            sayCount = AVSpeechUtterance(string: "Timer continues")
+            sayCount.rate = 0.5
+            synth.speakUtterance(sayCount)}
     }
-    
-    
+
+
+
     func updateElapsedTimeLabel(timer: NSTimer) {
         
         // for paused.
         if isPaused == true {
-            
+             VoiceOut(3)
             watch.start()
             return
         }
@@ -112,7 +137,7 @@ class ViewController: UIViewController {
             
             // if it is target time stop and alert
             if targetTimeLabel.text == elapsedTimeLabel.text {
-                VoiceOut()
+                VoiceOut(1)
                 timer.invalidate()
                 
             }

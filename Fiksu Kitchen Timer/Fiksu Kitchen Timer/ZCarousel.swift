@@ -16,6 +16,7 @@ class ZCarousel: UIScrollView, UIScrollViewDelegate {
     
     var ZCButtons:[UIButton] = []
     var ZCImages:[UIImageView] = []
+    var pageInt: Int = 0
     private var buttons:[UIButton] = []
     private var images:[UIImageView] = []
     private var page: CGFloat!
@@ -41,7 +42,7 @@ class ZCarousel: UIScrollView, UIScrollViewDelegate {
     
     func initalizeScrollViewProperties(){
         super.pagingEnabled = true
-        super.contentSize = CGSize(width: 0, height: self.frame.height)
+        super.contentSize = CGSize(width: 50, height: self.frame.height)
         super.clipsToBounds = false
         super.delegate = self
         super.showsHorizontalScrollIndicator = false
@@ -165,7 +166,7 @@ class ZCarousel: UIScrollView, UIScrollViewDelegate {
         //1
         page = scrollView.contentOffset.x/self.frame.width
         //2
-        var pageInt = Int(round(Float(page)))-2
+        pageInt = Int(round(Float(page)))-2
         
         if pageInt == -1 {
             pageInt = pageInt + originalArrayCount
