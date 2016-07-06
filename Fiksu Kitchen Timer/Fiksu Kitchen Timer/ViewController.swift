@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var sayCount = AVSpeechUtterance(string: "")
     let targetTime = [5,12,15,10,4,14]
     var isPaused = false
+    var isTimerOn = false
     var pausedTime: NSTimeInterval!
     var timer = NSTimer()
     var transferText: String! = "0"
@@ -65,34 +66,42 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func pauseButtonTapped(sender: AnyObject) {
-        
-        if isPaused == true {
-            // for resume
-            
-             resumeTimer(pausedTime)
-        }
-            
-        else {
-            // for pause
-            
-            watch.pause()
-            VoiceOut(3)
-            timer.invalidate()
-        }
-        self.pausedTime = 0.0
-        isPaused = !isPaused
-        
-    }
+//    @IBAction func pauseButtonTapped(sender: AnyObject) {
+//        
+//        if isPaused == true {
+//            // for resume
+//            isTimerOn = !isTimerOn
+//             resumeTimer(pausedTime)
+//        }
+//            
+//        else {
+//            // for pause
+//            
+//            watch.pause()
+//            VoiceOut(3)
+//            timer.invalidate()
+//        }
+//        self.pausedTime = 0.0
+//        isPaused = !isPaused
+//        isTimerOn = !isTimerOn
+//    }
     
     @IBAction func startButtonTapped(sender: UIButton) {
-        
+        if isTimerOn == false {
         if !timer.valid {timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self,
                                                                            selector: #selector(ViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)
         VoiceOut(0)
             watch.start()} else {
         print ("play button is pressed while timer counting")
+                     }
+        } else {
+            watch.pause()
+            VoiceOut(3)
+            timer.invalidate()
+            self.pausedTime = 0.0
         }
+        isTimerOn = !isTimerOn
+
     }
     
     @IBAction func stopButtonTapped(sender: UIButton) {
@@ -156,8 +165,12 @@ class ViewController: UIViewController {
             
             // if it is target time stop and alert
             if targetTimeLabel.text == elapsedTimeLabel.text {
-                VoiceOut(1)
+                self.pausedTime = 0.0
                 timer.invalidate()
+                elapsedTimeLabel.text = "00:00"
+                VoiceOut(1)
+                isTimerOn = !isTimerOn
+                watch.stop()
                 
             }
             // normally update label with new elapsed time
