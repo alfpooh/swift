@@ -44,20 +44,24 @@ class ViewController: UIViewController {
     }
     
     @IBAction func PlusMinute(sender: AnyObject) {
+        if timer.valid {
         watch.addOneMinute()
         VoiceOut(5)
+        }
     }
     
     @IBAction func backtomenu(sender: AnyObject) {
-        watch.pause()
+        if timer.valid { watch.pause()
         timer.invalidate()
+            dismissViewControllerAnimated(true, completion: nil)}
         
     }
     
     @IBAction func MinusMinute(sender: AnyObject) {
-        
+        if timer.valid {
         watch.minusOneMinute()
         VoiceOut(6)
+        }
     }
     
     
@@ -82,10 +86,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startButtonTapped(sender: UIButton) {
+        
         if !timer.valid {timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self,
-                                                                           selector: #selector(ViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)}
+                                                                           selector: #selector(ViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)
         VoiceOut(0)
-        watch.start()
+            watch.start()} else {
+        print ("play button is pressed while timer counting")
+        }
     }
     
     @IBAction func stopButtonTapped(sender: UIButton) {
