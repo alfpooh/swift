@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         targetTimeLabel.text = "0\(targetTime[timerindex]):00"
         } else {
         targetTimeLabel.text = "\(targetTime[timerindex]):00"}
-        print ("timerindex: \(timerindex), targetTimelabel: \(targetTimeLabel.text)")
+
     }
     
     @IBAction func PlusMinute(sender: AnyObject) {
@@ -88,12 +88,16 @@ class ViewController: UIViewController {
     
     @IBAction func startButtonTapped(sender: UIButton) {
         if isTimerOn == false {
-        if !timer.valid {timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self,
+            VoiceOut(0)
+            watch.start()
+                if !timer.valid {timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self,
                                                                            selector: #selector(ViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)
-        VoiceOut(0)
-            watch.start()} else {
-        print ("play button is pressed while timer counting")
-                     }
+
+        
+                } else {
+                        print ("play button is pressed while timer counting")
+                        }
+            
         } else {
             watch.pause()
             VoiceOut(3)
@@ -110,7 +114,7 @@ class ViewController: UIViewController {
     
     func resumeTimer(lastTime: NSTimeInterval) {
  
-        print("\(lastTime)")
+
          VoiceOut(4)
         if !timer.valid {NSTimer.scheduledTimerWithTimeInterval(0.1, target: self,
                                                                 selector: #selector(ViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)
@@ -155,22 +159,30 @@ class ViewController: UIViewController {
 
     func updateElapsedTimeLabel(timer: NSTimer) {
         
-        // for paused.
-        if isPaused == true {
+
+        if isTimerOn == false {
             watch.start()
+            isTimerOn = !isTimerOn
             return
-        }
+        } else {
+        
+
         // normally timer is running now
         if watch.isRunning {
             
             // if it is target time stop and alert
             if targetTimeLabel.text == elapsedTimeLabel.text {
-                self.pausedTime = 0.0
+                //stop watch
                 timer.invalidate()
-                elapsedTimeLabel.text = "00:00"
-                VoiceOut(1)
-                isTimerOn = !isTimerOn
                 watch.stop()
+                VoiceOut(1)
+                
+                //initialize
+                self.pausedTime = 0.0
+                elapsedTimeLabel.text = "00:00"
+
+                isTimerOn = !isTimerOn
+
                 
             }
             // normally update label with new elapsed time
@@ -178,6 +190,8 @@ class ViewController: UIViewController {
         } else {
             // if watch is not running, off timer.
             timer.invalidate()
+        }
+            
         }
     }
 

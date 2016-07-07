@@ -54,6 +54,7 @@ class Watch {
     
     func stop() {
         startTime = nil
+        pausedTime = 0.0
     }
     
 }
