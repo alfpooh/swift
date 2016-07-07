@@ -21,7 +21,9 @@ class MenuViewController: UIViewController, ZCarouselDelegate {
         //Use SENDER to pass data
         if currentIndex == nil {currentIndex = 0}
         let str = "\(currentIndex)"
+        dismissViewControllerAnimated(true, completion: nil)
         performSegueWithIdentifier("GoTimer", sender: str)
+
     }
     
 

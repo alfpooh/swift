@@ -45,9 +45,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func PlusMinute(sender: AnyObject) {
+        let timerindex = Int(transferText)!
+        let timenowplusonemin = Double(watch.elapsedTime) + 60.0
+        let targettimenow = Double(targetTime[timerindex] * 60)
         if timer.valid {
-        watch.addOneMinute()
-        VoiceOut(5)
+            if timenowplusonemin <= targettimenow {
+                watch.addOneMinute()
+                VoiceOut(5)} else {VoiceOut(7)}
         }
     }
     
@@ -59,10 +63,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func MinusMinute(sender: AnyObject) {
+        let timenow = watch.elapsedTime
         if timer.valid {
-        watch.minusOneMinute()
-        VoiceOut(6)
-        }
+            if  timenow > 60 {
+                watch.minusOneMinute()
+                VoiceOut(6)} else {VoiceOut(7)} }
     }
     
     
@@ -151,6 +156,10 @@ class ViewController: UIViewController {
             synth.speakUtterance(sayCount)}
         else if index == 6 {
             sayCount = AVSpeechUtterance(string: "One minute more")
+            sayCount.rate = 0.5
+            synth.speakUtterance(sayCount)}
+        else if index == 7 {
+            sayCount = AVSpeechUtterance(string: "Beep")
             sayCount.rate = 0.5
             synth.speakUtterance(sayCount)}
     }
