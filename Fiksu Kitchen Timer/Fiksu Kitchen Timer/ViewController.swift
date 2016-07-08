@@ -59,7 +59,8 @@ class ViewController: UIViewController {
     @IBAction func backtomenu(sender: AnyObject) {
         if timer.valid { watch.pause()
         timer.invalidate()
-            dismissViewControllerAnimated(true, completion: nil)}
+            dismissViewControllerAnimated(true, completion: nil)
+        }
         
     }
     
