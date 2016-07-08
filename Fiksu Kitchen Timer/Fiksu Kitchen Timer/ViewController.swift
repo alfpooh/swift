@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var targetTimeLabel: UILabel!
 
+    @IBOutlet weak var playorpauseLbl: UILabel!
     
     @IBOutlet weak var elapsedTimeLabel: UILabel!
 
@@ -98,13 +99,14 @@ class ViewController: UIViewController {
                 if !timer.valid {timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self,
                                                                            selector: #selector(ViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)
 
-        
+        playorpauseLbl.text = "❙❙"
                 } else {
                         print ("play button is pressed while timer counting")
                         }
             
         } else {
             watch.pause()
+            playorpauseLbl.text = "►"
             VoiceOut(3)
             timer.invalidate()
             self.pausedTime = 0.0
@@ -189,7 +191,7 @@ class ViewController: UIViewController {
                 //initialize
                 self.pausedTime = 0.0
                 elapsedTimeLabel.text = "00:00"
-
+                playorpauseLbl.text = "►"
                 isTimerOn = !isTimerOn
 
                 

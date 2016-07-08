@@ -41,9 +41,9 @@ class MenuViewController: UIViewController, ZCarouselDelegate {
         
        // self.view.addSubview(menu!)
         
-        images = ZCarousel(frame: CGRect( x: self.view.frame.size.width/5,
-            y: 200,
-            width: (self.view.frame.size.width/5)*3,
+        images = ZCarousel(frame: CGRect( x: self.view.frame.size.width/5-10,
+            y: 100,
+            width: ((self.view.frame.size.width/5)*3),
             height: (self.view.frame.size.width/5)*3))
         images.ZCdelegate = self
         

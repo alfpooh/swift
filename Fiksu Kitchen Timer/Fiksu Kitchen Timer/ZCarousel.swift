@@ -52,7 +52,7 @@ class ZCarousel: UIScrollView, UIScrollViewDelegate {
     func addButtons(titles: [String]){
         originalArrayCount = titles.count
         //1
-        var buttonFrame = CGRectMake(0, 0, self.frame.size.width, self.frame.height)
+        var buttonFrame = CGRectMake(0, 0, self.frame.size.width+100, self.frame.height+100)
         
         //a
         var finalButtons = titles
@@ -117,10 +117,10 @@ class ZCarousel: UIScrollView, UIScrollViewDelegate {
             //3
             
             if i != 0 {
-                imageViewFrame = CGRectMake(imageViewFrame.origin.x+imageViewFrame.width,
-                                            self.frame.height/2-self.frame.height/2,
-                                            self.frame.size.width,
-                                            self.frame.height)
+                imageViewFrame = CGRectMake(imageViewFrame.origin.x+imageViewFrame.width+20,
+                                            self.frame.height/2-self.frame.height/2+20,
+                                            self.frame.size.width-20,
+                                            self.frame.height-20)
             }
             //4
             let imageView = UIImageView(frame: imageViewFrame)
