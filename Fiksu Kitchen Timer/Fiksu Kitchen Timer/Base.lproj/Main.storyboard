@@ -37,7 +37,7 @@
                                             <constraint firstAttribute="width" constant="50" id="V1b-L9-n7r"/>
                                             <constraint firstAttribute="height" constant="50" id="nJt-H2-cNx"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="16"/>
                                         <state key="normal" title="BACK">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -136,27 +136,27 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <stackView opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="XUv-84-49B">
-                                                <rect key="frame" x="23" y="29" width="191" height="195"/>
+                                                <rect key="frame" x="23" y="29" width="201" height="199"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="center" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="CBd-rG-S3f">
-                                                        <rect key="frame" x="0.0" y="0.0" width="191" height="134"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="201" height="138"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg0-sY-h3j" userLabel="targetTimeLabel">
-                                                                <rect key="frame" x="20" y="0.0" width="151" height="70"/>
-                                                                <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="60"/>
+                                                                <rect key="frame" x="27" y="0.0" width="148" height="69"/>
+                                                                <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="59"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQa-dZ-dYW" userLabel="elapsedTimeLabel">
-                                                                <rect key="frame" x="0.0" y="45" width="191" height="89"/>
-                                                                <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="76"/>
+                                                                <rect key="frame" x="0.0" y="44" width="201" height="94"/>
+                                                                <fontDescription key="fontDescription" name="TallyCounter-Regular" family="Tally Counter" pointSize="80"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="►" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoE-KO-mm3" userLabel="PorP">
-                                                        <rect key="frame" x="84" y="168" width="24" height="27"/>
+                                                        <rect key="frame" x="89" y="172" width="24" height="27"/>
                                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="24"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>

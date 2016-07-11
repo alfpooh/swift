@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     
     
     let synth = AVSpeechSynthesizer()
+    var timerEffectplayer: AVAudioPlayer!
+    var timerLoudRingplayer: AVAudioPlayer!
+    var timerShortRingplayer: AVAudioPlayer!
+    var timerRewindplayer: AVAudioPlayer!
     var sayCount = AVSpeechUtterance(string: "")
     let targetTime = [5,12,15,10,4,14]
     var isPaused = false
@@ -23,11 +27,11 @@ class ViewController: UIViewController {
     var transferText: String! = "0"
     
     @IBOutlet weak var targetTimeLabel: UILabel!
-
+    
     @IBOutlet weak var playorpauseLbl: UILabel!
     
     @IBOutlet weak var elapsedTimeLabel: UILabel!
-
+    
     let watch = Watch()
     
     override func viewDidLoad() {
@@ -39,10 +43,10 @@ class ViewController: UIViewController {
         //target time should be decided from selecting menu later!
         let timerindex = Int(transferText)!
         if targetTime[timerindex] < 10 {
-        targetTimeLabel.text = "0\(targetTime[timerindex]):00"
+            targetTimeLabel.text = "0\(targetTime[timerindex]):00"
         } else {
-        targetTimeLabel.text = "\(targetTime[timerindex]):00"}
-
+            targetTimeLabel.text = "\(targetTime[timerindex]):00"}
+        
     }
     
     @IBAction func PlusMinute(sender: AnyObject) {
@@ -57,8 +61,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func backtomenu(sender: AnyObject) {
-        if timer.valid { watch.pause()
-        timer.invalidate()
+        if timer.valid {
+            timerEffectplayer.pause()
+            watch.pause()
+            timer.invalidate()
             dismissViewControllerAnimated(true, completion: nil)
         }
         
@@ -73,39 +79,42 @@ class ViewController: UIViewController {
     }
     
     
-//    @IBAction func pauseButtonTapped(sender: AnyObject) {
-//        
-//        if isPaused == true {
-//            // for resume
-//            isTimerOn = !isTimerOn
-//             resumeTimer(pausedTime)
-//        }
-//            
-//        else {
-//            // for pause
-//            
-//            watch.pause()
-//            VoiceOut(3)
-//            timer.invalidate()
-//        }
-//        self.pausedTime = 0.0
-//        isPaused = !isPaused
-//        isTimerOn = !isTimerOn
-//    }
-    
     @IBAction func startButtonTapped(sender: UIButton) {
         if isTimerOn == false {
             VoiceOut(0)
             watch.start()
-                if !timer.valid {timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self,
-                                                                           selector: #selector(ViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)
+            if !timer.valid {timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self,
+                                                                            selector: #selector(ViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)
+                
+                do {
+                    let resourcePath =  NSBundle.mainBundle().pathForResource("Timer", ofType: "wav")!
+                    let url = NSURL(fileURLWithPath: resourcePath)
+                    try timerEffectplayer = AVAudioPlayer(contentsOfURL: url)
+                    try timerLoudRingplayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("TimerLoudRing", ofType: "wav")!))
+                    try timerShortRingplayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("TimerShortRing", ofType: "wav")!))
+                    try timerRewindplayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("TimerRewind", ofType: "wav")!))
+    
+                    timerEffectplayer.numberOfLoops = -1
+                    timerEffectplayer.prepareToPlay()
+                    timerEffectplayer.play()
+                    timerLoudRingplayer.prepareToPlay()
+                    timerShortRingplayer.prepareToPlay()
+                    timerRewindplayer.prepareToPlay()
 
-        playorpauseLbl.text = "❙❙"
-                } else {
-                        print ("play button is pressed while timer counting")
-                        }
+                    
+                    
+                } catch let err as NSError {
+                    print (err.debugDescription)
+                }
+                
+                
+                playorpauseLbl.text = "❙❙"
+            } else {
+                print ("play button is pressed while timer counting")
+            }
             
         } else {
+            timerEffectplayer.pause()
             watch.pause()
             playorpauseLbl.text = "►"
             VoiceOut(3)
@@ -113,7 +122,7 @@ class ViewController: UIViewController {
             self.pausedTime = 0.0
         }
         isTimerOn = !isTimerOn
-
+        
     }
     
     @IBAction func stopButtonTapped(sender: UIButton) {
@@ -121,27 +130,28 @@ class ViewController: UIViewController {
     }
     
     func resumeTimer(lastTime: NSTimeInterval) {
- 
-
-         VoiceOut(4)
+        
+        
+        VoiceOut(4)
         if !timer.valid {NSTimer.scheduledTimerWithTimeInterval(0.1, target: self,
                                                                 selector: #selector(ViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)
-                        }
-
+        }
+        
         
         watch.start()
     }
     
     func VoiceOut(index: Int){
         if index == 0 {
-        sayCount = AVSpeechUtterance(string: "Timer Starts")
-        sayCount.rate = 0.5
+            sayCount = AVSpeechUtterance(string: "Timer Starts")
+            sayCount.rate = 0.5
             synth.speakUtterance(sayCount)}
         else if index == 1 {
+            timerLoudRingplayer.play()
             sayCount = AVSpeechUtterance(string: "Time out!")
             sayCount.rate = 0.5
             synth.speakUtterance(sayCount)}
-         else if index == 2 {
+        else if index == 2 {
             sayCount = AVSpeechUtterance(string: "One minute left")
             sayCount.rate = 0.5
             synth.speakUtterance(sayCount)}
@@ -154,59 +164,54 @@ class ViewController: UIViewController {
             sayCount.rate = 0.5
             synth.speakUtterance(sayCount)}
         else if index == 5 {
-            sayCount = AVSpeechUtterance(string: "Jump one minute")
-            sayCount.rate = 0.5
-            synth.speakUtterance(sayCount)}
+            timerRewindplayer.play()}
         else if index == 6 {
-            sayCount = AVSpeechUtterance(string: "One minute more")
-            sayCount.rate = 0.5
-            synth.speakUtterance(sayCount)}
+            timerRewindplayer.play()}
         else if index == 7 {
-            sayCount = AVSpeechUtterance(string: "Beep")
-            sayCount.rate = 0.5
-            synth.speakUtterance(sayCount)}
+            timerShortRingplayer.play()}
     }
-
-
-
+    
+    
+    
     func updateElapsedTimeLabel(timer: NSTimer) {
         
-
+        
         if isTimerOn == false {
             watch.start()
             isTimerOn = !isTimerOn
             return
         } else {
-        
-
-        // normally timer is running now
-        if watch.isRunning {
             
-            // if it is target time stop and alert
-            if targetTimeLabel.text == elapsedTimeLabel.text {
-                //stop watch
+            
+            // normally timer is running now
+            if watch.isRunning {
+                
+                // if it is target time stop and alert
+                if targetTimeLabel.text == elapsedTimeLabel.text {
+                    //stop watch
+                    timerEffectplayer.pause()
+                    timer.invalidate()
+                    watch.stop()
+                    VoiceOut(1)
+                    
+                    //initialize
+                    self.pausedTime = 0.0
+                    elapsedTimeLabel.text = "00:00"
+                    playorpauseLbl.text = "►"
+                    isTimerOn = !isTimerOn
+                    
+                    
+                }
+                // normally update label with new elapsed time
+                elapsedTimeLabel.text = watch.elapsedTimeAsString
+            } else {
+                // if watch is not running, off timer.
                 timer.invalidate()
-                watch.stop()
-                VoiceOut(1)
-                
-                //initialize
-                self.pausedTime = 0.0
-                elapsedTimeLabel.text = "00:00"
-                playorpauseLbl.text = "►"
-                isTimerOn = !isTimerOn
-
-                
             }
-            // normally update label with new elapsed time
-            elapsedTimeLabel.text = watch.elapsedTimeAsString
-        } else {
-            // if watch is not running, off timer.
-            timer.invalidate()
-        }
             
         }
     }
-
+    
     
 }
 
