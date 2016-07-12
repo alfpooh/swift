@@ -244,5 +244,47 @@ class FtkToolBtn: UIButton {
             linePath.stroke()
             
         }
+        
+        else if self.tag == 6 {
+            //Draw Play icon
+            
+            let linePath = UIBezierPath()
+            //make multiple offset
+            //Drawing Arrow head first
+            linePath.moveToPoint(CGPoint(x:cordiW/3, y:(cordiH/3)))
+            linePath.addLineToPoint(CGPoint(x:(cordiW*2)/3, y:cordiH/2))
+            linePath.addLineToPoint(CGPoint(x:cordiW/3, y:(cordiH*2)/3))
+            linePath.closePath()
+            
+            //Drawing Arrow head second
+            linePath.moveToPoint(CGPoint(x:(cordiW*2)/3, y:(cordiH/3)))
+            linePath.addLineToPoint(CGPoint(x:cordiW, y:cordiH/2))
+            linePath.addLineToPoint(CGPoint(x:(cordiW*2)/3, y:(cordiH*2)/3))
+            linePath.closePath()
+            
+            
+            //What is miterLinit? tavmjong.free.fr/SVG/MITER_LIMIT/index.html
+            linePath.miterLimit = 4
+            // lineCapStyle can be .Round .Square .Butt
+            linePath.lineCapStyle = .Round
+            linePath.usesEvenOddFillRule = true
+            
+            //scale
+            linePath.applyTransform(CGAffineTransformMakeTranslation(-cordiW/2,-cordiH/2))
+            linePath.applyTransform(CGAffineTransformMakeScale(iconScale,iconScale))
+            
+            // use special for rotating
+            //linePath.applyTransform(CGAffineTransformMakeRotation(CGFloat(M_PI/2)))
+            
+            // back to center and offset
+            linePath.applyTransform(CGAffineTransformMakeTranslation((cordiW/2)+offsetX,(cordiH/2)+offsetY))
+            
+            // fill arrow head
+            strokeColor.setFill()
+            linePath.fill()
+            strokeColor.setStroke()
+                linePath.stroke()}
+            
+
     }
 }//end

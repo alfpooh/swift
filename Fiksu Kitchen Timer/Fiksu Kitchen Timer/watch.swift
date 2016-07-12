@@ -16,7 +16,7 @@ class Watch {
     
     var elapsedTime: NSTimeInterval {
         if let startTime = self.startTime {
-            print (-startTime.timeIntervalSinceNow)
+            //print (-startTime.timeIntervalSinceNow)
             var totalTime = self.pausedTime - startTime.timeIntervalSinceNow
             //timer cannot be under zero
             if totalTime < 0.0 { totalTime = 0.0}

@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     var isPaused = false
     var isTimerOn = false
     var pausedTime: NSTimeInterval!
+    var currentTargetmin:Double = 0
     var timer = NSTimer()
     var transferText: String! = "0"
     
@@ -42,6 +43,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         //target time should be decided from selecting menu later!
         let timerindex = Int(transferText)!
+        currentTargetmin = Double(targetTime[timerindex])
         if targetTime[timerindex] < 10 {
             targetTimeLabel.text = "0\(targetTime[timerindex]):00"
         } else {
@@ -50,13 +52,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func PlusMinute(sender: AnyObject) {
-        let timerindex = Int(transferText)!
-        let timenowplusonemin = Double(watch.elapsedTime) + 60.0
-        let targettimenow = Double(targetTime[timerindex] * 60)
-        if timer.valid {
-            if timenowplusonemin <= targettimenow {
-                watch.addOneMinute()
-                VoiceOut(5)} else {VoiceOut(7)}
+        if isTimerOn == true {
+            let timenowplusonemin = Double(watch.elapsedTime) + 60.0
+            if timer.valid {
+                print ("timenowplusone: \(timenowplusonemin), currentTargetmin: \(currentTargetmin) ")
+                if timenowplusonemin <= (currentTargetmin*60) {
+                    watch.addOneMinute()
+                    VoiceOut(5)} else {VoiceOut(7)}
+            }
         }
     }
     
@@ -70,13 +73,24 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func MinusMinute(sender: AnyObject) {
-        let timenow = watch.elapsedTime
-        if timer.valid {
-            if  timenow > 60 {
-                watch.minusOneMinute()
-                VoiceOut(6)} else {VoiceOut(7)} }
+    @IBAction func plusTargetTime (sender: UIButton) {
+        if isTimerOn == true {
+            currentTargetmin = currentTargetmin + 1
+            VoiceOut(6)
+            if currentTargetmin < 10 {
+                targetTimeLabel.text = "0\(Int(currentTargetmin)):00"
+            } else {
+                targetTimeLabel.text = "\(Int(currentTargetmin)):00"}
+        }
     }
+    
+    //    @IBAction func MinusMinute(sender: AnyObject) {
+    //        let timenow = watch.elapsedTime
+    //        if timer.valid {
+    //            if  timenow > 60 {
+    //                watch.minusOneMinute()
+    //                VoiceOut(6)} else {VoiceOut(7)} }
+    //    }
     
     
     @IBAction func startButtonTapped(sender: UIButton) {
@@ -93,14 +107,14 @@ class ViewController: UIViewController {
                     try timerLoudRingplayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("TimerLoudRing", ofType: "wav")!))
                     try timerShortRingplayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("TimerShortRing", ofType: "wav")!))
                     try timerRewindplayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("TimerRewind", ofType: "wav")!))
-    
+                    
                     timerEffectplayer.numberOfLoops = -1
                     timerEffectplayer.prepareToPlay()
                     timerEffectplayer.play()
                     timerLoudRingplayer.prepareToPlay()
                     timerShortRingplayer.prepareToPlay()
                     timerRewindplayer.prepareToPlay()
-
+                    
                     
                     
                 } catch let err as NSError {
