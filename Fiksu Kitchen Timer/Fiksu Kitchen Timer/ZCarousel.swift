@@ -125,6 +125,12 @@ class ZCarousel: UIScrollView, UIScrollViewDelegate {
             //4
             let imageView = UIImageView(frame: imageViewFrame)
             imageView.image = image
+            
+            //
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ZCarousel.imageTapped(_:)))
+            imageView.userInteractionEnabled = true
+            imageView.addGestureRecognizer(tapGestureRecognizer)
+            
             //6
             self.addSubview(imageView)
             self.contentSize.width = super.contentSize.width+imageView.frame.width
@@ -136,6 +142,11 @@ class ZCarousel: UIScrollView, UIScrollViewDelegate {
         let middleImage = images[(images.count/2)]
         self.scrollRectToVisible(middleImage.frame, animated: false)
     }
+    
+    func imageTapped(image: AnyObject) {
+    print ("tapped!")
+    }
+    
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         //1
