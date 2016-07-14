@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,14 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="El5-FM-2zX">
-                                <rect key="frame" x="120" y="50" width="325" height="505"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="El5-FM-2zX">
+                                <rect key="frame" x="177" y="100" width="265" height="403"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cD0-ZL-6NM" userLabel="Display">
-                                        <rect key="frame" x="0.0" y="0.0" width="325" height="80"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cD0-ZL-6NM" userLabel="Display">
+                                        <rect key="frame" x="0.0" y="0.0" width="265" height="53"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz3-dk-WI0">
-                                                <rect key="frame" x="5" y="5" width="307" height="73"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz3-dk-WI0">
+                                                <rect key="frame" x="8" y="3" width="249" height="50"/>
                                                 <color key="backgroundColor" red="0.99438130859999996" green="0.75010651350000002" blue="0.82674539089999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,25 +35,22 @@
                                         <color key="backgroundColor" red="0.99438130859999996" green="0.75010651350000002" blue="0.82674539089999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="Nz3-dk-WI0" firstAttribute="leading" secondItem="cD0-ZL-6NM" secondAttribute="leading" constant="5" id="Ehx-Ps-w5W"/>
-                                            <constraint firstAttribute="bottom" secondItem="Nz3-dk-WI0" secondAttribute="bottom" constant="5" id="Lap-TR-gpA"/>
+                                            <constraint firstAttribute="width" secondItem="cD0-ZL-6NM" secondAttribute="height" multiplier="5:1" id="ILg-kg-yKW"/>
                                             <constraint firstAttribute="trailing" secondItem="Nz3-dk-WI0" secondAttribute="trailing" constant="5" id="aOc-V7-PBB"/>
-                                            <constraint firstItem="Nz3-dk-WI0" firstAttribute="top" secondItem="cD0-ZL-6NM" secondAttribute="top" constant="5" id="hQe-un-DNA"/>
+                                            <constraint firstItem="Nz3-dk-WI0" firstAttribute="centerY" secondItem="cD0-ZL-6NM" secondAttribute="centerY" id="nY7-GH-MVC"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KxB-c5-rkQ">
-                                        <rect key="frame" x="0.0" y="95" width="325" height="410"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KxB-c5-rkQ">
+                                        <rect key="frame" x="0.0" y="68" width="265" height="335"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WR5-4e-rYR">
-                                                <rect key="frame" x="0.0" y="0.0" width="70" height="410"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WR5-4e-rYR">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="335"/>
                                                 <subviews>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soj-De-MEw" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soj-De-MEw" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="Gpm-v2-RFc"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="HdY-qj-3cj"/>
-                                                            <constraint firstAttribute="height" constant="70" id="gPa-pc-5gT"/>
-                                                            <constraint firstAttribute="width" constant="70" id="veX-Gl-mNb"/>
+                                                            <constraint firstAttribute="width" secondItem="soj-De-MEw" secondAttribute="height" multiplier="1:1" id="n5T-ek-MdO"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
                                                         <state key="normal" title="+">
@@ -64,14 +62,11 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQa-7Y-P6F" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="85" width="70" height="70"/>
+                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQa-7Y-P6F" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="70" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="70" id="Dgz-7d-6JZ"/>
-                                                            <constraint firstAttribute="height" constant="70" id="KDR-xs-Kew"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="QPn-uY-gfJ"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="fNv-HP-zxt"/>
+                                                            <constraint firstAttribute="width" secondItem="IQa-7Y-P6F" secondAttribute="height" multiplier="1:1" id="Poq-xN-fI2"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
                                                         <state key="normal" title="7">
@@ -83,14 +78,11 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reP-ZE-OMJ" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="170" width="70" height="70"/>
+                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reP-ZE-OMJ" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="140" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="70" id="IoT-mG-lNO"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="P72-vI-HUv"/>
-                                                            <constraint firstAttribute="width" constant="70" id="mhS-nz-xmi"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="vko-HD-Bs9"/>
+                                                            <constraint firstAttribute="width" secondItem="reP-ZE-OMJ" secondAttribute="height" multiplier="1:1" id="EeT-LN-VG2"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
                                                         <state key="normal" title="4">
@@ -102,14 +94,11 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoO-AA-tvO" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="255" width="70" height="70"/>
+                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoO-AA-tvO" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="210" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="2la-Bt-2Ty"/>
-                                                            <constraint firstAttribute="height" constant="70" id="UUq-Zs-xpW"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="lHs-Yb-0me"/>
-                                                            <constraint firstAttribute="width" constant="70" id="tp1-Qj-Yvu"/>
+                                                            <constraint firstAttribute="width" secondItem="AoO-AA-tvO" secondAttribute="height" multiplier="1:1" id="zOa-7d-eUa"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
                                                         <state key="normal" title="1">
@@ -121,16 +110,13 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grc-A9-J78" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="340" width="70" height="70"/>
+                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grc-A9-J78" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="280" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="70" id="ARt-9x-cZi"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="GfC-Ie-afW"/>
-                                                            <constraint firstAttribute="height" constant="70" id="dui-sz-9Vh"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="kFb-Ve-Siq"/>
+                                                            <constraint firstAttribute="width" secondItem="grc-A9-J78" secondAttribute="height" multiplier="1:1" id="Z34-r9-feS"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="19"/>
                                                         <state key="normal" title="func">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -141,18 +127,18 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="Lcm-k7-QrO"/>
+                                                </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gcE-Gb-7eb">
-                                                <rect key="frame" x="85" y="0.0" width="70" height="410"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gcE-Gb-7eb">
+                                                <rect key="frame" x="70" y="0.0" width="55" height="335"/>
                                                 <subviews>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruS-DE-XC4" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruS-DE-XC4" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="SBJ-r3-441"/>
-                                                            <constraint firstAttribute="width" constant="70" id="U8h-SY-GOh"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="gYc-nU-72U"/>
-                                                            <constraint firstAttribute="height" constant="70" id="t5F-41-rXO"/>
+                                                            <constraint firstAttribute="width" secondItem="ruS-DE-XC4" secondAttribute="height" multiplier="1:1" id="JJ6-04-hU3"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
                                                         <state key="normal" title="−">
@@ -164,14 +150,11 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jG-Vt-Baw" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="85" width="70" height="70"/>
+                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jG-Vt-Baw" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="70" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="70" id="5DA-Tw-Px4"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="EHc-bm-mcz"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="eY9-yl-WsA"/>
-                                                            <constraint firstAttribute="width" constant="70" id="fiN-01-eZM"/>
+                                                            <constraint firstAttribute="width" secondItem="0jG-Vt-Baw" secondAttribute="height" multiplier="1:1" id="Xwg-8r-OYx"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
                                                         <state key="normal" title="8">
@@ -183,14 +166,11 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ll-iq-mBg" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="170" width="70" height="70"/>
+                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ll-iq-mBg" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="140" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="0J0-Y3-ncI"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="Npx-jk-urf"/>
-                                                            <constraint firstAttribute="width" constant="70" id="id9-i4-Sib"/>
-                                                            <constraint firstAttribute="height" constant="70" id="xpf-uO-aJQ"/>
+                                                            <constraint firstAttribute="width" secondItem="4ll-iq-mBg" secondAttribute="height" multiplier="1:1" id="WqW-zL-iiv"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
                                                         <state key="normal" title="5">
@@ -202,14 +182,11 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmL-WD-2ra" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="255" width="70" height="70"/>
+                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmL-WD-2ra" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="210" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="70" id="ERq-ZC-z5s"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="Gdn-fx-1BX"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="Gsh-pE-tFe"/>
-                                                            <constraint firstAttribute="width" constant="70" id="Ll0-2j-2Vy"/>
+                                                            <constraint firstAttribute="width" secondItem="pmL-WD-2ra" secondAttribute="height" multiplier="1:1" id="8rX-eg-xZU"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
                                                         <state key="normal" title="2">
@@ -221,14 +198,11 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NI-da-LCg" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="340" width="70" height="70"/>
+                                                    <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NI-da-LCg" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="280" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="5jU-cT-lBN"/>
-                                                            <constraint firstAttribute="width" constant="70" id="J0E-pp-82l"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="wgU-Bm-O0d"/>
-                                                            <constraint firstAttribute="height" constant="70" id="ww8-Ow-oe6"/>
+                                                            <constraint firstAttribute="width" secondItem="5NI-da-LCg" secondAttribute="height" multiplier="1:1" id="C8q-Lw-I96"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
                                                         <state key="normal" title="0">
@@ -241,18 +215,18 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="fIZ-Aj-f9q"/>
+                                                </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5Hd-Ej-nnj">
-                                                <rect key="frame" x="170" y="0.0" width="70" height="410"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5Hd-Ej-nnj">
+                                                <rect key="frame" x="140" y="0.0" width="55" height="335"/>
                                                 <subviews>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4V-qL-RBM" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4V-qL-RBM" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="HH1-mt-091"/>
-                                                            <constraint firstAttribute="width" constant="70" id="dIP-rc-yY2"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="gU6-9h-qiE"/>
-                                                            <constraint firstAttribute="height" constant="70" id="lq5-RC-8K6"/>
+                                                            <constraint firstAttribute="width" secondItem="H4V-qL-RBM" secondAttribute="height" multiplier="1:1" id="4DP-Xl-RWP"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
                                                         <state key="normal" title="×">
@@ -264,14 +238,11 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cO-zE-na2" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="85" width="70" height="70"/>
+                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cO-zE-na2" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="70" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="I5x-WY-uHn"/>
-                                                            <constraint firstAttribute="width" constant="70" id="ZHE-AR-Lmx"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="lha-tk-MUe"/>
-                                                            <constraint firstAttribute="height" constant="70" id="sxb-b8-TYW"/>
+                                                            <constraint firstAttribute="width" secondItem="9cO-zE-na2" secondAttribute="height" multiplier="1:1" id="GC0-i0-Ryx"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
                                                         <state key="normal" title="9">
@@ -283,14 +254,11 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10S-xF-trc" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="170" width="70" height="70"/>
+                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10S-xF-trc" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="140" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="40o-6w-hUp"/>
-                                                            <constraint firstAttribute="height" constant="70" id="hhy-HQ-6pG"/>
-                                                            <constraint firstAttribute="width" constant="70" id="oVB-IV-tEk"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="ozm-3a-xks"/>
+                                                            <constraint firstAttribute="width" secondItem="10S-xF-trc" secondAttribute="height" multiplier="1:1" id="ULY-Iy-Gwz"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
                                                         <state key="normal" title="6">
@@ -302,14 +270,11 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uoi-Ux-mDG" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="255" width="70" height="70"/>
+                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uoi-Ux-mDG" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="210" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="B36-bT-LNe"/>
-                                                            <constraint firstAttribute="width" constant="70" id="JLX-4r-N1u"/>
-                                                            <constraint firstAttribute="height" constant="70" id="yNR-c4-PHu"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="z4D-2T-gKs"/>
+                                                            <constraint firstAttribute="width" secondItem="Uoi-Ux-mDG" secondAttribute="height" multiplier="1:1" id="80Q-4v-wuL"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
                                                         <state key="normal" title="3">
@@ -321,14 +286,11 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXP-LP-KvX" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="340" width="70" height="70"/>
+                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXP-LP-KvX" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="280" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="FHt-AV-K1S"/>
-                                                            <constraint firstAttribute="height" constant="70" id="eG5-e9-JOQ"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="wmT-gv-a1c"/>
-                                                            <constraint firstAttribute="width" constant="70" id="x0F-af-9oY"/>
+                                                            <constraint firstAttribute="width" secondItem="iXP-LP-KvX" secondAttribute="height" multiplier="1:1" id="P6C-Fe-hsD"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
                                                         <state key="normal" title=".">
@@ -341,18 +303,18 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="qM6-4d-yvY"/>
+                                                </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="a1s-Zl-DTl">
-                                                <rect key="frame" x="255" y="0.0" width="70" height="410"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="a1s-Zl-DTl">
+                                                <rect key="frame" x="210" y="0.0" width="55" height="335"/>
                                                 <subviews>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ay1-W8-DPJ" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ay1-W8-DPJ" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="GPj-kw-O7d"/>
-                                                            <constraint firstAttribute="height" constant="70" id="U4F-eE-LKc"/>
-                                                            <constraint firstAttribute="width" constant="70" id="fkC-Zq-T4C"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="jon-dV-dm6"/>
+                                                            <constraint firstAttribute="width" secondItem="ay1-W8-DPJ" secondAttribute="height" multiplier="1:1" id="X9a-vm-QVR"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
                                                         <state key="normal" title="÷">
@@ -364,14 +326,11 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7r-8a-tYU" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="85" width="70" height="70"/>
+                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7r-8a-tYU" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="70" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="70" id="39o-jY-kyn"/>
-                                                            <constraint firstAttribute="height" constant="70" id="Eqw-QV-a2X"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="t9c-o2-I7e"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="u4W-gg-wRG"/>
+                                                            <constraint firstAttribute="width" secondItem="X7r-8a-tYU" secondAttribute="height" multiplier="1:1" id="3oX-sK-vs9"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="17"/>
                                                         <state key="normal" title="BACK">
@@ -383,19 +342,18 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lme-64-rpG">
-                                                        <rect key="frame" x="0.0" y="170" width="70" height="240"/>
+                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lme-64-rpG">
+                                                        <rect key="frame" x="0.0" y="140" width="55" height="195"/>
                                                         <color key="backgroundColor" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="70" id="Ksh-NV-5Or"/>
-                                                            <constraint firstAttribute="height" constant="240" id="aVC-kB-9g4"/>
-                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
                                                         <state key="normal" title="=">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="C0T-dW-1H3"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -403,6 +361,10 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="El5-FM-2zX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BHh-0N-smB"/>
+                            <constraint firstItem="El5-FM-2zX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Krb-dn-5xi"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
