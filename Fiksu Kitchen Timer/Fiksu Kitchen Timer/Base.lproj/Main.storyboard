@@ -293,30 +293,10 @@
                                             <constraint firstAttribute="height" constant="200" id="l1f-Mu-oCr"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SS-Fk-WS6" userLabel="StartTimer" customClass="FtkToolBtn" customModule="Fiksu_Kitchen_Timer" customModuleProvider="target">
-                                        <rect key="frame" x="250" y="460" width="100" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="YQX-7F-oOm"/>
-                                            <constraint firstAttribute="height" constant="100" id="iyQ-jg-wPu"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" red="1" green="0.6470588235294118" blue="0.070588235294117646" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="offsetX">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="GoTimer:" destination="0YA-XT-kbZ" eventType="touchUpInside" id="6aV-q8-pOP"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="1SS-Fk-WS6" secondAttribute="bottom" constant="40" id="DqU-rp-v2g"/>
                                     <constraint firstItem="A6m-CJ-dj1" firstAttribute="leading" secondItem="Wgj-Hg-Ohy" secondAttribute="leading" id="Pnz-7S-Qdl"/>
-                                    <constraint firstItem="1SS-Fk-WS6" firstAttribute="centerX" secondItem="Wgj-Hg-Ohy" secondAttribute="centerX" id="Qbi-O8-xMD"/>
                                     <constraint firstItem="A6m-CJ-dj1" firstAttribute="top" secondItem="Wgj-Hg-Ohy" secondAttribute="top" id="XtS-vV-MpJ"/>
                                     <constraint firstAttribute="trailing" secondItem="A6m-CJ-dj1" secondAttribute="trailing" id="dPe-1N-oXk"/>
                                 </constraints>

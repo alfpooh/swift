@@ -15,24 +15,9 @@ class MenuViewController: UIViewController, ZCarouselDelegate {
    // var menu: ZCarousel!
     var images: ZCarousel!
     var currentIndex: Int!
-    
-    
-    @IBAction func GoTimer(sender: AnyObject) {
-        //Use SENDER to pass data
-        if currentIndex == nil {currentIndex = 0}
-        let str = "\(currentIndex)"
-        performSegueWithIdentifier("GoTimer", sender: str)
 
-    }
     
-    func GotoTimer(sender: String) {
-        //Use SENDER to pass data
-//        if currentIndex == nil {currentIndex = 0}
-//        let str = "\(currentIndex)"
-//        performSegueWithIdentifier("GoTimer:", sender: str)
-        print ("Arrived at MenuViewController but crashed.")
-        
-    }
+
     
     
     override func viewDidLoad() {
@@ -57,6 +42,16 @@ class MenuViewController: UIViewController, ZCarouselDelegate {
         
 
         self.view.addSubview(images)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(GotoTimer), name: "starttimer", object: nil)
+    }
+    
+    func GotoTimer(sender: AnyObject) {
+
+                if currentIndex == nil {currentIndex = 0}
+                let str = "\(currentIndex)"
+                performSegueWithIdentifier("GoTimer", sender: str)
+
     }
     
     func ZCarouselShowingIndex(scrollview: ZCarousel, index: Int) {
