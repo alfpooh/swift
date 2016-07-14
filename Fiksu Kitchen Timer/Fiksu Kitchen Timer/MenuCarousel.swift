@@ -25,7 +25,14 @@ class MenuViewController: UIViewController, ZCarouselDelegate {
 
     }
     
-
+    func GotoTimer(sender: String) {
+        //Use SENDER to pass data
+//        if currentIndex == nil {currentIndex = 0}
+//        let str = "\(currentIndex)"
+//        performSegueWithIdentifier("GoTimer:", sender: str)
+        print ("Arrived at MenuViewController but crashed.")
+        
+    }
     
     
     override func viewDidLoad() {

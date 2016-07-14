@@ -144,7 +144,7 @@ class ZCarousel: UIScrollView, UIScrollViewDelegate {
     }
     
     func imageTapped(image: AnyObject) {
-    print ("tapped!")
+        print ("test")
     }
     
     
