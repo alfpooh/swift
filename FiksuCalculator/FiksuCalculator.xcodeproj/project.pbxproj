@@ -15,6 +15,8 @@
 		FDD9227C1D37836F00CE5AE5 /* FiksuCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD9227B1D37836F00CE5AE5 /* FiksuCalculatorTests.swift */; };
 		FDD922871D37836F00CE5AE5 /* FiksuCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD922861D37836F00CE5AE5 /* FiksuCalculatorUITests.swift */; };
 		FDD922951D378C2000CE5AE5 /* FTK_unibutton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD922941D378C2000CE5AE5 /* FTK_unibutton.swift */; };
+		FDFAB6EF1D37ADF1003D0E60 /* CalcBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFAB6EE1D37ADF1003D0E60 /* CalcBrain.swift */; };
+		FDFAB6F11D37FC6E003D0E60 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFAB6F01D37FC6E003D0E60 /* Background.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		FDD922861D37836F00CE5AE5 /* FiksuCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiksuCalculatorUITests.swift; sourceTree = "<group>"; };
 		FDD922881D37836F00CE5AE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDD922941D378C2000CE5AE5 /* FTK_unibutton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTK_unibutton.swift; sourceTree = "<group>"; };
+		FDFAB6EE1D37ADF1003D0E60 /* CalcBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalcBrain.swift; sourceTree = "<group>"; };
+		FDFAB6F01D37FC6E003D0E60 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				FDD9226F1D37836F00CE5AE5 /* LaunchScreen.storyboard */,
 				FDD922721D37836F00CE5AE5 /* Info.plist */,
 				FDD922941D378C2000CE5AE5 /* FTK_unibutton.swift */,
+				FDFAB6EE1D37ADF1003D0E60 /* CalcBrain.swift */,
+				FDFAB6F01D37FC6E003D0E60 /* Background.swift */,
 			);
 			path = FiksuCalculator;
 			sourceTree = "<group>";
@@ -261,8 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDD922691D37836F00CE5AE5 /* ViewController.swift in Sources */,
+				FDFAB6EF1D37ADF1003D0E60 /* CalcBrain.swift in Sources */,
 				FDD922671D37836F00CE5AE5 /* AppDelegate.swift in Sources */,
 				FDD922951D378C2000CE5AE5 /* FTK_unibutton.swift in Sources */,
+				FDFAB6F11D37FC6E003D0E60 /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +499,7 @@
 				FDD9228D1D37836F00CE5AE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FDD9228E1D37836F00CE5AE5 /* Build configuration list for PBXNativeTarget "FiksuCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +508,7 @@
 				FDD922901D37836F00CE5AE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FDD922911D37836F00CE5AE5 /* Build configuration list for PBXNativeTarget "FiksuCalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +517,7 @@
 				FDD922931D37836F00CE5AE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
