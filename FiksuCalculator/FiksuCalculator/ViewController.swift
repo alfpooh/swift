@@ -21,9 +21,11 @@ class ViewController: UIViewController {
             let textInTheCurrentDisplay = display.text!
             display.text = textInTheCurrentDisplay + digit
         } else {
-            display.text = digit
+            if digit == "." { display.text = "0\(digit)"}
+            else {
+                display.text = digit}
         }
-        userIsInTheMiddleOfTyping = !userIsInTheMiddleOfTyping
+        userIsInTheMiddleOfTyping = true
     }
     
     private var displayValue: Double {
@@ -44,7 +46,7 @@ class ViewController: UIViewController {
         
         if userIsInTheMiddleOfTyping {
             brain.setOperand(displayValue)
-            userIsInTheMiddleOfTyping = true
+            userIsInTheMiddleOfTyping = false
         }
         
         if let mathematicalSymbol = sender.currentTitle {
