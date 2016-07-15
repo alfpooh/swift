@@ -37,6 +37,25 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        do {
+            let resourcePath =  NSBundle.mainBundle().pathForResource("Timer", ofType: "wav")!
+            let url = NSURL(fileURLWithPath: resourcePath)
+            try timerEffectplayer = AVAudioPlayer(contentsOfURL: url)
+            try timerLoudRingplayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("TimerLoudRing", ofType: "wav")!))
+            try timerShortRingplayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("TimerShortRing", ofType: "wav")!))
+            try timerRewindplayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("TimerRewind", ofType: "wav")!))
+            
+            timerEffectplayer.numberOfLoops = -1
+            timerEffectplayer.prepareToPlay()
+            timerLoudRingplayer.prepareToPlay()
+            timerShortRingplayer.prepareToPlay()
+            timerRewindplayer.prepareToPlay()
+            
+            
+            
+        } catch let err as NSError {
+            print (err.debugDescription)
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -74,16 +93,49 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plusTargetTime (sender: UIButton) {
-        if isTimerOn == true {
+
             currentTargetmin = currentTargetmin + 1
             VoiceOut(6)
             if currentTargetmin < 10 {
                 targetTimeLabel.text = "0\(Int(currentTargetmin)):00"
             } else {
                 targetTimeLabel.text = "\(Int(currentTargetmin)):00"}
-        }
     }
     
+    @IBAction func minusTargetTime (sender: UIButton) {
+
+    currentTargetmin = currentTargetmin - 1
+        if currentTargetmin <= 0 {
+        currentTargetmin = 1
+        VoiceOut(7)
+        }
+        if isTimerOn == true {
+            if currentTargetmin <= elapsedTimeMin {
+            currentTargetmin = currentTargetmin + 1
+                VoiceOut(7)
+            }
+        }
+    VoiceOut(6)
+    if currentTargetmin < 10 {
+    targetTimeLabel.text = "0\(Int(currentTargetmin)):00"
+    } else {
+    targetTimeLabel.text = "\(Int(currentTargetmin)):00"}
+
+}
+    private var elapsedTimeMin: Double {
+    
+        get {
+            let eTimeMin: String = String(elapsedTimeLabel.text!.characters.prefix(2))
+            return Double(eTimeMin)!
+        }
+        set {
+            if let eTime:String = String(elapsedTimeMin) {
+                elapsedTimeLabel.text = "\(eTime):00"
+            }
+        }
+    
+    }
+
     //    @IBAction func MinusMinute(sender: AnyObject) {
     //        let timenow = watch.elapsedTime
     //        if timer.valid {
@@ -99,27 +151,7 @@ class ViewController: UIViewController {
             watch.start()
             if !timer.valid {timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self,
                                                                             selector: #selector(ViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)
-                
-                do {
-                    let resourcePath =  NSBundle.mainBundle().pathForResource("Timer", ofType: "wav")!
-                    let url = NSURL(fileURLWithPath: resourcePath)
-                    try timerEffectplayer = AVAudioPlayer(contentsOfURL: url)
-                    try timerLoudRingplayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("TimerLoudRing", ofType: "wav")!))
-                    try timerShortRingplayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("TimerShortRing", ofType: "wav")!))
-                    try timerRewindplayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("TimerRewind", ofType: "wav")!))
-                    
-                    timerEffectplayer.numberOfLoops = -1
-                    timerEffectplayer.prepareToPlay()
-                    timerEffectplayer.play()
-                    timerLoudRingplayer.prepareToPlay()
-                    timerShortRingplayer.prepareToPlay()
-                    timerRewindplayer.prepareToPlay()
-                    
-                    
-                    
-                } catch let err as NSError {
-                    print (err.debugDescription)
-                }
+                 timerEffectplayer.play()
                 
                 
                 playorpauseLbl.text = "❙❙"
