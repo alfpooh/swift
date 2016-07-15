@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="265" height="53"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="headTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz3-dk-WI0">
-                                                <rect key="frame" x="8" y="3" width="249" height="50"/>
+                                                <rect key="frame" x="53" y="3" width="198" height="50"/>
                                                 <color key="backgroundColor" red="0.2459134615384615" green="0.18636822170513417" blue="0.20757686884539223" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -378,7 +378,7 @@
                                                             <constraint firstAttribute="width" secondItem="X7r-8a-tYU" secondAttribute="height" multiplier="1:1" id="3oX-sK-vs9"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="17"/>
-                                                        <state key="normal" title="BACK">
+                                                        <state key="normal" title="Clear">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -386,6 +386,9 @@
                                                                 <color key="value" red="0.0" green="0.0028140406469999999" blue="0.56955128209999994" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="clearCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lMc-pn-ZFz"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lme-64-rpG">
                                                         <rect key="frame" x="0.0" y="140" width="55" height="195"/>

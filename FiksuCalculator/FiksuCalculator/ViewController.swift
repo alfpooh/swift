@@ -13,6 +13,18 @@ class ViewController: UIViewController {
     //displaying digits
     @IBOutlet weak var display: UILabel!
     
+    @IBAction func clearCalc(sender: UIButton) {
+        if userIsInTheMiddleOfTyping {
+            let textInTheCurrentDisplay = display.text!
+            display.text = String(textInTheCurrentDisplay.characters.dropLast())
+            if display.text == "" {display.text="0"}
+            
+        } else {
+        display.text = "0"
+        }
+    }
+    
+    
     private var userIsInTheMiddleOfTyping = false
     
     @IBAction private func touchDigit (sender: UIButton) {
