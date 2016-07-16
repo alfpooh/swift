@@ -18,7 +18,7 @@ class FtkToolBtn: UIButton {
     @IBInspectable var fillColor: UIColor = UIColor.greenColor()
     @IBInspectable var strokeColor: UIColor = UIColor.whiteColor()
     @IBInspectable var iconScale: CGFloat = 1.0
-    @IBInspectable var strokelineWidth: CGFloat = 1.0
+    @IBInspectable var strokelineWidth: CGFloat = 0.8
     @IBInspectable var miterlimit: CGFloat = 4
     @IBInspectable var offsetX: CGFloat = 0
     @IBInspectable var offsetY: CGFloat = 0
@@ -285,6 +285,68 @@ class FtkToolBtn: UIButton {
             strokeColor.setStroke()
             linePath.stroke()}
         
+        else if self.tag == 7 {
         
+            //Draw export icon
+            //Drawing Arrow stem
+            let linePath = UIBezierPath()
+            linePath.moveToPoint(CGPoint(x:bounds.width/2, y:bounds.height/2))
+            linePath.addLineToPoint(CGPoint(x:bounds.width/2, y:(bounds.height*7)/36))
+            //Drawing Arrow head
+            linePath.moveToPoint(CGPoint(x:(bounds.width * 5)/12, y:(bounds.height * 11)/36))
+            linePath.addLineToPoint(CGPoint(x:bounds.width/2, y:(bounds.height * 5 )/36))
+            linePath.addLineToPoint(CGPoint(x:(bounds.width * 7)/12, y:(bounds.height * 11)/36))
+            
+            linePath.closePath()
+            //What is miterLinit? tavmjong.free.fr/SVG/MITER_LIMIT/index.html
+            linePath.miterLimit = 4;
+            // lineCapStyle can be .Round .Square .Butt
+            linePath.lineCapStyle = .Round
+            linePath.usesEvenOddFillRule = true
+            // fill arrow head
+            strokeColor.setFill()
+            strokeColor.setStroke()
+            linePath.lineWidth = strokelineWidth
+                
+            //scale
+            linePath.applyTransform(CGAffineTransformMakeTranslation(-cordiW/2,-cordiH/2))
+            linePath.applyTransform(CGAffineTransformMakeScale(iconScale,iconScale))
+            
+            // use special for rotating
+            //linePath.applyTransform(CGAffineTransformMakeRotation(CGFloat(M_PI/2)))
+            
+            // back to center and offset
+            linePath.applyTransform(CGAffineTransformMakeTranslation((cordiW/2)+offsetX,(cordiH/2)+offsetY))
+            
+            //draw
+            linePath.fill()
+            linePath.stroke()
+            
+            //Drawing box
+            
+            let boxPath = UIBezierPath()
+            boxPath.moveToPoint(CGPoint(x:(bounds.width*5)/12, y:(bounds.height*5)/12))
+            boxPath.addLineToPoint(CGPoint(x:(bounds.width/3), y:(bounds.height*5)/12))
+            boxPath.addLineToPoint(CGPoint(x:(bounds.width/3), y:(bounds.height*3)/4))
+            boxPath.addLineToPoint(CGPoint(x:(bounds.width*2/3), y:(bounds.height*3)/4))
+            boxPath.addLineToPoint(CGPoint(x:(bounds.width*2/3), y:(bounds.height*5)/12))
+            boxPath.addLineToPoint(CGPoint(x:(bounds.width*7)/12, y:(bounds.height*5)/12))
+            // lineCapStyle can be .Round .Square .Butt
+            boxPath.lineCapStyle = .Round
+            boxPath.usesEvenOddFillRule = true
+            
+            //scale
+            boxPath.applyTransform(CGAffineTransformMakeTranslation(-cordiW/2,-cordiH/2))
+            boxPath.applyTransform(CGAffineTransformMakeScale(iconScale,iconScale))
+            
+            
+            // back to center and offset
+            boxPath.applyTransform(CGAffineTransformMakeTranslation((cordiW/2)+offsetX,(cordiH/2)+offsetY))
+            
+            strokeColor.setStroke()
+            boxPath.lineWidth = strokelineWidth
+            boxPath.stroke()
+
+        }
     }
 }//end
