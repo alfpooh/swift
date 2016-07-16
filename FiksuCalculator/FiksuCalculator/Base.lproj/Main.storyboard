@@ -64,7 +64,7 @@
                                                             <constraint firstAttribute="width" secondItem="soj-De-MEw" secondAttribute="height" multiplier="1:1" id="n5T-ek-MdO"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
-                                                        <state key="normal" title="M">
+                                                        <state key="normal" title="M1">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -72,6 +72,9 @@
                                                                 <color key="value" red="0.046014708190000003" green="0.3829727564" blue="0.19321495920000001" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="memoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NFi-rB-Ypb"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVy-yH-P7H" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="70" width="55" height="55"/>
@@ -181,7 +184,7 @@
                                                             <constraint firstAttribute="width" secondItem="ruS-DE-XC4" secondAttribute="height" multiplier="1:1" id="JJ6-04-hU3"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
-                                                        <state key="normal" title="M">
+                                                        <state key="normal" title="M2">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -189,6 +192,9 @@
                                                                 <color key="value" red="1" green="0.16841727279999999" blue="0.0" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="memoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mS3-5y-TU7"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgT-oc-ag2" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="70" width="55" height="55"/>
@@ -301,7 +307,7 @@
                                                             <constraint firstAttribute="width" secondItem="H4V-qL-RBM" secondAttribute="height" multiplier="1:1" id="4DP-Xl-RWP"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
-                                                        <state key="normal" title="M">
+                                                        <state key="normal" title="M3">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -309,6 +315,9 @@
                                                                 <color key="value" red="0.30064147749999998" green="0.28791537830000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="memoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tqn-gg-eVj"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czy-hl-2G1" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="70" width="55" height="55"/>
@@ -435,6 +444,9 @@
                                                                 <real key="value" value="0.5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="exportResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nNY-29-oIl"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDb-jt-EEl" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="70" width="55" height="55"/>

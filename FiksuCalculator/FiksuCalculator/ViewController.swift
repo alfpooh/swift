@@ -13,14 +13,32 @@ class ViewController: UIViewController {
     //displaying digits
     @IBOutlet weak var display: UILabel!
     
+    var memory:[String:String] = ["M1":"", "M2":"", "M3":""]
+    
+    @IBAction func memoryButton(sender: UIButton) {
+        if memory["M1"] == "" {
+            let MR = display.text
+            memory["M1"] = MR
+        }
+        else {
+            display.text = memory["M1"]
+            userIsInTheMiddleOfTyping = true        }
+    }
+    
+    @IBAction func exportResult(sender: UIButton) {
+    }
     @IBAction func clearCalc(sender: UIButton) {
         if userIsInTheMiddleOfTyping {
             let textInTheCurrentDisplay = display.text!
             display.text = String(textInTheCurrentDisplay.characters.dropLast())
-            if display.text == "" {display.text="0"}
+            if display.text == "" {
+                display.text="0"
+            userIsInTheMiddleOfTyping = false
+            }
             
         } else {
         display.text = "0"
+        userIsInTheMiddleOfTyping = false
         }
     }
     
