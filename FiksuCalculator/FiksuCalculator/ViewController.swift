@@ -10,7 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var BasicPad: UIView!
+    @IBOutlet weak var FunctionPad: UIView!
+    
+    @IBOutlet weak var funcDigits: UILabel!
+    
+    var isBasicShowing = true
+    
     @IBAction func copytoClipboard(sender: AnyObject) {
+        
         UIPasteboard.generalPasteboard().string = display.text
     }
     
@@ -81,7 +89,6 @@ class ViewController: UIViewController {
         
         set {
             display.text = String(newValue)
-            
         }
     }
     
@@ -107,6 +114,43 @@ class ViewController: UIViewController {
 
     }
     
+    @IBAction func counterViewSwipe (gesture:UISwipeGestureRecognizer?) {
+        if (isBasicShowing) {
+            UIView.transitionFromView(BasicPad,
+                                      toView:FunctionPad,
+                                      duration: 1.0,
+                                      options: [UIViewAnimationOptions.TransitionFlipFromLeft, UIViewAnimationOptions.ShowHideTransitionViews],
+                                      completion:nil)
+                                        funcDigits.text = display.text
+        } else {
+            UIView.transitionFromView(FunctionPad,
+                                      toView: BasicPad,
+                                      duration: 1.0,
+                                      options: [UIViewAnimationOptions.TransitionFlipFromLeft, UIViewAnimationOptions.ShowHideTransitionViews],
+                                      completion: nil)
+                                        display.text = funcDigits.text}
+                isBasicShowing = !isBasicShowing
+    }
+    
+    @IBAction func counterViewSwipeback (gesture:UISwipeGestureRecognizer?) {
+        if (isBasicShowing) {
+            UIView.transitionFromView(BasicPad,
+                                      toView:FunctionPad,
+                                      duration: 1.0,
+                                      options: [UIViewAnimationOptions.TransitionFlipFromRight
+                                        , UIViewAnimationOptions.ShowHideTransitionViews],
+                                      completion:nil)
+            funcDigits.text = display.text
+        } else {
+            UIView.transitionFromView(FunctionPad,
+                                      toView: BasicPad,
+                                      duration: 1.0,
+                                      options: [UIViewAnimationOptions.TransitionFlipFromRight
+                                        , UIViewAnimationOptions.ShowHideTransitionViews],
+                                      completion: nil)
+            display.text = funcDigits.text}
+        isBasicShowing = !isBasicShowing
+    }
 
     
 }

@@ -18,534 +18,602 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="El5-FM-2zX">
-                                <rect key="frame" x="177" y="100" width="265" height="473"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YdF-cs-5Y5" userLabel="TopPad">
+                                <rect key="frame" x="150" y="50" width="300" height="500"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cD0-ZL-6NM" userLabel="Display" customClass="FtkSquareBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="265" height="53"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zl3-bM-YnP" userLabel="BasicPad">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="headTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz3-dk-WI0">
-                                                <rect key="frame" x="53" y="3" width="198" height="50"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="28"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="El5-FM-2zX">
+                                                <rect key="frame" x="17" y="14" width="265" height="473"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cD0-ZL-6NM" userLabel="Display" customClass="FtkSquareBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="265" height="53"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="right" lineBreakMode="headTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz3-dk-WI0">
+                                                                <rect key="frame" x="5" y="10" width="255" height="32.5"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="28"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="Nz3-dk-WI0" firstAttribute="leading" secondItem="cD0-ZL-6NM" secondAttribute="leading" constant="5" id="Ehx-Ps-w5W"/>
+                                                            <constraint firstAttribute="width" secondItem="cD0-ZL-6NM" secondAttribute="height" multiplier="5:1" id="ILg-kg-yKW"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Nz3-dk-WI0" secondAttribute="trailing" constant="5" id="aOc-V7-PBB"/>
+                                                            <constraint firstItem="Nz3-dk-WI0" firstAttribute="centerY" secondItem="cD0-ZL-6NM" secondAttribute="centerY" id="nY7-GH-MVC"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                <color key="value" red="0.24591346150000001" green="0.1863682217" blue="0.20757686880000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="radius">
+                                                                <size key="value" width="10" height="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KxB-c5-rkQ">
+                                                        <rect key="frame" x="0.0" y="68" width="265" height="405"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WR5-4e-rYR">
+                                                                <rect key="frame" x="0.0" y="0.0" width="55" height="405"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soj-De-MEw" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="soj-De-MEw" secondAttribute="height" multiplier="1:1" id="n5T-ek-MdO"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="16"/>
+                                                                        <state key="normal" title="M1">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="0.046014708190000003" green="0.3829727564" blue="0.19321495920000001" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="memoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NFi-rB-Ypb"/>
+                                                                            <action selector="memoryDelete:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="ObF-tn-3yS"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVy-yH-P7H" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="70" width="55" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="fVy-yH-P7H" secondAttribute="height" multiplier="1:1" id="oKa-MP-G3j"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                                                        <state key="normal" title="+">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="0.0" green="0.0028140406469999999" blue="0.56955128209999994" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f3P-J6-3yD"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQa-7Y-P6F" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="140" width="55" height="55"/>
+                                                                        <color key="backgroundColor" red="0.59709535256410251" green="0.065809743742177421" blue="0.23081452327147664" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="IQa-7Y-P6F" secondAttribute="height" multiplier="1:1" id="Poq-xN-fI2"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                                                        <state key="normal" title="7">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.95328663793103452" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J1s-2h-RJb"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reP-ZE-OMJ" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="210" width="55" height="55"/>
+                                                                        <color key="backgroundColor" red="0.59709535256410251" green="0.065809743742177421" blue="0.23081452327147664" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="reP-ZE-OMJ" secondAttribute="height" multiplier="1:1" id="EeT-LN-VG2"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                                                        <state key="normal" title="4">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.95328663793103452" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YAN-uj-MnO"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoO-AA-tvO" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="280" width="55" height="55"/>
+                                                                        <color key="backgroundColor" red="0.59709535256410251" green="0.065809743742177421" blue="0.23081452327147664" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="AoO-AA-tvO" secondAttribute="height" multiplier="1:1" id="zOa-7d-eUa"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                                                        <state key="normal" title="1">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.95328663793103452" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Crf-Or-72e"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grc-A9-J78" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="350" width="55" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="grc-A9-J78" secondAttribute="height" multiplier="1:1" id="Z34-r9-feS"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="19"/>
+                                                                        <state key="normal" title="±">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="0.0" green="0.0028140406473060862" blue="0.56955128205128203" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lb1-lQ-HLy"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="fVy-yH-P7H" firstAttribute="width" secondItem="fVy-yH-P7H" secondAttribute="height" multiplier="1:1" id="70a-ks-oLu"/>
+                                                                    <constraint firstAttribute="width" constant="55" id="Lcm-k7-QrO"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gcE-Gb-7eb">
+                                                                <rect key="frame" x="70" y="0.0" width="55" height="405"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruS-DE-XC4" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="ruS-DE-XC4" secondAttribute="height" multiplier="1:1" id="JJ6-04-hU3"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="16"/>
+                                                                        <state key="normal" title="M2">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="1" green="0.16841727279999999" blue="0.0" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="memoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mS3-5y-TU7"/>
+                                                                            <action selector="memoryDelete:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="hFP-gs-onW"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgT-oc-ag2" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="70" width="55" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="sgT-oc-ag2" secondAttribute="height" multiplier="1:1" id="qtj-Bc-xqE"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                                                        <state key="normal" title="−">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="0.0" green="0.0028140406469999999" blue="0.56955128209999994" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pAG-UV-Dfo"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jG-Vt-Baw" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="140" width="55" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="0jG-Vt-Baw" secondAttribute="height" multiplier="1:1" id="Xwg-8r-OYx"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                                                        <state key="normal" title="8">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ryg-Gn-5eX"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ll-iq-mBg" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="210" width="55" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="4ll-iq-mBg" secondAttribute="height" multiplier="1:1" id="WqW-zL-iiv"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                                                        <state key="normal" title="5">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3vs-cB-qUS"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmL-WD-2ra" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="280" width="55" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="pmL-WD-2ra" secondAttribute="height" multiplier="1:1" id="8rX-eg-xZU"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                                                        <state key="normal" title="2">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="syN-ux-mVC"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NI-da-LCg" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="350" width="55" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="5NI-da-LCg" secondAttribute="height" multiplier="1:1" id="C8q-Lw-I96"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                                                        <state key="normal" title="0">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lDU-IE-ZJP"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="sgT-oc-ag2" firstAttribute="width" secondItem="sgT-oc-ag2" secondAttribute="height" multiplier="1:1" id="UO4-Yy-f7L"/>
+                                                                    <constraint firstAttribute="width" constant="55" id="fIZ-Aj-f9q"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5Hd-Ej-nnj">
+                                                                <rect key="frame" x="140" y="0.0" width="55" height="405"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4V-qL-RBM" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="H4V-qL-RBM" secondAttribute="height" multiplier="1:1" id="4DP-Xl-RWP"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="16"/>
+                                                                        <state key="normal" title="M3">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="0.30064147749999998" green="0.28791537830000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="memoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tqn-gg-eVj"/>
+                                                                            <action selector="memoryDelete:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="Olw-DK-PfD"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czy-hl-2G1" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="70" width="55" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="czy-hl-2G1" secondAttribute="height" multiplier="1:1" id="upR-B7-x78"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                                                        <state key="normal" title="×">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="0.0" green="0.0028140406469999999" blue="0.56955128209999994" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="130-Vo-VNP"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cO-zE-na2" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="140" width="55" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="9cO-zE-na2" secondAttribute="height" multiplier="1:1" id="GC0-i0-Ryx"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                                                        <state key="normal" title="9">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tvY-Aa-gRt"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10S-xF-trc" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="210" width="55" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="10S-xF-trc" secondAttribute="height" multiplier="1:1" id="ULY-Iy-Gwz"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                                                        <state key="normal" title="6">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Es8-j6-7dU"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uoi-Ux-mDG" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="280" width="55" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="Uoi-Ux-mDG" secondAttribute="height" multiplier="1:1" id="80Q-4v-wuL"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                                                        <state key="normal" title="3">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OrG-of-Tsz"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXP-LP-KvX" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="350" width="55" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="iXP-LP-KvX" secondAttribute="height" multiplier="1:1" id="P6C-Fe-hsD"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                                                        <state key="normal" title=".">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gGl-kE-SzX"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="czy-hl-2G1" firstAttribute="width" secondItem="czy-hl-2G1" secondAttribute="height" multiplier="1:1" id="RhD-VR-pQ4"/>
+                                                                    <constraint firstAttribute="width" constant="55" id="qM6-4d-yvY"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="a1s-Zl-DTl">
+                                                                <rect key="frame" x="210" y="0.0" width="55" height="405"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" tag="7" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ay1-W8-DPJ" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="ay1-W8-DPJ" secondAttribute="height" multiplier="1:1" id="X9a-vm-QVR"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                                                        <state key="normal">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="0.41323039189999999" green="0.13665475399999999" blue="0.65817307700000005" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="iconScale">
+                                                                                <real key="value" value="0.59999999999999998"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="strokelineWidth">
+                                                                                <real key="value" value="0.5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="copytoClipboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p1B-BY-kjs"/>
+                                                                            <action selector="exportResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nNY-29-oIl"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDb-jt-EEl" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="70" width="55" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="YDb-jt-EEl" secondAttribute="height" multiplier="1:1" id="Nvz-gJ-ruK"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                                                        <state key="normal" title="÷">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="0.0" green="0.0028140406469999999" blue="0.56955128209999994" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HpQ-gn-MRu"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7r-8a-tYU" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="140" width="55" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="X7r-8a-tYU" secondAttribute="height" multiplier="1:1" id="3oX-sK-vs9"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="10"/>
+                                                                        <state key="normal" title="⌫">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="0.0" green="0.0028140406469999999" blue="0.56955128209999994" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="clearCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lMc-pn-ZFz"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lme-64-rpG" customClass="FtkSquareBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="210" width="55" height="195"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="28"/>
+                                                                        <state key="normal" title="=">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="size" keyPath="radius">
+                                                                                <size key="value" width="22" height="10"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                                <color key="value" red="0.6729366987179487" green="0.10963922220121176" blue="0.28271189139566427" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l03-qI-5NS"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="55" id="C0T-dW-1H3"/>
+                                                                    <constraint firstItem="YDb-jt-EEl" firstAttribute="width" secondItem="YDb-jt-EEl" secondAttribute="height" multiplier="1:1" id="WuJ-AT-2QH"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="473" id="L0x-gj-NPA"/>
+                                                    <constraint firstAttribute="width" constant="265" id="yPc-eb-BgU"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="Nz3-dk-WI0" firstAttribute="leading" secondItem="cD0-ZL-6NM" secondAttribute="leading" constant="5" id="Ehx-Ps-w5W"/>
-                                            <constraint firstAttribute="width" secondItem="cD0-ZL-6NM" secondAttribute="height" multiplier="5:1" id="ILg-kg-yKW"/>
-                                            <constraint firstAttribute="trailing" secondItem="Nz3-dk-WI0" secondAttribute="trailing" constant="5" id="aOc-V7-PBB"/>
-                                            <constraint firstItem="Nz3-dk-WI0" firstAttribute="centerY" secondItem="cD0-ZL-6NM" secondAttribute="centerY" id="nY7-GH-MVC"/>
+                                            <constraint firstItem="El5-FM-2zX" firstAttribute="centerX" secondItem="zl3-bM-YnP" secondAttribute="centerX" id="NEJ-ea-sJX"/>
+                                            <constraint firstItem="El5-FM-2zX" firstAttribute="centerY" secondItem="zl3-bM-YnP" secondAttribute="centerY" id="b7n-2G-6Xe"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" red="0.24591346150000001" green="0.1863682217" blue="0.20757686880000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="size" keyPath="radius">
-                                                <size key="value" width="12" height="12"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KxB-c5-rkQ">
-                                        <rect key="frame" x="0.0" y="68" width="265" height="405"/>
+                                    <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tbr-Ae-fGP" userLabel="FunctionPad">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WR5-4e-rYR">
-                                                <rect key="frame" x="0.0" y="0.0" width="55" height="405"/>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cWF-bF-poA" userLabel="FuncDisplay" customClass="FtkSquareBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="17" y="224" width="265" height="53"/>
                                                 <subviews>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soj-De-MEw" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="soj-De-MEw" secondAttribute="height" multiplier="1:1" id="n5T-ek-MdO"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="16"/>
-                                                        <state key="normal" title="M1">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="0.046014708190000003" green="0.3829727564" blue="0.19321495920000001" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="memoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NFi-rB-Ypb"/>
-                                                            <action selector="memoryDelete:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="ObF-tn-3yS"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVy-yH-P7H" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="70" width="55" height="55"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="fVy-yH-P7H" secondAttribute="height" multiplier="1:1" id="oKa-MP-G3j"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
-                                                        <state key="normal" title="+">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="0.0" green="0.0028140406469999999" blue="0.56955128209999994" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f3P-J6-3yD"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQa-7Y-P6F" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="140" width="55" height="55"/>
-                                                        <color key="backgroundColor" red="0.59709535256410251" green="0.065809743742177421" blue="0.23081452327147664" alpha="0.0" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="IQa-7Y-P6F" secondAttribute="height" multiplier="1:1" id="Poq-xN-fI2"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
-                                                        <state key="normal" title="7">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.95328663793103452" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J1s-2h-RJb"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reP-ZE-OMJ" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="210" width="55" height="55"/>
-                                                        <color key="backgroundColor" red="0.59709535256410251" green="0.065809743742177421" blue="0.23081452327147664" alpha="0.0" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="reP-ZE-OMJ" secondAttribute="height" multiplier="1:1" id="EeT-LN-VG2"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
-                                                        <state key="normal" title="4">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.95328663793103452" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YAN-uj-MnO"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoO-AA-tvO" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="280" width="55" height="55"/>
-                                                        <color key="backgroundColor" red="0.59709535256410251" green="0.065809743742177421" blue="0.23081452327147664" alpha="0.0" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="AoO-AA-tvO" secondAttribute="height" multiplier="1:1" id="zOa-7d-eUa"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
-                                                        <state key="normal" title="1">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.95328663793103452" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Crf-Or-72e"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grc-A9-J78" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="350" width="55" height="55"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="grc-A9-J78" secondAttribute="height" multiplier="1:1" id="Z34-r9-feS"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="19"/>
-                                                        <state key="normal" title="±">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="0.0" green="0.0028140406473060862" blue="0.56955128205128203" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lb1-lQ-HLy"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="fVy-yH-P7H" firstAttribute="width" secondItem="fVy-yH-P7H" secondAttribute="height" multiplier="1:1" id="70a-ks-oLu"/>
-                                                    <constraint firstAttribute="width" constant="55" id="Lcm-k7-QrO"/>
-                                                </constraints>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gcE-Gb-7eb">
-                                                <rect key="frame" x="70" y="0.0" width="55" height="405"/>
-                                                <subviews>
-                                                    <button opaque="NO" alpha="0.80000001192092896" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruS-DE-XC4" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="ruS-DE-XC4" secondAttribute="height" multiplier="1:1" id="JJ6-04-hU3"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="16"/>
-                                                        <state key="normal" title="M2">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="1" green="0.16841727279999999" blue="0.0" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="memoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mS3-5y-TU7"/>
-                                                            <action selector="memoryDelete:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="hFP-gs-onW"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgT-oc-ag2" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="70" width="55" height="55"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="sgT-oc-ag2" secondAttribute="height" multiplier="1:1" id="qtj-Bc-xqE"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
-                                                        <state key="normal" title="−">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="0.0" green="0.0028140406469999999" blue="0.56955128209999994" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pAG-UV-Dfo"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jG-Vt-Baw" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="140" width="55" height="55"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="0jG-Vt-Baw" secondAttribute="height" multiplier="1:1" id="Xwg-8r-OYx"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
-                                                        <state key="normal" title="8">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ryg-Gn-5eX"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ll-iq-mBg" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="210" width="55" height="55"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="4ll-iq-mBg" secondAttribute="height" multiplier="1:1" id="WqW-zL-iiv"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
-                                                        <state key="normal" title="5">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3vs-cB-qUS"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmL-WD-2ra" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="280" width="55" height="55"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="pmL-WD-2ra" secondAttribute="height" multiplier="1:1" id="8rX-eg-xZU"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
-                                                        <state key="normal" title="2">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="syN-ux-mVC"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NI-da-LCg" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="350" width="55" height="55"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="5NI-da-LCg" secondAttribute="height" multiplier="1:1" id="C8q-Lw-I96"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
-                                                        <state key="normal" title="0">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lDU-IE-ZJP"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="sgT-oc-ag2" firstAttribute="width" secondItem="sgT-oc-ag2" secondAttribute="height" multiplier="1:1" id="UO4-Yy-f7L"/>
-                                                    <constraint firstAttribute="width" constant="55" id="fIZ-Aj-f9q"/>
-                                                </constraints>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5Hd-Ej-nnj">
-                                                <rect key="frame" x="140" y="0.0" width="55" height="405"/>
-                                                <subviews>
-                                                    <button opaque="NO" alpha="0.80000001192092896" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4V-qL-RBM" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="H4V-qL-RBM" secondAttribute="height" multiplier="1:1" id="4DP-Xl-RWP"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="16"/>
-                                                        <state key="normal" title="M3">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="0.30064147749999998" green="0.28791537830000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="memoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tqn-gg-eVj"/>
-                                                            <action selector="memoryDelete:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="Olw-DK-PfD"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czy-hl-2G1" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="70" width="55" height="55"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="czy-hl-2G1" secondAttribute="height" multiplier="1:1" id="upR-B7-x78"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
-                                                        <state key="normal" title="×">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="0.0" green="0.0028140406469999999" blue="0.56955128209999994" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="130-Vo-VNP"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cO-zE-na2" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="140" width="55" height="55"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="9cO-zE-na2" secondAttribute="height" multiplier="1:1" id="GC0-i0-Ryx"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
-                                                        <state key="normal" title="9">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tvY-Aa-gRt"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10S-xF-trc" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="210" width="55" height="55"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="10S-xF-trc" secondAttribute="height" multiplier="1:1" id="ULY-Iy-Gwz"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
-                                                        <state key="normal" title="6">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Es8-j6-7dU"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uoi-Ux-mDG" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="280" width="55" height="55"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="Uoi-Ux-mDG" secondAttribute="height" multiplier="1:1" id="80Q-4v-wuL"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
-                                                        <state key="normal" title="3">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OrG-of-Tsz"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXP-LP-KvX" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="350" width="55" height="55"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="iXP-LP-KvX" secondAttribute="height" multiplier="1:1" id="P6C-Fe-hsD"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
-                                                        <state key="normal" title=".">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="1" green="0.1079018194" blue="0.37863291230000001" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gGl-kE-SzX"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="czy-hl-2G1" firstAttribute="width" secondItem="czy-hl-2G1" secondAttribute="height" multiplier="1:1" id="RhD-VR-pQ4"/>
-                                                    <constraint firstAttribute="width" constant="55" id="qM6-4d-yvY"/>
-                                                </constraints>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="a1s-Zl-DTl">
-                                                <rect key="frame" x="210" y="0.0" width="55" height="405"/>
-                                                <subviews>
-                                                    <button opaque="NO" alpha="0.80000001192092896" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ay1-W8-DPJ" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="ay1-W8-DPJ" secondAttribute="height" multiplier="1:1" id="X9a-vm-QVR"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
-                                                        <state key="normal">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="0.41323039189999999" green="0.13665475399999999" blue="0.65817307700000005" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="iconScale">
-                                                                <real key="value" value="0.59999999999999998"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="strokelineWidth">
-                                                                <real key="value" value="0.5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="copytoClipboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p1B-BY-kjs"/>
-                                                            <action selector="exportResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nNY-29-oIl"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDb-jt-EEl" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="70" width="55" height="55"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="YDb-jt-EEl" secondAttribute="height" multiplier="1:1" id="Nvz-gJ-ruK"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
-                                                        <state key="normal" title="÷">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="0.0" green="0.0028140406469999999" blue="0.56955128209999994" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HpQ-gn-MRu"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7r-8a-tYU" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="140" width="55" height="55"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="X7r-8a-tYU" secondAttribute="height" multiplier="1:1" id="3oX-sK-vs9"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="10"/>
-                                                        <state key="normal" title="⌫">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="0.0" green="0.0028140406469999999" blue="0.56955128209999994" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="clearCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lMc-pn-ZFz"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lme-64-rpG" customClass="FtkSquareBtn" customModule="FiksuCalculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="210" width="55" height="195"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="right" lineBreakMode="headTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3Y-Fk-584" userLabel="FuncDigits">
+                                                        <rect key="frame" x="5" y="10" width="255" height="32.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="28"/>
-                                                        <state key="normal" title="=">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="size" keyPath="radius">
-                                                                <size key="value" width="22" height="10"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                <color key="value" red="0.6729366987179487" green="0.10963922220121176" blue="0.28271189139566427" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l03-qI-5NS"/>
-                                                        </connections>
-                                                    </button>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="55" id="C0T-dW-1H3"/>
-                                                    <constraint firstItem="YDb-jt-EEl" firstAttribute="width" secondItem="YDb-jt-EEl" secondAttribute="height" multiplier="1:1" id="WuJ-AT-2QH"/>
+                                                    <constraint firstItem="N3Y-Fk-584" firstAttribute="centerY" secondItem="cWF-bF-poA" secondAttribute="centerY" id="KqQ-IE-MAA"/>
+                                                    <constraint firstAttribute="width" secondItem="cWF-bF-poA" secondAttribute="height" multiplier="5:1" id="RWf-al-ocN"/>
+                                                    <constraint firstAttribute="trailing" secondItem="N3Y-Fk-584" secondAttribute="trailing" constant="5" id="a8n-y5-pJp"/>
+                                                    <constraint firstItem="N3Y-Fk-584" firstAttribute="leading" secondItem="cWF-bF-poA" secondAttribute="leading" constant="5" id="vf9-fy-gZ3"/>
                                                 </constraints>
-                                            </stackView>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                        <color key="value" red="0.24591346150000001" green="0.1863682217" blue="0.20757686880000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="radius">
+                                                        <size key="value" width="10" height="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                         </subviews>
-                                    </stackView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="W1z-2i-th6"/>
+                                            <constraint firstAttribute="height" constant="500" id="cgr-T5-kef"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="a4c-aH-UlW"/>
+                                    <constraint firstAttribute="height" constant="500" id="uhA-nn-aLM"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="JFf-Fc-utE" appends="YES" id="k1H-bi-aoJ"/>
+                                    <outletCollection property="gestureRecognizers" destination="tbY-md-jin" appends="YES" id="zoq-Vl-SBE"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="El5-FM-2zX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BHh-0N-smB"/>
-                            <constraint firstItem="El5-FM-2zX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Krb-dn-5xi"/>
+                            <constraint firstItem="YdF-cs-5Y5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1Cl-VU-2hA"/>
+                            <constraint firstItem="YdF-cs-5Y5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LCb-XC-IaW"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
-                                <color key="value" red="1" green="0.69335859714625081" blue="0.62049561082188021" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <color key="value" red="1" green="0.80528391283961653" blue="0.067069852384338713" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="medColor">
-                                <color key="value" red="0.96862745100000003" green="0.79607843140000001" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="1" green="0.92866469196269474" blue="0.21106201084560772" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="darkColor">
-                                <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.94270280214961155" green="1" blue="0.61661331160119948" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="backColor">
                                 <color key="value" red="1" green="0.89628775169999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -556,10 +624,23 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="BasicPad" destination="zl3-bM-YnP" id="XPp-ld-h8k"/>
+                        <outlet property="FunctionPad" destination="Tbr-Ae-fGP" id="yzE-8P-Eps"/>
                         <outlet property="display" destination="Nz3-dk-WI0" id="tnx-bj-iRB"/>
+                        <outlet property="funcDigits" destination="N3Y-Fk-584" id="WB4-4t-hUz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="JFf-Fc-utE">
+                    <connections>
+                        <action selector="counterViewSwipe:" destination="BYZ-38-t0r" id="Fxn-p9-EPC"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="tbY-md-jin">
+                    <connections>
+                        <action selector="counterViewSwipeback:" destination="BYZ-38-t0r" id="6Ec-ld-q0q"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="280" y="316"/>
         </scene>
