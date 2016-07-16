@@ -160,7 +160,7 @@
                                                             <constraint firstAttribute="width" secondItem="grc-A9-J78" secondAttribute="height" multiplier="1:1" id="Z34-r9-feS"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="19"/>
-                                                        <state key="normal" title="ƒ">
+                                                        <state key="normal" title="±">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -168,6 +168,9 @@
                                                                 <color key="value" red="0.0" green="0.0028140406473060862" blue="0.56955128205128203" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lb1-lQ-HLy"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>

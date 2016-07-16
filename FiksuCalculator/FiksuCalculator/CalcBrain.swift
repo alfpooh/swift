@@ -24,6 +24,7 @@ class CalculatorBrain {
         "−": Operation.BinaryOperation({$0-$1}),
         "×": Operation.BinaryOperation({$0*$1}),
         "÷": Operation.BinaryOperation({$0/$1}),
+        "±": Operation.UnaryOperation({-$0}),
         "=": Operation.Equals
         
         
