@@ -63,7 +63,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="soj-De-MEw" secondAttribute="height" multiplier="1:1" id="n5T-ek-MdO"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="16"/>
                                                         <state key="normal" title="M1">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -74,6 +74,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="memoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NFi-rB-Ypb"/>
+                                                            <action selector="memoryDelete:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="ObF-tn-3yS"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVy-yH-P7H" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
@@ -177,13 +178,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gcE-Gb-7eb">
                                                 <rect key="frame" x="70" y="0.0" width="55" height="405"/>
                                                 <subviews>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruS-DE-XC4" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                    <button opaque="NO" alpha="0.80000001192092896" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruS-DE-XC4" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="ruS-DE-XC4" secondAttribute="height" multiplier="1:1" id="JJ6-04-hU3"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="16"/>
                                                         <state key="normal" title="M2">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -191,9 +192,13 @@
                                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
                                                                 <color key="value" red="1" green="0.16841727279999999" blue="0.0" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="memoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mS3-5y-TU7"/>
+                                                            <action selector="memoryDelete:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="hFP-gs-onW"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgT-oc-ag2" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
@@ -300,13 +305,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5Hd-Ej-nnj">
                                                 <rect key="frame" x="140" y="0.0" width="55" height="405"/>
                                                 <subviews>
-                                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4V-qL-RBM" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
+                                                    <button opaque="NO" alpha="0.80000001192092896" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4V-qL-RBM" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="H4V-qL-RBM" secondAttribute="height" multiplier="1:1" id="4DP-Xl-RWP"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="16"/>
                                                         <state key="normal" title="M3">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -314,9 +319,13 @@
                                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
                                                                 <color key="value" red="0.30064147749999998" green="0.28791537830000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="memoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tqn-gg-eVj"/>
+                                                            <action selector="memoryDelete:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="Olw-DK-PfD"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czy-hl-2G1" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
@@ -445,6 +454,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <action selector="copytoClipboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p1B-BY-kjs"/>
                                                             <action selector="exportResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nNY-29-oIl"/>
                                                         </connections>
                                                     </button>

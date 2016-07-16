@@ -10,18 +10,33 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBAction func copytoClipboard(sender: AnyObject) {
+        UIPasteboard.generalPasteboard().string = display.text
+    }
+    
     //displaying digits
     @IBOutlet weak var display: UILabel!
     
     var memory:[String:String] = ["M1":"", "M2":"", "M3":""]
     
+    @IBAction func memoryDelete(sender: AnyObject) {
+        let key = "M\(sender.tag+1)"
+        sender.setTitle(key, forState: .Normal)
+        memory[key] = ""
+    }
+    
+    
     @IBAction func memoryButton(sender: UIButton) {
-        if memory["M1"] == "" {
+
+        let key = "M\(sender.tag+1)"
+        
+        if memory[key] == "" {
             let MR = display.text
-            memory["M1"] = MR
+            memory[key] = MR
+            sender.setTitle(MR, forState: .Normal)
         }
         else {
-            display.text = memory["M1"]
+            display.text = memory[key]
             userIsInTheMiddleOfTyping = true        }
     }
     
@@ -89,8 +104,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
+    
+
     
 }
 
