@@ -21,24 +21,35 @@
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="El5-FM-2zX">
                                 <rect key="frame" x="177" y="100" width="265" height="403"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cD0-ZL-6NM" userLabel="Display">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cD0-ZL-6NM" userLabel="Display" customClass="FtkSquareBtn" customModule="FiksuCalculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="265" height="53"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="headTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz3-dk-WI0">
                                                 <rect key="frame" x="53" y="3" width="198" height="50"/>
-                                                <color key="backgroundColor" red="0.2459134615384615" green="0.18636822170513417" blue="0.20757686884539223" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.24591346150000001" green="0.1863682217" blue="0.20757686880000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Nz3-dk-WI0" firstAttribute="leading" secondItem="cD0-ZL-6NM" secondAttribute="leading" constant="5" id="Ehx-Ps-w5W"/>
                                             <constraint firstAttribute="width" secondItem="cD0-ZL-6NM" secondAttribute="height" multiplier="5:1" id="ILg-kg-yKW"/>
                                             <constraint firstAttribute="trailing" secondItem="Nz3-dk-WI0" secondAttribute="trailing" constant="5" id="aOc-V7-PBB"/>
                                             <constraint firstItem="Nz3-dk-WI0" firstAttribute="centerY" secondItem="cD0-ZL-6NM" secondAttribute="centerY" id="nY7-GH-MVC"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.24591346150000001" green="0.1863682217" blue="0.20757686880000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="radius">
+                                                <size key="value" width="12" height="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KxB-c5-rkQ">
                                         <rect key="frame" x="0.0" y="68" width="265" height="335"/>
@@ -393,7 +404,7 @@
                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lme-64-rpG" customClass="FtkSquareBtn" customModule="FiksuCalculator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="140" width="55" height="195"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="28"/>
                                                         <state key="normal" title="=">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
