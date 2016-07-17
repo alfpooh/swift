@@ -72,8 +72,15 @@ class ViewController: UIViewController {
         let digit = sender.currentTitle!
         if userIsInTheMiddleOfTyping {
             let textInTheCurrentDisplay = display.text!
-            if digit == "0" && display.text == "0" { display.text = "0"} else {
-                display.text = textInTheCurrentDisplay + digit }
+                    if digit == "0" && display.text == "0" {
+                            display.text = "0"
+                            userIsInTheMiddleOfTyping = false
+                                                    } else {
+                    if display.text == "0"  {
+                        display.text = digit
+                    } else {
+                        display.text = textInTheCurrentDisplay + digit}
+            }
         } else {
             if digit == "." { display.text = "0\(digit)"}
             else {
