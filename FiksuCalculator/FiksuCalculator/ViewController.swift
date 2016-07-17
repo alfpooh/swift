@@ -7,16 +7,26 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
+    var isBasicShowing = true
+    let synth = AVSpeechSynthesizer()
+    var buttonclickplayer: AVAudioPlayer!
+    var resultplayer: AVAudioPlayer!
+    var swipingplayer: AVAudioPlayer!
+    var sayCount = AVSpeechUtterance(string: "")
+    
+    
     @IBOutlet weak var BasicPad: UIView!
     @IBOutlet weak var FunctionPad: UIView!
-    
     @IBOutlet weak var funcDigits: UILabel!
     
-    var isBasicShowing = true
-    
+    @IBAction func sayDisplay(sender:AnyObject) {
+    SoundOut(0)
+    }
+
     @IBAction func copytoClipboard(sender: AnyObject) {
         
         UIPasteboard.generalPasteboard().string = display.text
@@ -121,6 +131,27 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        do {
+//            let resourcePath =  NSBundle.mainBundle().pathForResource("Timer", ofType: "wav")!
+//            let url = NSURL(fileURLWithPath: resourcePath)
+//            try timerEffectplayer = AVAudioPlayer(contentsOfURL: url)
+//            try timerLoudRingplayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("TimerLoudRing", ofType: "wav")!))
+//            try timerShortRingplayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("TimerShortRing", ofType: "wav")!))
+//            try timerRewindplayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("TimerRewind", ofType: "wav")!))
+//            
+//            timerEffectplayer.numberOfLoops = -1
+//            timerEffectplayer.prepareToPlay()
+//            timerLoudRingplayer.prepareToPlay()
+//            timerShortRingplayer.prepareToPlay()
+//            timerRewindplayer.prepareToPlay()
+            
+            
+            
+        } catch let err as NSError {
+            print (err.debugDescription)
+        }
+
 
     }
     
@@ -160,6 +191,20 @@ class ViewController: UIViewController {
                                       completion: nil)
             display.text = funcDigits.text}
         isBasicShowing = !isBasicShowing
+    }
+
+    func SoundOut(index: Int){
+        if index == 0 {
+            print ("sound shoud be out!")
+            sayCount = AVSpeechUtterance(string: display.text!)
+            sayCount.rate = 0.5
+            synth.speakUtterance(sayCount)}
+        else if index == 1 {
+            buttonclickplayer.play()}
+        else if index == 2 {
+            resultplayer.play()}
+        else if index == 3 {
+            swipingplayer.play()}
     }
 
     
