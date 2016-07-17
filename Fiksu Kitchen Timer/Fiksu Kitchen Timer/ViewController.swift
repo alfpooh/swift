@@ -193,6 +193,7 @@ class ViewController: UIViewController {
             sayCount.rate = 0.5
             synth.speakUtterance(sayCount)}
         else if index == 1 {
+            timerLoudRingplayer.volume = 1
             timerLoudRingplayer.play()
             sayCount = AVSpeechUtterance(string: "Time out!")
             sayCount.rate = 0.5
