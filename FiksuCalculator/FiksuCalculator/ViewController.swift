@@ -20,8 +20,10 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var BasicPad: UIView!
+
     @IBOutlet weak var FunctionPad: UIView!
     @IBOutlet weak var funcDigits: UILabel!
+
     
     @IBAction func sayDisplay(sender:AnyObject) {
     SoundOut(0)
@@ -34,6 +36,7 @@ class ViewController: UIViewController {
     
     //displaying digits
     @IBOutlet weak var display: UILabel!
+    
     
     var memory:[String:String] = ["M1":"", "M2":"", "M3":""]
     
@@ -58,8 +61,7 @@ class ViewController: UIViewController {
             userIsInTheMiddleOfTyping = true        }
     }
     
-    @IBAction func exportResult(sender: UIButton) {
-    }
+
     @IBAction func clearCalc(sender: UIButton) {
         if userIsInTheMiddleOfTyping {
             let textInTheCurrentDisplay = display.text!
@@ -109,6 +111,7 @@ class ViewController: UIViewController {
         
         set {
             display.text = String(newValue)
+            funcDigits.text = String(newValue)
         }
     }
     

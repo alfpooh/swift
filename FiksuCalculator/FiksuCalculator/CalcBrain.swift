@@ -25,7 +25,13 @@ class CalculatorBrain {
         "×": Operation.BinaryOperation({$0*$1}),
         "÷": Operation.BinaryOperation({$0/$1}),
         "±": Operation.UnaryOperation({-$0}),
-        "=": Operation.Equals
+        "√": Operation.UnaryOperation({ sqrt($0) }),
+        "Random": Operation.UnaryOperation({ _ in Double(rand()) }),
+        "Round": Operation.UnaryOperation({ round($0) }),
+        "ABS": Operation.UnaryOperation({ abs($0) }),
+        "=": Operation.Equals,
+        "π": Operation.Constant(M_PI),
+        "e": Operation.Constant(M_E)
         
         
     ]

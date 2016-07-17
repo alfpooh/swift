@@ -467,7 +467,6 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                         <connections>
                                                                             <action selector="copytoClipboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p1B-BY-kjs"/>
-                                                                            <action selector="exportResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nNY-29-oIl"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDb-jt-EEl" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
@@ -631,7 +630,7 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                         <connections>
-                                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kqe-wH-o3u"/>
+                                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UPM-ua-2Wl"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQ5-x6-VZN" userLabel="√" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
@@ -650,7 +649,7 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                         <connections>
-                                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="swe-yO-VX7"/>
+                                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zzl-l3-qAh"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7HX-ZZ-ObH" userLabel="%" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
@@ -669,7 +668,7 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                         <connections>
-                                                                            <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QXc-Wg-KXl"/>
+                                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iS5-pZ-hgf"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -874,7 +873,6 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                         <connections>
                                                                             <action selector="copytoClipboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5hQ-NA-fWq"/>
-                                                                            <action selector="exportResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nju-sP-JB2"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Aa-ce-iJe" userLabel="Rand" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
@@ -893,7 +891,7 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                         <connections>
-                                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ad4-fN-rQC"/>
+                                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N8s-Cz-rVl"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1e-OW-fCa" userLabel="ABS" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
@@ -912,7 +910,7 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                         <connections>
-                                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kYJ-cx-B1s"/>
+                                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xxs-e8-sT3"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fI-0g-3x4" userLabel="Round" customClass="FtkToolBtn" customModule="FiksuCalculator" customModuleProvider="target">
@@ -932,6 +930,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                         <connections>
                                                                             <action selector="clearCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XgP-o2-MrR"/>
+                                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RIG-e1-zVZ"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -992,9 +991,9 @@
                     </view>
                     <connections>
                         <outlet property="BasicPad" destination="zl3-bM-YnP" id="XPp-ld-h8k"/>
-                        <outlet property="FunctionPad" destination="Tbr-Ae-fGP" id="yzE-8P-Eps"/>
-                        <outlet property="display" destination="Nz3-dk-WI0" id="tnx-bj-iRB"/>
-                        <outlet property="funcDigits" destination="N3Y-Fk-584" id="WB4-4t-hUz"/>
+                        <outlet property="FunctionPad" destination="Tbr-Ae-fGP" id="2dz-S9-jtt"/>
+                        <outlet property="display" destination="Nz3-dk-WI0" id="Je3-JV-omc"/>
+                        <outlet property="funcDigits" destination="N3Y-Fk-584" id="NqG-gP-jAc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
