@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var funcDigits: UILabel!
 
     
+    @IBOutlet weak var XxX: FtkToolBtn!
     @IBAction func sayDisplay(sender:AnyObject) {
     SoundOut(0)
     }
@@ -134,6 +135,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let xxx =  "x\u{B2}"
+        XxX.setTitle(xxx, forState: .Normal)
         
         do {
 //            let resourcePath =  NSBundle.mainBundle().pathForResource("Timer", ofType: "wav")!
